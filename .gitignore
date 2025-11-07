@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Model files and cache
+*.bin
+*.safetensors
+.cache/
+models/
+*.pt
+*.pth
+
+# Results and outputs
+results/*.csv
+results/baseline_patches/
+results/semantic_hint_patches/
+benchmark/security_hints.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
