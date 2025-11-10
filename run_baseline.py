@@ -161,3 +161,5 @@ if __name__ == "__main__":
     tokenizer, model = load_codellama_model(args.model)
     process_vulnerable_snippets(args.input, args.output, tokenizer, model)
 
+
+

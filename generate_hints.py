@@ -5,6 +5,8 @@ Generates security hints for vulnerable code snippets using GPT-4.
 """
 
 import os
+from dotenv import load_dotenv  
+load_dotenv() 
 import json
 from pathlib import Path
 from openai import OpenAI
@@ -22,6 +24,7 @@ def generate_security_hint(code_snippet, api_key=None, model="gpt-4"):
     Returns:
         str: Security hint describing the vulnerability and fix guidance
     """
+
     if api_key is None:
         api_key = os.getenv("OPENAI_API_KEY")
     

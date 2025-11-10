@@ -8,6 +8,7 @@ env/
 venv/
 ENV/
 .venv
+.env/
 
 # Model files and cache
 *.bin
@@ -41,4 +42,6 @@ desktop.ini
 # Temporary files
 *.tmp
 *.temp
+
+
 
