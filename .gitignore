@@ -18,12 +18,6 @@ models/
 *.pt
 *.pth
 
-# Results and outputs
-results/*.csv
-results/baseline_patches/
-results/semantic_hint_patches/
-benchmark/security_hints.json
-
 # IDE
 .vscode/
 .idea/
