@@ -37,7 +37,7 @@ def load_codellama_model(model_name="codellama/CodeLlama-7b-Instruct-hf"):
     return tokenizer, model
 
 
-def generate_patch(code_snippet, tokenizer, model, max_length=512):
+def generate_patch(code_snippet, tokenizer, model, max_length=1028):
     """
     Generate a patch for vulnerable code using CodeLlama.
     
