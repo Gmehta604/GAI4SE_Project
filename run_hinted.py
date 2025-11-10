@@ -23,6 +23,11 @@ def load_codellama_model(model_name="codellama/CodeLlama-7b-Instruct-hf"):
     """
     print(f"Loading model: {model_name}...")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
+    # Set pad_token if not already set
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+        tokenizer.pad_token_id = tokenizer.eos_token_id
+    
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
         torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
@@ -65,7 +70,8 @@ def generate_patch_with_hint(code_snippet, hint, tokenizer, model, max_length=51
     Returns:
         str: Generated patch
     """
-    prompt = f"""Fix the following C/C++ code to remove security vulnerabilities.
+    # Use CodeLlama-Instruct format with proper instruction tags
+    prompt = f"""<s>[INST] Fix the following C/C++ code to remove security vulnerabilities.
 
 Security Hint: {hint}
 
@@ -74,13 +80,14 @@ Vulnerable code:
 {code_snippet}
 ```
 
-Fixed code:
-```c
-"""
+Provide the fixed code: [/INST]"""
     
-    inputs = tokenizer(prompt, return_tensors="pt")
+    inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=2048)
     if torch.cuda.is_available():
         inputs = {k: v.cuda() for k, v in inputs.items()}
+    
+    # Store input length to extract only newly generated tokens
+    input_length = inputs['input_ids'].shape[1]
     
     with torch.no_grad():
         outputs = model.generate(
@@ -89,19 +96,30 @@ Fixed code:
             temperature=0.2,
             do_sample=True,
             top_p=0.95,
-            pad_token_id=tokenizer.eos_token_id
+            pad_token_id=tokenizer.pad_token_id,
+            eos_token_id=tokenizer.eos_token_id,
+            repetition_penalty=1.1
         )
     
-    generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    # Decode only the newly generated tokens (exclude the input prompt)
+    generated_tokens = outputs[0][input_length:]
+    generated_text = tokenizer.decode(generated_tokens, skip_special_tokens=True)
     
-    # Extract the generated code (after "Fixed code:")
-    if "Fixed code:" in generated_text:
-        generated_code = generated_text.split("Fixed code:")[-1].strip()
-        # Remove code block markers if present
-        generated_code = generated_code.replace("```c", "").replace("```", "").strip()
-        return generated_code
+    # Clean up the generated code
+    generated_code = generated_text.strip()
     
-    return generated_text
+    # Remove code block markers if present
+    if generated_code.startswith("```"):
+        # Remove opening code block marker (could be ```c, ```cpp, etc.)
+        lines = generated_code.split('\n')
+        if lines[0].startswith("```"):
+            generated_code = '\n'.join(lines[1:])
+    
+    # Remove closing code block marker if present
+    if generated_code.endswith("```"):
+        generated_code = generated_code[:-3].strip()
+    
+    return generated_code
 
 
 def process_vulnerable_snippets(input_dir, output_dir, hints_file, tokenizer, model):
