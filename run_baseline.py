@@ -9,6 +9,7 @@ import json
 from pathlib import Path
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
+import textwrap
 
 
 def load_codellama_model(model_name="codellama/CodeLlama-7b-Instruct-hf"):
@@ -45,15 +46,19 @@ def generate_patch(code_snippet, tokenizer, model, max_length=512):
     Returns:
         str: Generated patch
     """
-    prompt = f"""Fix the following C/C++ code to remove security vulnerabilities:
+    # Sanitize snippet so embedded triple-backticks won't close the prompt fences
+    safe_snippet = code_snippet.replace('```', '```\u200b')
 
-```c
-{code_snippet}
-```
+    prompt = textwrap.dedent(f"""
+    Fix the following C/C++ code to remove security vulnerabilities:
 
-Fixed code:
-```c
-"""
+    ```c
+    {safe_snippet}
+    ```
+
+    Fixed code:
+    ```c
+    """).lstrip("\n")
     
     inputs = tokenizer(prompt, return_tensors="pt")
     if torch.cuda.is_available():
