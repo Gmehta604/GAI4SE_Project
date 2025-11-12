@@ -1,14 +1,12 @@
-The code has several issues related to stack-based buffer overflow and integer overflow. Here's the corrected code:
-```c
 /* TEMPLATE GENERATED TESTCASE FILE
-Filename: CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81_goodG2B.cpp
+Filename: CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81_goodG2B.cpp
 Label Definition File: CWE121_Stack_Based_Buffer_Overflow__CWE129.label.xml
 Template File: sources-sinks-81_goodG2B.tmpl.cpp
 */
 /*
  * @description
  * CWE: 121 Stack Based Buffer Overflow
- * BadSource: fgets Read data from the console using fgets()
+ * BadSource: fscanf Read data from the console using fscanf()
  * GoodSource: Larger than zero but less than 10
  * Sinks:
  *    GoodSink: Ensure the array index is valid
@@ -19,12 +17,12 @@ Template File: sources-sinks-81_goodG2B.tmpl.cpp
 #ifndef OMITGOOD
 
 #include "std_testcase.h"
-#include "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81.h"
+#include "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81.h"
 
-namespace CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81
+namespace CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81
 {
 
-void CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81_goodG2B::action(int data) const
+void CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81_goodG2B::action(int data) const
 {
     {
         int i;
@@ -47,4 +45,4 @@ void CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81_goodG2B::action(int dat
 }
 
 }
-#endif /* OMITGOOD */
+#endif /* OMIT
