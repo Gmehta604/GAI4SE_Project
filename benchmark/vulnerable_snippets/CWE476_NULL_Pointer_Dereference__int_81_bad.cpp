@@ -24,7 +24,6 @@ namespace CWE476_NULL_Pointer_Dereference__int_81
 
 void CWE476_NULL_Pointer_Dereference__int_81_bad::action(int * data) const
 {
-    /* POTENTIAL FLAW: Attempt to use data, which may be NULL */
     printIntLine(*data);
 }
 

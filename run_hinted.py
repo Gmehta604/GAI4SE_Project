@@ -56,7 +56,7 @@ def load_security_hints(hints_file="benchmark/security_hints.json"):
         return json.load(f)
 
 
-def generate_patch_with_hint(code_snippet, hint, tokenizer, model, max_length=512):
+def generate_patch_with_hint(code_snippet, hint, tokenizer, model, max_length=1028):
     """
     Generate a patch for vulnerable code using CodeLlama with a security hint.
     

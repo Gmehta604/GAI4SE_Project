@@ -29,8 +29,7 @@ void CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81_goodG2B::action(int dat
     {
         int i;
         int buffer[10] = { 0 };
-        /* POTENTIAL FLAW: Attempt to write to an index of the array that is above the upper bound
-        * This code does check to see if the array index is negative */
+
         if (data >= 0 && data < 10)
         {
             buffer[data] = 1;
@@ -42,4 +41,10 @@ void CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81_goodG2B::action(int dat
         }
         else
         {
-            printLine("ERROR: Array
+            printLine("ERROR: Array index is out-of-bounds");
+        }
+    }
+}
+
+}
+#endif /* OMITGOOD */

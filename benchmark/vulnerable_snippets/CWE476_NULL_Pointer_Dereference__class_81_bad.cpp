@@ -24,9 +24,7 @@ namespace CWE476_NULL_Pointer_Dereference__class_81
 
 void CWE476_NULL_Pointer_Dereference__class_81_bad::action(TwoIntsClass * data) const
 {
-    /* POTENTIAL FLAW: Attempt to use data, which may be NULL */
     printIntLine(data->intOne);
-    /* avoid memory leak - deleting a NULL pointer is a no-op in C++ so no need to check for NULL */
     delete data;
 }
 
