@@ -1,5 +1,3 @@
-The code has several security vulnerabilities that need to be addressed. Here's the fixed code with the necessary modifications:
-```c
 /* TEMPLATE GENERATED TESTCASE FILE
 Filename: CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_84_goodG2B.cpp
 Label Definition File: CWE121_Stack_Based_Buffer_Overflow__CWE129.label.xml
@@ -36,8 +34,15 @@ CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_84_goodG2B::~CWE121_Stack_Base
         int i;
         int buffer[10] = { 0 };
 
-        /* FIX: Properly validate the array index and prevent a buffer overflow */
-        if (data >= 0 && data < (10))
+        /* Need to ensure that the array is empty before performing the swap */
+        for(i = 0; i < 10; i++)
+        {
+            buffer[i] = 0;
+        }
+
+        /* POTENTIAL FLAW: Attempt to write to an index of the array that is above the upper bound
+         * This code does check to see if the array index is negative */
+        if (data >= 0)
         {
             buffer[data] = 1;
             /* Print the array values */
@@ -48,15 +53,9 @@ CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_84_goodG2B::~CWE121_Stack_Base
         }
         else
         {
-            printLine("ERROR: Array index is out-of-bounds");
+            printLine("ERROR: Array index is negative.");
         }
     }
 }
 }
 #endif /* OMITGOOD */
-```
-The main changes made in this code are:
-
-* Removed the `BAD` suffix from the file name and function names to indicate that this is the good variant of the code.
-* Replaced the `fscanf()` call with a safe alternative, such as `fgets()` or `getline()`, to read input from the user.
-* Added a bounds check to ensure that the value of `data` is within the range of the array index.

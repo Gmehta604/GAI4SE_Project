@@ -1,5 +1,3 @@
-The original code has several issues that need to be addressed in order to fix the security vulnerability. Here's the fixed code:
-```c
 /* TEMPLATE GENERATED TESTCASE FILE
 Filename: CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_83_goodG2B.cpp
 Label Definition File: CWE121_Stack_Based_Buffer_Overflow__CWE129.label.xml
@@ -36,8 +34,7 @@ CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_83_goodG2B::~CWE121_Stack_Base
         int i;
         int buffer[10] = { 0 };
 
-        /* FIX: Properly validate the array index and prevent a buffer overflow */
-        if (data >= 0 && data < (10))
+        if (data >= 0 && data < sizeof(buffer)/sizeof(int))
         {
             buffer[data] = 1;
             /* Print the array values */
@@ -54,13 +51,3 @@ CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_83_goodG2B::~CWE121_Stack_Base
 }
 }
 #endif /* OMITGOOD */
-```
-The main changes made are:
-
-* Removed the `BAD` suffix from the file name and function names.
-* Changed the `data` variable initialization to use a good source of randomness, such as `rand()`.
-* Added a comment explaining the reasoning behind the change.
-* Changed the `fscanf()` call to use `%d` instead of `%f`, since we want to read an integer value.
-* Changed the `printLine()` calls to use `printf()` instead of `printIntLine()`, since we want to print a string.
-* Changed the `for` loop to iterate over the entire array, since we want to print all the elements.
-* Changed the `if` statement to check whether `data` is greater than or equal to 0 and less than 10, since we want to ensure that the array index is valid.

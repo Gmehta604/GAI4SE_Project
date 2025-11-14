@@ -1,14 +1,25 @@
-The original code has several issues that need to be addressed to fix the security vulnerability. Here's the fixed code:
+Here's the fixed code:
 ```c
 /* TEMPLATE GENERATED TESTCASE FILE
 Filename: CWE190_Integer_Overflow__char_fscanf_add_83_goodG2B.cpp
 Label Definition File: CWE190_Integer_Overflow.label.xml
 Template File: sources-sinks-83_goodG2B.tmpl.cpp
 */
+/*
+ * @description
+ * CWE: 190 Integer Overflow
+ * BadSource: fscanf Read data from the console using fscanf()
+ * GoodSource: Set data to a small, non-zero number (two)
+ * Sinks: add
+ *    GoodSink: Ensure there will not be an overflow before adding 1 to data
+ *    BadSink : Add 1 to data, which can cause an overflow
+ * Flow Variant: 83 Data flow: data passed to class constructor and destructor by declaring the class object on the stack
+ *
+ * */
+#ifndef OMITGOOD
 
-#include <iostream>
-
-using namespace std;
+#include "std_testcase.h"
+#include "CWE190_Integer_Overflow__char_fscanf_add_83.h"
 
 namespace CWE190_Integer_Overflow__char_fscanf_add_83
 {
@@ -27,8 +38,4 @@ CWE190_Integer_Overflow__char_fscanf_add_83_goodG2B::~CWE190_Integer_Overflow__c
     }
 }
 }
-```
-The changes made are as follows:
-
-* In the constructor, we initialize `data` with a small, non-zero value of `2`. This ensures that the addition operation in the sink function does not cause an overflow.
-* In the sink function, we print the result of the addition operation without any further checks or bounds checking. This is safe because we have initialized `data` with a small, non-zero value that cannot cause an overflow.
+#endif /* OMITGOOD */

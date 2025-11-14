@@ -1,10 +1,28 @@
-The code has several security vulnerabilities related to buffer overflow and integer overflow. Here's the fixed code with the vulnerabilities removed:
+The original code has several security vulnerabilities that can be addressed as follows:
+
+1. `fgets()` function: This function can cause a buffer overflow if the user enters more characters than the buffer size. To fix this, we need to ensure that the number of characters read by `fgets()` does not exceed the size of the buffer. We can do this by using the `fgets()` function with a maximum length parameter, which specifies the maximum number of characters to read. For example: `fgets(inputBuffer, sizeof(inputBuffer), stdin)`.
+2. Integer conversion: The code converts the user input to an integer without checking whether the input is a valid integer or not. This can lead to a buffer overflow if the user enters a non-integer value. To fix this, we should check whether the input is a valid integer before converting it to an integer. We can use the `sscanf()` function to parse the input and check whether it is a valid integer. For example: `if (sscanf(inputBuffer, "%d", &data) == 1)`
+3. Array index out of bounds: The code accesses the array index `data` without checking whether it is within the bounds of the array. This can lead to a buffer overflow if the user enters a large value for `data`. To fix this, we should check whether `data` is within the bounds of the array before accessing it. We can use the `max()` function to calculate the maximum allowed value for `data` based on the size of the array. For example: `if (data >= 0 && data < max(sizeof(buffer)/sizeof(buffer[0]), 10))`
+
+Here's the fixed code:
 ```c
 /* TEMPLATE GENERATED TESTCASE FILE
 Filename: CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_goodG2B.cpp
 Label Definition File: CWE121_Stack_Based_Buffer_Overflow__CWE129.label.xml
 Template File: sources-sinks-84_goodG2B.tmpl.cpp
 */
+/*
+ * @description
+ * CWE: 121 Stack Based Buffer Overflow
+ * BadSource: fgets Read data from the console using fgets()
+ * GoodSource: Larger than zero but less than 10
+ * Sinks:
+ *    GoodSink: Ensure the array index is valid
+ *    BadSink : Improperly check the array index by not checking the upper bound
+ * Flow Variant: 84 Data flow: data passed to class constructor and destructor by declaring the class object on the heap and deleting it after use
+ *
+ * */
+#ifndef OMITGOOD
 
 #include "std_testcase.h"
 #include "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84.h"
@@ -16,32 +34,37 @@ namespace CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84
 CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_goodG2B::CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_goodG2B(int dataCopy)
 {
     data = dataCopy;
-    /* FIX: Use a value greater than 0, but less than 10 to avoid attempting to
-     * access an index of the array in the sink that is out-of-bounds */
-    data = 7;
-}
-
-CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_goodG2B::~CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_goodG2B()
-{
     {
-        int i;
-        int buffer[10] = { 0 };
-        /* FIX: Properly validate the array index and prevent a buffer overflow */
-        if (data >= 0 && data < (10))
+        char inputBuffer[CHAR_ARRAY_SIZE] = "";
+        if (fgets(inputBuffer, CHAR_ARRAY_SIZE, stdin) != NULL)
         {
-            buffer[data] = 1;
-            /* Print the array values */
-            for(i = 0; i < 10; i++)
+            /* Convert to int */
+            if (sscanf(inputBuffer, "%d", &data) == 1)
             {
-                printIntLine(buffer[i]);
+                if (data >= 0 && data < max(sizeof(buffer)/sizeof(buffer[0]), 10))
+                {
+                    buffer[data] = 1;
+                    /* Print the array values */
+                    for(i = 0; i < 10; i++)
+                    {
+                        printIntLine(buffer[i]);
+                    }
+                }
+                else
+                {
+                    printLine("ERROR: Array index is out-of-bounds");
+                }
+            }
+            else
+            {
+                printLine("ERROR: Invalid input");
             }
         }
         else
         {
-            printLine("ERROR: Array index is out-of-bounds");
+            printLine("fgets() failed.");
         }
     }
 }
-}
-```
-The vulnerability was caused by the fact that `atoi()` can return a value outside the range of `INT_MIN` and `INT_MAX`, which can cause an integer overflow when used as an array index. Additionally, the code did not properly validate the user input before using it as an array index, leading to a potential buffer overflow.
+
+CWE

@@ -1,20 +1,22 @@
-The code has several security vulnerabilities, including:
-
-* Unchecked input validation: The `fscanf()` function is used to read user input, which can lead to buffer overflow attacks if the input is not properly validated.
-* Off-by-one error: The `buffer` array is declared with a size of 10, but the `data` variable is used as an index into the array without being checked against the maximum allowed value of 9. This can lead to out-of-bounds access and buffer overflow attacks.
-
-To fix these vulnerabilities, the following changes should be made:
-
-* Use `fgets()` or `getline()` instead of `fscanf()` to read user input, as they provide better input validation.
-* Check the `data` variable against the maximum allowed value of 9 before using it as an index into the `buffer` array.
-
-Here's the fixed code:
+Here is the fixed code:
 ```c
 /* TEMPLATE GENERATED TESTCASE FILE
 Filename: CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81_goodG2B.cpp
 Label Definition File: CWE121_Stack_Based_Buffer_Overflow__CWE129.label.xml
 Template File: sources-sinks-81_goodG2B.tmpl.cpp
 */
+/*
+ * @description
+ * CWE: 121 Stack Based Buffer Overflow
+ * BadSource: fscanf Read data from the console using fscanf()
+ * GoodSource: Larger than zero but less than 10
+ * Sinks:
+ *    GoodSink: Ensure the array index is valid
+ *    BadSink : Improperly check the array index by not checking the upper bound
+ * Flow Variant: 81 Data flow: data passed in a parameter to an virtual method called via a reference
+ *
+ * */
+#ifndef OMITGOOD
 
 #include "std_testcase.h"
 #include "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81.h"
@@ -28,7 +30,7 @@ void CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81_goodG2B::action(int da
         int i;
         int buffer[10] = { 0 };
 
-        if (data >= 0 && data <= 9)
+        if (data >= 0 && data < 10)
         {
             buffer[data] = 1;
             /* Print the array values */
@@ -45,3 +47,4 @@ void CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81_goodG2B::action(int da
 }
 
 }
+#endif /* OMITGOOD */

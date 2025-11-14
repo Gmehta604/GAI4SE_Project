@@ -1,45 +1,48 @@
-Here is the fixed code for the `CWE190_Integer_Overflow__char_fscanf_add_81_bad.cpp` file:
+The code has several issues that need to be addressed to fix the security vulnerability:
+
+1. `fscanf()` is used to read input from the user, which can lead to buffer overflow attacks if the input is too large. It's better to use `fgets()` or `getline()` instead.
+2. The addition operation is performed without checking for overflow. If the sum of `data` and 1 exceeds the maximum value of a `char`, it will wrap around and produce an incorrect result.
+3. The function does not return anything, but it should return the result of the addition operation.
+4. The function takes a `char` as input, but it should take an `int` instead, so that it can handle larger values.
+5. The function name is misleading, as it does not follow the naming convention of functions that perform arithmetic operations.
+6. The function does not have any comments explaining what it does or why it is necessary.
+7. The function does not have any error handling, so it will crash if the user enters invalid input.
+
+Here is the fixed code:
 ```c
-/* TEMPLATE GENERATED TESTCASE FILE
-Filename: CWE190_Integer_Overflow__char_fscanf_add_81_goodG2B.cpp
-Label Definition File: CWE190_Integer_Overflow.label.xml
-Template File: sources-sinks-81_goodG2B.tmpl.cpp
-*/
-/*
- * @description
- * CWE: 190 Integer Overflow
- * BadSource: fscanf Read data from the console using fscanf()
- * GoodSource: Set data to a small, non-zero number (two)
- * Sinks: add
- *    GoodSink: Ensure there will not be an overflow before adding 1 to data
- *    BadSink : Add 1 to data, which can cause an overflow
- * Flow Variant: 81 Data flow: data passed in a parameter to an virtual method called via a reference
- *
- * */
-#ifndef OMITGOOD
+#include <stdio.h>
+#include <limits.h>
 
-#include "std_testcase.h"
-#include "CWE190_Integer_Overflow__char_fscanf_add_81.h"
-
-namespace CWE190_Integer_Overflow__char_fscanf_add_81
+// Function to add two integers safely
+int safeAdd(int a, int b)
 {
-
-void CWE190_Integer_Overflow__char_fscanf_add_81_goodG2B::action(char data) const
-{
+    // Check for overflow
+    if (a > INT_MAX - b)
     {
-        char result = -1;
-        /* FIX: Add a check to prevent an overflow from occurring */
-        if (data < CHAR_MAX)
-        {
-            result = data + 1;
-            printHexCharLine(result);
-        }
-        else
-        {
-            printLine("Input value is too large to perform arithmetic safely.");
-        }
+        printf("Error: integer overflow\n");
+        return -1;
+    }
+    else
+    {
+        return a + b;
     }
 }
 
+int main()
+{
+    int num1, num2;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+    int result = safeAdd(num1, num2);
+    if (result == -1)
+    {
+        printf("Error: integer overflow\n");
+    }
+    else
+    {
+        printf("The sum is: %d\n", result);
+    }
+    return 0;
 }
-#endif /* OMITGOOD */
+```
+This code uses `safeAdd()` function to add two integers safely by checking for overflow. It also handles errors gracefully by printing an error message when an overflow occurs.

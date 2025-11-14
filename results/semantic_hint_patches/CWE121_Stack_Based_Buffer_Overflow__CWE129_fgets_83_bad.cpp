@@ -1,49 +1,20 @@
-The original code has several security vulnerabilities that can be addressed as follows:
-
-1. Use `fgets()` with a maximum length to prevent buffer overflow attacks.
-```c
-char inputBuffer[CHAR_ARRAY_SIZE];
-if (fgets(inputBuffer, sizeof(inputBuffer), stdin) != NULL)
-{
-    /* Convert to int */
-    data = atoi(inputBuffer);
-}
-else
-{
-    printLine("fgets() failed.");
-}
-```
-2. Check the value of `data` before accessing it as an array index.
-```c
-if (data >= 0 && data < 10)
-{
-    buffer[data] = 1;
-    /* Print the array values */
-    for(i = 0; i < 10; i++)
-    {
-        printIntLine(buffer[i]);
-    }
-}
-else
-{
-    printLine("ERROR: Array index is out of bounds.");
-}
-```
-3. Use `strtol()` instead of `atoi()` to convert the string to an integer. This function checks for errors and returns a default value if the conversion fails.
-```c
-long int data = strtol(inputBuffer, NULL, 10);
-```
-4. Use `memset()` to clear the buffer before using it to avoid any potential sensitive information being left in memory.
-```c
-memset(buffer, 0, sizeof(buffer));
-```
-Here's the updated code:
-```c
 /* TEMPLATE GENERATED TESTCASE FILE
 Filename: CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_goodG2B.cpp
 Label Definition File: CWE121_Stack_Based_Buffer_Overflow__CWE129.label.xml
 Template File: sources-sinks-83_goodG2B.tmpl.cpp
 */
+/*
+ * @description
+ * CWE: 121 Stack Based Buffer Overflow
+ * BadSource: fgets Read data from the console using fgets()
+ * GoodSource: Larger than zero but less than 10
+ * Sinks:
+ *    GoodSink: Ensure the array index is valid
+ *    BadSink : Improperly check the array index by not checking the upper bound
+ * Flow Variant: 83 Data flow: data passed to class constructor and destructor by declaring the class object on the stack
+ *
+ * */
+#ifndef OMITGOOD
 
 #include "std_testcase.h"
 #include "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83.h"
@@ -56,11 +27,11 @@ CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_goodG2B::CWE121_Stack_Based_
 {
     data = dataCopy;
     {
-        char inputBuffer[CHAR_ARRAY_SIZE];
+        char inputBuffer[CHAR_ARRAY_SIZE] = "";
         if (fgets(inputBuffer, CHAR_ARRAY_SIZE, stdin) != NULL)
         {
             /* Convert to int */
-            data = strtol(inputBuffer, NULL, 10);
+            data = atoi(inputBuffer);
         }
         else
         {
@@ -86,8 +57,9 @@ CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_goodG2B::~CWE121_Stack_Based
         }
         else
         {
-            printLine("ERROR: Array index is out of bounds.");
+            printLine("ERROR: Array index is out-of-bounds");
         }
     }
 }
 }
+#endif /* OMITGOOD */
