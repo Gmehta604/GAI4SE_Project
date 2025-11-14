@@ -37,7 +37,7 @@ def load_codellama_model(model_name="codellama/CodeLlama-7b-Instruct-hf"):
     return tokenizer, model
 
 
-def load_security_hints(hints_file="benchmark/security_hints.json"):
+def load_security_hints(hints_file="benchmark/security_hints_codeastra.json"):
     """
     Load security hints from JSON file.
     
@@ -199,13 +199,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate patches using CodeLlama with security hints")
     parser.add_argument("--input", default="benchmark/vulnerable_snippets",
                        help="Directory containing vulnerable snippets")
-    parser.add_argument("--output", default="results/semantic_hint_patches",
+    parser.add_argument("--output", default="results/codeastra",
                        help="Output directory for generated patches")
-    parser.add_argument("--hints", default="benchmark/security_hints.json",
+    parser.add_argument("--hints", default="benchmark/security_hints_codeastra.json",
                        help="JSON file containing security hints")
     parser.add_argument("--model", default="codellama/CodeLlama-7b-Instruct-hf",
                        help="CodeLlama model name")
-    parser.add_argument("--max-length", type=int, default=512,
+    parser.add_argument("--max-length", type=int, default=1024,
                        help="Maximum generation length")
     
     args = parser.parse_args()
