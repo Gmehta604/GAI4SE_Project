@@ -113,7 +113,7 @@ def load_codebert_model():
         tokenizer = AutoTokenizer.from_pretrained("microsoft/codebert-base")
         model = AutoModel.from_pretrained(
             "microsoft/codebert-base",
-            torch_dtype=torch.float32
+            dtype=torch.float32
         )
         model.eval()
         return tokenizer, model
@@ -182,6 +182,31 @@ def check_quality(patch_file, ground_truth_file, tokenizer, model):
         return None
 
 
+def get_ground_truth_filename(patch_filename):
+    """
+    Convert patch filename to ground truth filename.
+    Patches are named *_bad.cpp, ground truth is named *_goodB2G.cpp
+    
+    Args:
+        patch_filename: Filename of the patch (e.g., "file_bad.cpp")
+        
+    Returns:
+        str: Ground truth filename (e.g., "file_goodB2G.cpp")
+    """
+    if isinstance(patch_filename, Path):
+        patch_filename = patch_filename.name
+    
+    # Replace _bad.cpp or _bad.c with _goodB2G.cpp or _goodB2G.c
+    if patch_filename.endswith('_bad.cpp'):
+        return patch_filename.replace('_bad.cpp', '_goodB2G.cpp')
+    elif patch_filename.endswith('_bad.c'):
+        return patch_filename.replace('_bad.c', '_goodB2G.c')
+    else:
+        # If no _bad suffix, try to find matching ground truth
+        # This handles other naming conventions
+        return patch_filename
+
+
 def evaluate_patches(baseline_dir, hinted_dir, vulnerable_dir, ground_truth_dir, output_csv="results/results.csv"):
     """
     Evaluate all generated patches.
@@ -213,9 +238,15 @@ def evaluate_patches(baseline_dir, hinted_dir, vulnerable_dir, ground_truth_dir,
     for patch_file in baseline_files:
         relative_path = patch_file.relative_to(baseline_path)
         vulnerable_file = vulnerable_path / relative_path
-        ground_truth_file = ground_truth_path / relative_path
+        # Convert patch filename to ground truth filename
+        ground_truth_filename = get_ground_truth_filename(relative_path.name)
+        ground_truth_file = ground_truth_path / ground_truth_filename
         
-        if not vulnerable_file.exists() or not ground_truth_file.exists():
+        if not vulnerable_file.exists():
+            print(f"Skipping {relative_path}: vulnerable file not found at {vulnerable_file}")
+            continue
+        if not ground_truth_file.exists():
+            print(f"Skipping {relative_path}: ground truth file not found at {ground_truth_file}")
             continue
         
         print(f"Evaluating: {relative_path}")
@@ -237,9 +268,15 @@ def evaluate_patches(baseline_dir, hinted_dir, vulnerable_dir, ground_truth_dir,
     for patch_file in hinted_files:
         relative_path = patch_file.relative_to(hinted_path)
         vulnerable_file = vulnerable_path / relative_path
-        ground_truth_file = ground_truth_path / relative_path
+        # Convert patch filename to ground truth filename
+        ground_truth_filename = get_ground_truth_filename(relative_path.name)
+        ground_truth_file = ground_truth_path / ground_truth_filename
         
-        if not vulnerable_file.exists() or not ground_truth_file.exists():
+        if not vulnerable_file.exists():
+            print(f"Skipping {relative_path}: vulnerable file not found at {vulnerable_file}")
+            continue
+        if not ground_truth_file.exists():
+            print(f"Skipping {relative_path}: ground truth file not found at {ground_truth_file}")
             continue
         
         print(f"Evaluating: {relative_path}")
@@ -303,7 +340,7 @@ if __name__ == "__main__":
                        help="Directory containing hinted patches")
     parser.add_argument("--vulnerable", default="benchmark/vulnerable_snippets",
                        help="Directory containing vulnerable snippets")
-    parser.add_argument("--ground-truth", default="benchmark/ground_truth_patches",
+    parser.add_argument("--ground-truth", default="benchmark/ground_truth",
                        help="Directory containing ground truth patches")
     parser.add_argument("--output", default="results/results.csv",
                        help="Output CSV file")

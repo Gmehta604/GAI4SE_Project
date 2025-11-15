@@ -9,6 +9,7 @@ venv/
 ENV/
 .venv
 .env/
+transformers_env/
 
 # Model files and cache
 *.bin
@@ -36,6 +37,7 @@ desktop.ini
 # Temporary files
 *.tmp
 *.temp
+
 
 
 
