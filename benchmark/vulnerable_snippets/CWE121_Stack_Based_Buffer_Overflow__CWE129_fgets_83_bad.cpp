@@ -1,19 +1,3 @@
-/* TEMPLATE GENERATED TESTCASE FILE
-Filename: CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad.cpp
-Label Definition File: CWE121_Stack_Based_Buffer_Overflow__CWE129.label.xml
-Template File: sources-sinks-83_bad.tmpl.cpp
-*/
-/*
- * @description
- * CWE: 121 Stack Based Buffer Overflow
- * BadSource: fgets Read data from the console using fgets()
- * GoodSource: Larger than zero but less than 10
- * Sinks:
- *    GoodSink: Ensure the array index is valid
- *    BadSink : Improperly check the array index by not checking the upper bound
- * Flow Variant: 83 Data flow: data passed to class constructor and destructor by declaring the class object on the stack
- *
- * */
 #ifndef OMITBAD
 
 #include "std_testcase.h"
@@ -30,7 +14,7 @@ CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad::CWE121_Stack_Based_Buff
         char inputBuffer[CHAR_ARRAY_SIZE] = "";
         if (fgets(inputBuffer, CHAR_ARRAY_SIZE, stdin) != NULL)
         {
-            /* Convert to int */
+            
             data = atoi(inputBuffer);
         }
         else
@@ -49,7 +33,7 @@ CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad::~CWE121_Stack_Based_Buf
         if (data >= 0)
         {
             buffer[data] = 1;
-            /* Print the array values */
+            
             for(i = 0; i < 10; i++)
             {
                 printIntLine(buffer[i]);
@@ -62,4 +46,4 @@ CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad::~CWE121_Stack_Based_Buf
     }
 }
 }
-#endif /* OMITBAD */
+#endif 

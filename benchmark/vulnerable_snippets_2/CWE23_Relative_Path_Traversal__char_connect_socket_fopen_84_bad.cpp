@@ -1,18 +1,4 @@
-/* TEMPLATE GENERATED TESTCASE FILE
-Filename: CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_bad.cpp
-Label Definition File: CWE23_Relative_Path_Traversal.label.xml
-Template File: sources-sink-84_bad.tmpl.cpp
-*/
-/*
- * @description
- * CWE: 23 Relative Path Traversal
- * BadSource: connect_socket Read data using a connect socket (client side)
- * GoodSource: Use a fixed file name
- * Sinks: fopen
- *    BadSink : Open the file named in data using fopen()
- * Flow Variant: 84 Data flow: data passed to class constructor and destructor by declaring the class object on the heap and deleting it after use
- *
- * */
+
 #ifndef OMITBAD
 
 #include "std_testcase.h"
@@ -22,9 +8,9 @@ Template File: sources-sink-84_bad.tmpl.cpp
 #include <winsock2.h>
 #include <windows.h>
 #include <direct.h>
-#pragma comment(lib, "ws2_32") /* include ws2_32.lib when linking */
+#pragma comment(lib, "ws2_32") 
 #define CLOSE_SOCKET closesocket
-#else /* NOT _WIN32 */
+#else
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -69,7 +55,6 @@ CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_bad::CWE23_Relative_
             }
             wsaDataInit = 1;
 #endif
-            /* POTENTIAL FLAW: Read data using a connect socket */
             connectSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
             if (connectSocket == INVALID_SOCKET)
             {
@@ -83,17 +68,14 @@ CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_bad::CWE23_Relative_
             {
                 break;
             }
-            /* Abort on error or the connection was closed, make sure to recv one
-             * less char than is in the recv_buf in order to append a terminator */
-            /* Abort on error or the connection was closed */
             recvResult = recv(connectSocket, (char *)(data + dataLen), sizeof(char) * (FILENAME_MAX - dataLen - 1), 0);
             if (recvResult == SOCKET_ERROR || recvResult == 0)
             {
                 break;
             }
-            /* Append null terminator */
+  
             data[dataLen + recvResult / sizeof(char)] = '\0';
-            /* Eliminate CRLF */
+          
             replace = strchr(data, '\r');
             if (replace)
             {
@@ -131,4 +113,4 @@ CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_bad::~CWE23_Relative
     }
 }
 }
-#endif /* OMITBAD */
+#endif
