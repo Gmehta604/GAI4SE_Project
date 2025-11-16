@@ -42,7 +42,7 @@ def load_model(model_name="rootxhacker/CodeAstra-7B"):
 
 
 # -------------------------------
-# Code Analysis Function
+# Code Analysis Function (Corrected)
 # -------------------------------
 def analyze_code(model, tokenizer, code, max_new_tokens=256, temperature=0.2):
     """
@@ -56,13 +56,18 @@ def analyze_code(model, tokenizer, code, max_new_tokens=256, temperature=0.2):
 
 Code:
 {code}
-"""
+
+Analysis:
+"""  # <-- I also added 'Analysis:' to better cue the model to start
 
     inputs = tokenizer(prompt, return_tensors="pt", truncation=True)
     # move inputs to model device
     if torch.cuda.is_available():
         device = model.device if hasattr(model, 'device') else torch.device('cuda')
         inputs = {k: v.to(device) for k, v in inputs.items()}
+
+    # Get the length of the input tokens
+    input_length = inputs['input_ids'].shape[1]
 
     with torch.no_grad():
         outputs = model.generate(
@@ -74,20 +79,24 @@ Code:
             eos_token_id=tokenizer.eos_token_id,
         )
 
-    # decode full sequence and strip prompt if present
+    # ====================================================================
+    # START: CORRECTED SECTION
+    # ====================================================================
+    
+    # Get the full output sequence
     seq = outputs[0]
-    full_decoded = tokenizer.decode(seq, skip_special_tokens=True)
 
-    # try to remove the prompt prefix from the decoded text
-    # split on the 'Security hint:' marker we include in build_prompt
-    if 'Security hint:' in full_decoded:
-        # return the part after the marker
-        hint = full_decoded.split('Security hint:')[-1].strip()
-    else:
-        hint = full_decoded.strip()
+    # Get *only* the newly generated tokens (excluding the prompt)
+    generated_tokens = seq[input_length:]
+    
+    # Decode only the new tokens to get the hint
+    hint = tokenizer.decode(generated_tokens, skip_special_tokens=True).strip()
+
+    # ====================================================================
+    # END: CORRECTED SECTION
+    # ====================================================================
 
     return hint
-
 
 # -------------------------------
 # Main Function
