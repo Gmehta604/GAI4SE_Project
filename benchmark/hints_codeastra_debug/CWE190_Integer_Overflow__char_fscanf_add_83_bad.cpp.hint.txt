@@ -1,1 +1,0 @@
-The code contains an integer overflow vulnerability in the use of fscanf() function. The fscanf() function reads data from the standard input stream and stores it into variables. If the data read exceeds the size of the variable, it can lead to an integer overflow. This can result in unexpected behavior or crashes.

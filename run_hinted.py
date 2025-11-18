@@ -73,14 +73,14 @@ def generate_patch_with_hint(code_snippet, hint, tokenizer, model, max_length=10
     # Use CodeLlama-Instruct format with proper instruction tags
     prompt = f"""<s>[INST] Fix the following C/C++ code to remove security vulnerabilities.
 
-Security Hint: {hint}
+            Security Hint: {hint}
 
-Vulnerable code:
-```c
-{code_snippet}
-```
+            Vulnerable code:
+            ```c
+            {code_snippet}
+            ```
 
-Output ONLY the fixed code. Do not include any explanations, comments, or descriptions. Provide only the corrected code snippet: [/INST]"""
+            Output ONLY the fixed code. Do not include any explanations, comments, or descriptions. Provide only the corrected code snippet: [/INST]"""
     
     inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=2048)
     if torch.cuda.is_available():
@@ -228,9 +228,9 @@ if __name__ == "__main__":
     import argparse
     
     parser = argparse.ArgumentParser(description="Generate patches using CodeLlama with security hints")
-    parser.add_argument("--input", default="benchmark/vulnerable_snippets",
+    parser.add_argument("--input", default="benchmark/vulnerable_snippets_2",
                        help="Directory containing vulnerable snippets")
-    parser.add_argument("--output", default="results/codeastra",
+    parser.add_argument("--output", default="results/codeastra_2",
                        help="Output directory for generated patches")
     parser.add_argument("--hints", default="benchmark/security_hints_codeastra.json",
                        help="JSON file containing security hints")

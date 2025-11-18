@@ -1,1 +1,0 @@
-The code contains a buffer overflow vulnerability due to improper handling of user input. The 'fgets' function is used to read data from the console, but it doesn't check the size of the input, leading to a potential buffer overflow.

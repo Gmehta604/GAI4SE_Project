@@ -11,12 +11,13 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 
 
-def load_codellama_model(model_name="codellama/CodeLlama-7b-Instruct-hf"):
+def load_codellama_model(model_name="codellama/CodeLlama-7b-Instruct-hf", use_compile=False):
     """
     Load CodeLlama model and tokenizer.
     
     Args:
         model_name: HuggingFace model identifier
+        use_compile: If True, compile model with torch.compile() for faster inference (PyTorch 2.0+)
         
     Returns:
         tuple: (tokenizer, model)
@@ -31,13 +32,22 @@ def load_codellama_model(model_name="codellama/CodeLlama-7b-Instruct-hf"):
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
         dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-        device_map="auto" if torch.cuda.is_available() else None
+        device_map="auto" if torch.cuda.is_available() else None,
+        low_cpu_mem_usage=True
     )
+    
+    # Optional: Compile model for faster inference (PyTorch 2.0+)
+    if use_compile and hasattr(torch, 'compile'):
+        print("Compiling model with torch.compile() for faster inference...")
+        model = torch.compile(model, mode="reduce-overhead")
+    
     print("Model loaded successfully!")
+    device_info = "GPU" if torch.cuda.is_available() else "CPU"
+    print(f"Using device: {device_info}")
     return tokenizer, model
 
 
-def generate_patch(code_snippet, tokenizer, model, max_length=1028):
+def generate_patch(code_snippet, tokenizer, model, max_length=1024):
     """
     Generate a patch for vulnerable code using CodeLlama.
     
@@ -66,13 +76,15 @@ def generate_patch(code_snippet, tokenizer, model, max_length=1028):
     # Store input length to extract only newly generated tokens
     input_length = inputs['input_ids'].shape[1]
     
-    with torch.no_grad():
+    with torch.inference_mode():
         outputs = model.generate(
             **inputs,
             max_new_tokens=max_length,
             temperature=0.2,
             do_sample=True,
             top_p=0.95,
+            num_beams=1,  # Greedy decoding for faster generation
+            use_cache=True,  # Enable KV cache for faster inference
             pad_token_id=tokenizer.pad_token_id,
             eos_token_id=tokenizer.eos_token_id,
             repetition_penalty=1.1
@@ -130,7 +142,7 @@ def generate_patch(code_snippet, tokenizer, model, max_length=1028):
     return generated_code
 
 
-def process_vulnerable_snippets(input_dir, output_dir, tokenizer, model):
+def process_vulnerable_snippets(input_dir, output_dir, tokenizer, model, max_length=1024):
     """
     Process all vulnerable snippets and generate patches.
     
@@ -139,6 +151,7 @@ def process_vulnerable_snippets(input_dir, output_dir, tokenizer, model):
         output_dir: Directory to save generated patches
         tokenizer: CodeLlama tokenizer
         model: CodeLlama model
+        max_length: Maximum generation length
     """
     input_path = Path(input_dir)
     output_path = Path(output_dir)
@@ -159,7 +172,7 @@ def process_vulnerable_snippets(input_dir, output_dir, tokenizer, model):
                 code = f.read()
             
             print(f"Generating patch for: {file_path.name}...")
-            patch = generate_patch(code, tokenizer, model)
+            patch = generate_patch(code, tokenizer, model, max_length=max_length)
             
             if patch:
                 # Maintain directory structure
@@ -198,6 +211,8 @@ if __name__ == "__main__":
                        help="CodeLlama model name")
     parser.add_argument("--max-length", type=int, default=512,
                        help="Maximum generation length")
+    parser.add_argument("--compile", action="store_true",
+                       help="Use torch.compile() for faster inference (PyTorch 2.0+)")
     
     args = parser.parse_args()
     
@@ -205,11 +220,11 @@ if __name__ == "__main__":
     print(f"Input directory: {args.input}")
     print(f"Output directory: {args.output}")
     print(f"Model: {args.model}")
+    print(f"Max length: {args.max_length}")
     print("-" * 60)
     
-    tokenizer, model = load_codellama_model(args.model)
-    process_vulnerable_snippets(args.input, args.output, tokenizer, model)
-
+    tokenizer, model = load_codellama_model(args.model, use_compile=args.compile)
+    process_vulnerable_snippets(args.input, args.output, tokenizer, model, max_length=args.max_length)
 
 
 

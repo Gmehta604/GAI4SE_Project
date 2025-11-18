@@ -60,6 +60,8 @@ Code:
 Analysis:
 """  # <-- I also added 'Analysis:' to better cue the model to start
 
+    print(torch.cuda.is_available())
+
     inputs = tokenizer(prompt, return_tensors="pt", truncation=True)
     # move inputs to model device
     if torch.cuda.is_available():
@@ -103,7 +105,7 @@ Analysis:
 # -------------------------------
 def main():
     parser = argparse.ArgumentParser(description="Generate security hints using CodeAstra-7B (PEFT)")
-    parser.add_argument('--input', default='benchmark/vulnerable_snippets', help='Directory with vulnerable snippets')
+    parser.add_argument('--input', default='benchmark/vulnerable_snippets_2', help='Directory with vulnerable snippets')
     parser.add_argument('--output', default='benchmark/security_hints_codeastra.json', help='Output JSON file for hints')
     parser.add_argument('--model', default='rootxhacker/CodeAstra-7B', help='Model name or path')
     parser.add_argument('--max-new-tokens', type=int, default=256)

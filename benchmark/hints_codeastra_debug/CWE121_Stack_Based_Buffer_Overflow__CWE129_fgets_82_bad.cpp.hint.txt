@@ -1,1 +1,0 @@
-The code snippet demonstrates a buffer overflow vulnerability in C++. The 'fgets' function is used to read data from the console, but it does not check the size of the input. This can lead to a buffer overflow if the input is larger than the buffer size. The vulnerability is further exacerbated by the lack of proper bounds checking on array indices.
