@@ -1,1 +1,0 @@
-The code uses the 'fscanf' function to read data from the console. This data is then used in a multiplication operation, which can lead to an integer overflow if the data read is not properly validated.

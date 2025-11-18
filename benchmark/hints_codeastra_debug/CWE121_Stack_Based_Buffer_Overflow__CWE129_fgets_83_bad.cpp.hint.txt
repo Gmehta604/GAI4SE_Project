@@ -1,5 +1,0 @@
-The code uses the `fgets()` function to read data from the console. The function reads a line from the console and stores it in a character array. If the line is longer than the array size, it can lead to a buffer overflow.
-
-The vulnerability occurs when the programmer does not properly check the array index before accessing it. This can lead to a stack-based buffer overflow, which can be exploited by an attacker to execute arbitrary code.
-
-To fix the vulnerability, the programmer should properly check the array index before accessing it. This can be done by comparing the index to the size of the array. If the index is out of bounds, the program should handle it appropriately, such as by printing an error message or terminating the program.

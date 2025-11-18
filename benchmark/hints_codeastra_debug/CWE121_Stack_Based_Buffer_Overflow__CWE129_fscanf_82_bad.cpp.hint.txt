@@ -1,1 +1,0 @@
-The code snippet demonstrates a buffer overflow vulnerability in C++. The vulnerability arises from the use of 'fscanf' function to read data from the console without checking the size of the input. This can lead to a stack-based buffer overflow if the input size is larger than the buffer size.

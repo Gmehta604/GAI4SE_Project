@@ -1,0 +1,41 @@
+Here's the fixed code:
+```c
+#ifndef OMITBAD
+
+#include "std_testcase.h"
+#include "CWE259_Hard_Coded_Password__w32_char_81.h"
+
+#include <windows.h>
+#pragma comment(lib, "advapi32.lib")
+
+namespace CWE259_Hard_Coded_Password__w32_char_81
+{
+
+void CWE259_Hard_Coded_Password__w32_char_81_bad::action(char * password) const
+{
+    {
+        HANDLE pHandle;
+        char * username = "User";
+        char * domain = "Domain";
+        if (LogonUserA(
+                    username,
+                    domain,
+                    GetSecurePassword(), // Use a secure method for getting the password
+                    LOGON32_LOGON_NETWORK,
+                    LOGON32_PROVIDER_DEFAULT,
+                    &pHandle) != 0)
+        {
+            printLine("User logged in successfully.");
+            CloseHandle(pHandle);
+        }
+        else
+        {
+            printLine("Unable to login.");
+        }
+    }
+}
+
+}
+#endif 
+```
+In the fixed code, we replaced the hard-coded password with a call to `GetSecurePassword()`, which should return a securely stored password. This eliminates the security vulnerability of hard-coding the password in the source code.

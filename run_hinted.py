@@ -197,9 +197,9 @@ if __name__ == "__main__":
     import argparse
     
     parser = argparse.ArgumentParser(description="Generate patches using CodeLlama with security hints")
-    parser.add_argument("--input", default="benchmark/vulnerable_snippets",
+    parser.add_argument("--input", default="benchmark/vulnerable_snippets_2",
                        help="Directory containing vulnerable snippets")
-    parser.add_argument("--output", default="results/codeastra",
+    parser.add_argument("--output", default="results/codeastra_2",
                        help="Output directory for generated patches")
     parser.add_argument("--hints", default="benchmark/security_hints_codeastra.json",
                        help="JSON file containing security hints")

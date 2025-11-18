@@ -1,1 +1,0 @@
-The code may contain a buffer overflow vulnerability due to improper use of the fscanf() function. The fscanf() function reads data from the console and stores it into a buffer. If the size of the buffer is not properly checked, it can lead to a buffer overflow.

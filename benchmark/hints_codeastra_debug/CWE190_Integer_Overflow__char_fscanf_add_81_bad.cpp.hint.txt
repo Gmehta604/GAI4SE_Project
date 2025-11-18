@@ -1,1 +1,0 @@
-The code uses the 'fscanf' function to read data from the console. The data read from the console is then added to a character variable without checking for integer overflow. This can lead to integer overflow and potential buffer overflows.

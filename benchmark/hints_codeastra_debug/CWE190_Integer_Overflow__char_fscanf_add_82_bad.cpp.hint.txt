@@ -1,3 +1,0 @@
-The code snippet demonstrates a potential integer overflow vulnerability in C++. The vulnerability occurs when the 'fscanf' function is used to read data from the console and the data read is added to a variable without checking its size. This can lead to an integer overflow if the data read is larger than the variable can hold.
-
-The vulnerability can be exploited by an attacker to execute arbitrary code or cause a denial of service. To mitigate this vulnerability, it is recommended to validate input data before performing arithmetic operations.
