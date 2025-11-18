@@ -30,7 +30,7 @@ def load_codellama_model(model_name="codellama/CodeLlama-7b-Instruct-hf"):
     
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
-        torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+        dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
         device_map="auto" if torch.cuda.is_available() else None
     )
     print("Model loaded successfully!")
@@ -52,12 +52,12 @@ def generate_patch(code_snippet, tokenizer, model, max_length=1028):
     """
     # Use CodeLlama-Instruct format with proper instruction tags
     prompt = f"""<s>[INST] Fix the following C/C++ code to remove security vulnerabilities:
+            
+            ```c
+            {code_snippet}
+            ```
 
-    ```c
-    {code_snippet}
-    ```
-
-    Provide the fixed code: [/INST]"""
+            Output ONLY the fixed code. Do not include any explanations, comments, or descriptions. Provide only the corrected code snippet: [/INST]"""
     
     inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=2048)
     if torch.cuda.is_available():
@@ -85,16 +85,47 @@ def generate_patch(code_snippet, tokenizer, model, max_length=1028):
     # Clean up the generated code
     generated_code = generated_text.strip()
     
-    # Remove code block markers if present
-    if generated_code.startswith("```"):
-        # Remove opening code block marker (could be ```c, ```cpp, etc.)
-        lines = generated_code.split('\n')
-        if lines[0].startswith("```"):
-            generated_code = '\n'.join(lines[1:])
+    # Extract code from code block if present
+    if "```" in generated_code:
+        # Find the first code block
+        start_idx = generated_code.find("```")
+        if start_idx != -1:
+            # Skip the opening marker and language identifier
+            start_idx = generated_code.find('\n', start_idx) + 1
+            # Find the closing marker
+            end_idx = generated_code.find("```", start_idx)
+            if end_idx != -1:
+                generated_code = generated_code[start_idx:end_idx].strip()
+            else:
+                # No closing marker, take everything after opening
+                generated_code = generated_code[start_idx:].strip()
     
-    # Remove closing code block marker if present
-    if generated_code.endswith("```"):
-        generated_code = generated_code[:-3].strip()
+    # Remove any leading explanatory text (common patterns)
+    lines = generated_code.split('\n')
+    code_start = 0
+    code_indicators = ['{', '}', ';', '#include', '#define', 'int ', 'void ', 'char ', 'return', 'if ', 'for ', 'while ']
+    
+    for i, line in enumerate(lines):
+        # Skip lines that look like explanations (not code-like)
+        line_stripped = line.strip()
+        if not line_stripped:
+            continue
+        
+        line_lower = line_stripped.lower()
+        is_explanation = (
+            line_lower.startswith(('here', 'the fixed', 'here is', 'here\'s', 'below', 'following')) or
+            line_lower.endswith((':', 'is:', 'code:'))
+        )
+        
+        has_code_indicator = any(indicator in line for indicator in code_indicators)
+        
+        if is_explanation and not has_code_indicator:
+            continue
+        else:
+            code_start = i
+            break
+    
+    generated_code = '\n'.join(lines[code_start:]).strip()
     
     return generated_code
 
@@ -159,9 +190,9 @@ if __name__ == "__main__":
     import argparse
     
     parser = argparse.ArgumentParser(description="Generate patches using CodeLlama (baseline, no hints)")
-    parser.add_argument("--input", default="benchmark/vulnerable_snippets",
+    parser.add_argument("--input", default="benchmark/vulnerable_snippets_2",
                        help="Directory containing vulnerable snippets")
-    parser.add_argument("--output", default="results/baseline_patches",
+    parser.add_argument("--output", default="results/baseline_patches_2",
                        help="Output directory for generated patches")
     parser.add_argument("--model", default="codellama/CodeLlama-7b-Instruct-hf",
                        help="CodeLlama model name")

@@ -1,0 +1,325 @@
+{
+  "timestamp": "2025-11-17T19:08:59.517194",
+  "input_directory": "benchmark/vulnerable_snippets",
+  "summary": {
+    "total_files": 24,
+    "successful": 24,
+    "failed": 0,
+    "total_vulnerabilities": 4,
+    "files_with_vulns": 2,
+    "files_without_vulns": 22,
+    "vulnerability_types": {}
+  },
+  "results": [
+    {
+      "file": "benchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 32 in approximately 0.04 seconds (903 lines/second)\nPhysical Source Lines of Code (SLOC) = 26\nHits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_82_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_82_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 32 in approximately 0.06 seconds (547 lines/second)\nPhysical Source Lines of Code (SLOC) = 26\nHits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad.cpp\n\nFINAL RESULTS:\n\nbenchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad.cpp:14:  [2] (buffer) char:\n  Statically-sized arrays can be improperly restricted, leading to potential\n  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use\n  functions that limit length, or ensure that the size is larger than the\n  maximum possible length.\nbenchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad.cpp:18:  [2] (integer) atoi:\n  Unless checked, the resulting number can exceed the expected range\n  (CWE-190). If source untrusted, check both minimum and maximum, even if the\n  input had no minus sign (large numbers can roll over into negative number;\n  consider saving to an unsigned value if that is intended).\n\nANALYSIS SUMMARY:\n\nHits = 2\nLines analyzed = 49 in approximately 0.06 seconds (836 lines/second)\nPhysical Source Lines of Code (SLOC) = 42\nHits@level = [0]   0 [1]   0 [2]   2 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   2 [1+]   2 [2+]   2 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+] 47.619 [1+] 47.619 [2+] 47.619 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nNot every hit is necessarily a security vulnerability.\nYou can inhibit a report by adding a comment in this form:\n// flawfinder: ignore\nMake *sure* it's a false positive!\nYou can use the option --neverignore to show these.\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 2,
+        "hits": [
+          {
+            "line": 14,
+            "level": "2",
+            "description": ""
+          },
+          {
+            "line": 18,
+            "level": "2",
+            "description": ""
+          }
+        ]
+      },
+      "vulnerability_count": 2
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_bad.cpp\n\nFINAL RESULTS:\n\nbenchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_bad.cpp:14:  [2] (buffer) char:\n  Statically-sized arrays can be improperly restricted, leading to potential\n  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use\n  functions that limit length, or ensure that the size is larger than the\n  maximum possible length.\nbenchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_bad.cpp:18:  [2] (integer) atoi:\n  Unless checked, the resulting number can exceed the expected range\n  (CWE-190). If source untrusted, check both minimum and maximum, even if the\n  input had no minus sign (large numbers can roll over into negative number;\n  consider saving to an unsigned value if that is intended).\n\nANALYSIS SUMMARY:\n\nHits = 2\nLines analyzed = 49 in approximately 0.05 seconds (917 lines/second)\nPhysical Source Lines of Code (SLOC) = 42\nHits@level = [0]   0 [1]   0 [2]   2 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   2 [1+]   2 [2+]   2 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+] 47.619 [1+] 47.619 [2+] 47.619 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nNot every hit is necessarily a security vulnerability.\nYou can inhibit a report by adding a comment in this form:\n// flawfinder: ignore\nMake *sure* it's a false positive!\nYou can use the option --neverignore to show these.\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 2,
+        "hits": [
+          {
+            "line": 14,
+            "level": "2",
+            "description": ""
+          },
+          {
+            "line": 18,
+            "level": "2",
+            "description": ""
+          }
+        ]
+      },
+      "vulnerability_count": 2
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 32 in approximately 0.07 seconds (451 lines/second)\nPhysical Source Lines of Code (SLOC) = 26\nHits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_82_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_82_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 32 in approximately 0.04 seconds (811 lines/second)\nPhysical Source Lines of Code (SLOC) = 26\nHits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_83_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_83_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 37 in approximately 0.05 seconds (693 lines/second)\nPhysical Source Lines of Code (SLOC) = 31\nHits@level = [0]   1 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   1 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+] 32.2581 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_84_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_84_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 37 in approximately 0.04 seconds (959 lines/second)\nPhysical Source Lines of Code (SLOC) = 31\nHits@level = [0]   1 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   1 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+] 32.2581 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE190_Integer_Overflow__char_fscanf_add_81_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE190_Integer_Overflow__char_fscanf_add_81_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 18 in approximately 0.06 seconds (321 lines/second)\nPhysical Source Lines of Code (SLOC) = 14\nHits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE190_Integer_Overflow__char_fscanf_add_82_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE190_Integer_Overflow__char_fscanf_add_82_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 18 in approximately 0.06 seconds (302 lines/second)\nPhysical Source Lines of Code (SLOC) = 14\nHits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE190_Integer_Overflow__char_fscanf_add_83_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE190_Integer_Overflow__char_fscanf_add_83_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 22 in approximately 0.04 seconds (520 lines/second)\nPhysical Source Lines of Code (SLOC) = 19\nHits@level = [0]   1 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   1 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+] 52.6316 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE190_Integer_Overflow__char_fscanf_add_84_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE190_Integer_Overflow__char_fscanf_add_84_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 22 in approximately 0.06 seconds (361 lines/second)\nPhysical Source Lines of Code (SLOC) = 19\nHits@level = [0]   1 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   1 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+] 52.6316 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE190_Integer_Overflow__char_fscanf_multiply_81_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE190_Integer_Overflow__char_fscanf_multiply_81_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 19 in approximately 0.05 seconds (396 lines/second)\nPhysical Source Lines of Code (SLOC) = 15\nHits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE190_Integer_Overflow__char_fscanf_multiply_82_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE190_Integer_Overflow__char_fscanf_multiply_82_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 19 in approximately 0.07 seconds (264 lines/second)\nPhysical Source Lines of Code (SLOC) = 15\nHits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE190_Integer_Overflow__char_fscanf_multiply_83_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE190_Integer_Overflow__char_fscanf_multiply_83_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 23 in approximately 0.04 seconds (606 lines/second)\nPhysical Source Lines of Code (SLOC) = 20\nHits@level = [0]   1 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   1 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+]  50 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE190_Integer_Overflow__char_fscanf_multiply_84_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE190_Integer_Overflow__char_fscanf_multiply_84_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 23 in approximately 0.05 seconds (508 lines/second)\nPhysical Source Lines of Code (SLOC) = 20\nHits@level = [0]   1 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   1 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+]  50 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE476_NULL_Pointer_Dereference__char_81_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE476_NULL_Pointer_Dereference__char_81_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 16 in approximately 0.06 seconds (287 lines/second)\nPhysical Source Lines of Code (SLOC) = 11\nHits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE476_NULL_Pointer_Dereference__char_82_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE476_NULL_Pointer_Dereference__char_82_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 16 in approximately 0.04 seconds (425 lines/second)\nPhysical Source Lines of Code (SLOC) = 11\nHits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE476_NULL_Pointer_Dereference__class_81_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE476_NULL_Pointer_Dereference__class_81_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 16 in approximately 0.04 seconds (371 lines/second)\nPhysical Source Lines of Code (SLOC) = 12\nHits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE476_NULL_Pointer_Dereference__class_82_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE476_NULL_Pointer_Dereference__class_82_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 16 in approximately 0.06 seconds (286 lines/second)\nPhysical Source Lines of Code (SLOC) = 12\nHits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE476_NULL_Pointer_Dereference__int64_t_81_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE476_NULL_Pointer_Dereference__int64_t_81_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 15 in approximately 0.03 seconds (439 lines/second)\nPhysical Source Lines of Code (SLOC) = 11\nHits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE476_NULL_Pointer_Dereference__int64_t_82_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE476_NULL_Pointer_Dereference__int64_t_82_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 15 in approximately 0.04 seconds (403 lines/second)\nPhysical Source Lines of Code (SLOC) = 11\nHits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE476_NULL_Pointer_Dereference__int_81_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE476_NULL_Pointer_Dereference__int_81_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 15 in approximately 0.06 seconds (247 lines/second)\nPhysical Source Lines of Code (SLOC) = 11\nHits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    },
+    {
+      "file": "benchmark/vulnerable_snippets/CWE476_NULL_Pointer_Dereference__int_82_bad.cpp",
+      "returncode": 0,
+      "stdout": "Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.\nNumber of rules (primarily dangerous function names) in C/C++ ruleset: 222\nExamining benchmark/vulnerable_snippets/CWE476_NULL_Pointer_Dereference__int_82_bad.cpp\n\nFINAL RESULTS:\n\n\nANALYSIS SUMMARY:\n\nNo hits found.\nLines analyzed = 15 in approximately 0.04 seconds (420 lines/second)\nPhysical Source Lines of Code (SLOC) = 11\nHits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0\nHits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nHits/KSLOC@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0\nMinimum risk level = 1\n\nThere may be other security vulnerabilities; review your code!\nSee 'Secure Programming HOWTO'\n(https://dwheeler.com/secure-programs) for more information.\n",
+      "stderr": "",
+      "success": true,
+      "parsed": {
+        "total_hits": 0,
+        "hits": []
+      },
+      "vulnerability_count": 0
+    }
+  ]
+}
