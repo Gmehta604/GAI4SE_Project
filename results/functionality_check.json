@@ -1,0 +1,737 @@
+{
+  "timestamp": "2025-11-19T00:10:27.666181",
+  "functionality_summary": {
+    "baseline_patches_2": {
+      "total_files": 28,
+      "compiles_successfully": 5,
+      "compilation_failed": 19,
+      "skipped": 4,
+      "success_rate": 17.857142857142858
+    },
+    "codeastra_2": {
+      "total_files": 92,
+      "compiles_successfully": 3,
+      "compilation_failed": 76,
+      "skipped": 13,
+      "success_rate": 3.260869565217391
+    }
+  },
+  "results": {
+    "baseline_patches_2": [
+      {
+        "file": "io.c",
+        "full_path": "results/baseline_patches/io.c",
+        "compiles": null,
+        "error": "Support file (not meant to compile standalone)"
+      },
+      {
+        "file": "std_thread.c",
+        "full_path": "results/baseline_patches/std_thread.c",
+        "compiles": null,
+        "error": "Support file (not meant to compile standalone)"
+      },
+      {
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81_bad.cpp",
+        "full_path": "results/baseline_patches/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81_bad_test.cpp:62:9: error: found ‘:’ in nested-name-specifier, expected ‘::’\n   62 | Filename: CWE121_Stack_Based_Buffer_Ove"
+      },
+      {
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_82_bad.cpp",
+        "full_path": "results/baseline_patches/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad.cpp",
+        "full_path": "results/baseline_patches/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad_test.cpp:62:1: error: expected unqualified-id before ‘if’\n   62 | if (data >= 0 && data < 10)\n      | ^~\nresults/baseli"
+      },
+      {
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_bad.cpp",
+        "full_path": "results/baseline_patches/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches/CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_bad_test.cpp:62:4: error: stray ‘`’ in program\n   62 | 1. `fgets()` function: This function can cause a buffer overflow if "
+      },
+      {
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81_bad.cpp",
+        "full_path": "results/baseline_patches/CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches/CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81_bad_test.cpp:62:9: error: found ‘:’ in nested-name-specifier, expected ‘::’\n   62 | Filename: CWE121_Stack_Based_Buffer_Ov"
+      },
+      {
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_82_bad.cpp",
+        "full_path": "results/baseline_patches/CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_83_bad.cpp",
+        "full_path": "results/baseline_patches/CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_83_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches/CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_83_bad_test.cpp:62:9: error: found ‘:’ in nested-name-specifier, expected ‘::’\n   62 | Filename: CWE121_Stack_Based_Buffer_Ov"
+      },
+      {
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_84_bad.cpp",
+        "full_path": "results/baseline_patches/CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_84_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches/CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_84_bad_test.cpp:62:9: error: found ‘:’ in nested-name-specifier, expected ‘::’\n   62 | Filename: CWE121_Stack_Based_Buffer_Ov"
+      },
+      {
+        "file": "CWE190_Integer_Overflow__char_fscanf_add_81_bad.cpp",
+        "full_path": "results/baseline_patches/CWE190_Integer_Overflow__char_fscanf_add_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE190_Integer_Overflow__char_fscanf_add_82_bad.cpp",
+        "full_path": "results/baseline_patches/CWE190_Integer_Overflow__char_fscanf_add_82_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches/CWE190_Integer_Overflow__char_fscanf_add_82_bad_test.cpp:62:9: error: found ‘:’ in nested-name-specifier, expected ‘::’\n   62 | Filename: CWE190_Integer_Overflow__char_fscanf_"
+      },
+      {
+        "file": "CWE190_Integer_Overflow__char_fscanf_add_83_bad.cpp",
+        "full_path": "results/baseline_patches/CWE190_Integer_Overflow__char_fscanf_add_83_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches/CWE190_Integer_Overflow__char_fscanf_add_83_bad_test.cpp:65:1: error: ‘CWE190_Integer_Overflow__char_fscanf_add_83_goodG2B’ does not name a type\n   65 | CWE190_Integer_Overflo"
+      },
+      {
+        "file": "CWE190_Integer_Overflow__char_fscanf_add_84_bad.cpp",
+        "full_path": "results/baseline_patches/CWE190_Integer_Overflow__char_fscanf_add_84_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches/CWE190_Integer_Overflow__char_fscanf_add_84_bad_test.cpp:62:9: error: found ‘:’ in nested-name-specifier, expected ‘::’\n   62 | Filename: CWE190_Integer_Overflow__char_fscanf_"
+      },
+      {
+        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_81_bad.cpp",
+        "full_path": "results/baseline_patches/CWE190_Integer_Overflow__char_fscanf_multiply_81_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches/CWE190_Integer_Overflow__char_fscanf_multiply_81_bad_test.cpp:62:9: error: found ‘:’ in nested-name-specifier, expected ‘::’\n   62 | Filename: CWE190_Integer_Overflow__char_fs"
+      },
+      {
+        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_82_bad.cpp",
+        "full_path": "results/baseline_patches/CWE190_Integer_Overflow__char_fscanf_multiply_82_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches/CWE190_Integer_Overflow__char_fscanf_multiply_82_bad_test.cpp: In function ‘void action(char)’:\nresults/baseline_patches/CWE190_Integer_Overflow__char_fscanf_multiply_82_bad_t"
+      },
+      {
+        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_83_bad.cpp",
+        "full_path": "results/baseline_patches/CWE190_Integer_Overflow__char_fscanf_multiply_83_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches/CWE190_Integer_Overflow__char_fscanf_multiply_83_bad_test.cpp:62:40: error: stray ‘`’ in program\n   62 | 2. The multiplication operation in the `printHexCharLine()` function c"
+      },
+      {
+        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_84_bad.cpp",
+        "full_path": "results/baseline_patches/CWE190_Integer_Overflow__char_fscanf_multiply_84_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches/CWE190_Integer_Overflow__char_fscanf_multiply_84_bad_test.cpp:62:9: error: found ‘:’ in nested-name-specifier, expected ‘::’\n   62 | Filename: CWE190_Integer_Overflow__char_fs"
+      },
+      {
+        "file": "CWE476_NULL_Pointer_Dereference__char_81_bad.cpp",
+        "full_path": "results/baseline_patches/CWE476_NULL_Pointer_Dereference__char_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE476_NULL_Pointer_Dereference__char_82_bad.cpp",
+        "full_path": "results/baseline_patches/CWE476_NULL_Pointer_Dereference__char_82_bad.cpp",
+        "compiles": false,
+        "error": "/usr/bin/ld: /tmp/cchuKjgB.o: in function `action(char*)':\nCWE476_NULL_Pointer_Dereference__char_82_bad_test.cpp:(.text+0x2c7): undefined reference to `printHexCharLine(char)'\ncollect2: error: ld retu"
+      },
+      {
+        "file": "CWE476_NULL_Pointer_Dereference__class_81_bad.cpp",
+        "full_path": "results/baseline_patches/CWE476_NULL_Pointer_Dereference__class_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE476_NULL_Pointer_Dereference__class_82_bad.cpp",
+        "full_path": "results/baseline_patches/CWE476_NULL_Pointer_Dereference__class_82_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches/CWE476_NULL_Pointer_Dereference__class_82_bad_test.cpp:62:1: error: expected unqualified-id before ‘if’\n   62 | if (data != nullptr) {\n      | ^~\nresults/baseline_patches/CWE4"
+      },
+      {
+        "file": "CWE476_NULL_Pointer_Dereference__int64_t_81_bad.cpp",
+        "full_path": "results/baseline_patches/CWE476_NULL_Pointer_Dereference__int64_t_81_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches/CWE476_NULL_Pointer_Dereference__int64_t_81_bad_test.cpp:67:1: error: expected class-name before ‘{’ token\n   67 | {\n      | ^\nresults/baseline_patches/CWE476_NULL_Pointer_Der"
+      },
+      {
+        "file": "CWE476_NULL_Pointer_Dereference__int64_t_82_bad.cpp",
+        "full_path": "results/baseline_patches/CWE476_NULL_Pointer_Dereference__int64_t_82_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches/CWE476_NULL_Pointer_Dereference__int64_t_82_bad_test.cpp: In function ‘void CWE476_NULL_Pointer_Dereference__int64_t_82::printLongLongLine(int64_t)’:\nresults/baseline_patches/"
+      },
+      {
+        "file": "CWE476_NULL_Pointer_Dereference__int_81_bad.cpp",
+        "full_path": "results/baseline_patches/CWE476_NULL_Pointer_Dereference__int_81_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches/CWE476_NULL_Pointer_Dereference__int_81_bad_test.cpp:67:1: error: expected class-name before ‘{’ token\n   67 | {\n      | ^\n"
+      },
+      {
+        "file": "CWE476_NULL_Pointer_Dereference__int_82_bad.cpp",
+        "full_path": "results/baseline_patches/CWE476_NULL_Pointer_Dereference__int_82_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches/CWE476_NULL_Pointer_Dereference__int_82_bad_test.cpp:62:9: error: found ‘:’ in nested-name-specifier, expected ‘::’\n   62 | Filename: CWE476_NULL_Pointer_Dereference__int_82_g"
+      },
+      {
+        "file": "main.cpp",
+        "full_path": "results/baseline_patches/main.cpp",
+        "compiles": null,
+        "error": "Support file (not meant to compile standalone)"
+      },
+      {
+        "file": "main_linux.cpp",
+        "full_path": "results/baseline_patches/main_linux.cpp",
+        "compiles": null,
+        "error": "Support file (not meant to compile standalone)"
+      }
+    ],
+    "codeastra_2": [
+      {
+        "file": "CWE114_Process_Control__w32_char_connect_socket_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE114_Process_Control__w32_char_connect_socket_81_bad.cpp",
+        "compiles": null,
+        "error": "Missing includes/libraries (available in your environment)"
+      },
+      {
+        "file": "CWE114_Process_Control__w32_char_connect_socket_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE114_Process_Control__w32_char_connect_socket_82_bad.cpp",
+        "compiles": null,
+        "error": "Missing includes/libraries (available in your environment)"
+      },
+      {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_81_bad_test.cpp:70:6: error: ‘CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_81_bad’ has not been declare"
+      },
+      {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_82_bad_test.cpp:70:6: error: ‘CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_82_bad’ has not been declare"
+      },
+      {
+        "file": "CWE123_Write_What_Where_Condition__connect_socket_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE123_Write_What_Where_Condition__connect_socket_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE123_Write_What_Where_Condition__connect_socket_81_bad_test.cpp:70:6: error: ‘CWE123_Write_What_Where_Condition__connect_socket_81_bad’ has not been declared\n   70 | void CWE123_"
+      },
+      {
+        "file": "CWE123_Write_What_Where_Condition__connect_socket_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE123_Write_What_Where_Condition__connect_socket_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE123_Write_What_Where_Condition__connect_socket_82_bad_test.cpp:70:6: error: ‘CWE123_Write_What_Where_Condition__connect_socket_82_bad’ has not been declared\n   70 | void CWE123_"
+      },
+      {
+        "file": "CWE126_Buffer_Overread__char_alloca_loop_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE126_Buffer_Overread__char_alloca_loop_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE126_Buffer_Overread__char_alloca_loop_81_bad_test.cpp:70:6: error: ‘CWE126_Buffer_Overread__char_alloca_loop_81_bad’ has not been declared\n   70 | void CWE126_Buffer_Overread__c"
+      },
+      {
+        "file": "CWE126_Buffer_Overread__char_alloca_loop_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE126_Buffer_Overread__char_alloca_loop_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE126_Buffer_Overread__char_alloca_loop_82_bad_test.cpp:70:6: error: ‘CWE126_Buffer_Overread__char_alloca_loop_82_bad’ has not been declared\n   70 | void CWE126_Buffer_Overread__c"
+      },
+      {
+        "file": "CWE127_Buffer_Underread__char_alloca_cpy_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE127_Buffer_Underread__char_alloca_cpy_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE127_Buffer_Underread__char_alloca_cpy_81_bad_test.cpp:70:6: error: ‘CWE127_Buffer_Underread__char_alloca_cpy_81_bad’ has not been declared\n   70 | void CWE127_Buffer_Underread__"
+      },
+      {
+        "file": "CWE127_Buffer_Underread__char_alloca_cpy_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE127_Buffer_Underread__char_alloca_cpy_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE127_Buffer_Underread__char_alloca_cpy_82_bad_test.cpp:70:6: error: ‘CWE127_Buffer_Underread__char_alloca_cpy_82_bad’ has not been declared\n   70 | void CWE127_Buffer_Underread__"
+      },
+      {
+        "file": "CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_81_bad_test.cpp:70:6: error: ‘CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_81_bad’ has not been dec"
+      },
+      {
+        "file": "CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_82_bad_test.cpp:70:6: error: ‘CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_82_bad’ has not been dec"
+      },
+      {
+        "file": "CWE15_External_Control_of_System_or_Configuration_Setting__w32_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE15_External_Control_of_System_or_Configuration_Setting__w32_81_bad.cpp",
+        "compiles": null,
+        "error": "Missing includes/libraries (available in your environment)"
+      },
+      {
+        "file": "CWE15_External_Control_of_System_or_Configuration_Setting__w32_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE15_External_Control_of_System_or_Configuration_Setting__w32_82_bad.cpp",
+        "compiles": null,
+        "error": "Missing includes/libraries (available in your environment)"
+      },
+      {
+        "file": "CWE176_Improper_Handling_of_Unicode_Encoding__w32_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE176_Improper_Handling_of_Unicode_Encoding__w32_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE176_Improper_Handling_of_Unicode_Encoding__w32_81_bad_test.cpp:70:6: error: ‘CWE176_Improper_Handling_of_Unicode_Encoding__w32_81_bad’ has not been declared\n   70 | void CWE176_"
+      },
+      {
+        "file": "CWE176_Improper_Handling_of_Unicode_Encoding__w32_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE176_Improper_Handling_of_Unicode_Encoding__w32_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE176_Improper_Handling_of_Unicode_Encoding__w32_82_bad_test.cpp:70:6: error: ‘CWE176_Improper_Handling_of_Unicode_Encoding__w32_82_bad’ has not been declared\n   70 | void CWE176_"
+      },
+      {
+        "file": "CWE191_Integer_Underflow__char_fscanf_multiply_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE191_Integer_Underflow__char_fscanf_multiply_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE191_Integer_Underflow__char_fscanf_multiply_81_bad_test.cpp:70:6: error: ‘CWE191_Integer_Underflow__char_fscanf_multiply_81_bad’ has not been declared\n   70 | void CWE191_Intege"
+      },
+      {
+        "file": "CWE191_Integer_Underflow__char_fscanf_multiply_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE191_Integer_Underflow__char_fscanf_multiply_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE191_Integer_Underflow__char_fscanf_multiply_82_bad_test.cpp:70:6: error: ‘CWE191_Integer_Underflow__char_fscanf_multiply_82_bad’ has not been declared\n   70 | void CWE191_Intege"
+      },
+      {
+        "file": "CWE194_Unexpected_Sign_Extension__connect_socket_malloc_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE194_Unexpected_Sign_Extension__connect_socket_malloc_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE194_Unexpected_Sign_Extension__connect_socket_malloc_81_bad_test.cpp:70:6: error: ‘CWE194_Unexpected_Sign_Extension__connect_socket_malloc_81_bad’ has not been declared\n   70 | "
+      },
+      {
+        "file": "CWE194_Unexpected_Sign_Extension__connect_socket_malloc_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE194_Unexpected_Sign_Extension__connect_socket_malloc_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE194_Unexpected_Sign_Extension__connect_socket_malloc_82_bad_test.cpp:70:6: error: ‘CWE194_Unexpected_Sign_Extension__connect_socket_malloc_82_bad’ has not been declared\n   70 | "
+      },
+      {
+        "file": "CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_81_bad_test.cpp:70:6: error: ‘CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_81_bad’ has not be"
+      },
+      {
+        "file": "CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_82_bad_test.cpp:70:6: error: ‘CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_82_bad’ has not be"
+      },
+      {
+        "file": "CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_81_bad_test.cpp:70:6: error: ‘CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_81_bad’ has not been declared\n"
+      },
+      {
+        "file": "CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_82_bad_test.cpp:70:6: error: ‘CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_82_bad’ has not been declared\n"
+      },
+      {
+        "file": "CWE23_Relative_Path_Traversal__char_connect_socket_fopen_83_bad.cpp",
+        "full_path": "results/codeastra_2/CWE23_Relative_Path_Traversal__char_connect_socket_fopen_83_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE23_Relative_Path_Traversal__char_connect_socket_fopen_83_bad_test.cpp:62:123: error: stray ‘`’ in program\n   62 | To fix the security vulnerability in this code, you should use "
+      },
+      {
+        "file": "CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_bad.cpp",
+        "full_path": "results/codeastra_2/CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_bad_test.cpp:62: error: unterminated #ifndef\n   62 | #ifndef OMITBAD\n      | \nresults/codeastra_2/CWE23_Relative_Path_Tr"
+      },
+      {
+        "file": "CWE256_Plaintext_Storage_of_Password__w32_char_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE256_Plaintext_Storage_of_Password__w32_char_81_bad.cpp",
+        "compiles": null,
+        "error": "Missing includes/libraries (available in your environment)"
+      },
+      {
+        "file": "CWE256_Plaintext_Storage_of_Password__w32_char_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE256_Plaintext_Storage_of_Password__w32_char_82_bad.cpp",
+        "compiles": null,
+        "error": "Missing includes/libraries (available in your environment)"
+      },
+      {
+        "file": "CWE259_Hard_Coded_Password__w32_char_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE259_Hard_Coded_Password__w32_char_81_bad.cpp",
+        "compiles": null,
+        "error": "Missing includes/libraries (available in your environment)"
+      },
+      {
+        "file": "CWE259_Hard_Coded_Password__w32_char_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE259_Hard_Coded_Password__w32_char_82_bad.cpp",
+        "compiles": null,
+        "error": "Missing includes/libraries (available in your environment)"
+      },
+      {
+        "file": "CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_81_bad.cpp",
+        "compiles": null,
+        "error": "Missing includes/libraries (available in your environment)"
+      },
+      {
+        "file": "CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_82_bad_test.cpp:66:1: error: ‘SSL_CTX’ does not name a type\n   66 | SSL_CTX* ctx = SSL_CTX_new(TLS_client_method());\n   "
+      },
+      {
+        "file": "CWE321_Hard_Coded_Cryptographic_Key__w32_char_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE321_Hard_Coded_Cryptographic_Key__w32_char_81_bad.cpp",
+        "compiles": null,
+        "error": "Missing includes/libraries (available in your environment)"
+      },
+      {
+        "file": "CWE321_Hard_Coded_Cryptographic_Key__w32_char_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE321_Hard_Coded_Cryptographic_Key__w32_char_82_bad.cpp",
+        "compiles": null,
+        "error": "Missing includes/libraries (available in your environment)"
+      },
+      {
+        "file": "CWE369_Divide_by_Zero__float_connect_socket_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE369_Divide_by_Zero__float_connect_socket_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE369_Divide_by_Zero__float_connect_socket_81_bad_test.cpp:70:6: error: ‘CWE369_Divide_by_Zero__float_connect_socket_81_bad’ has not been declared\n   70 | void CWE369_Divide_by_Ze"
+      },
+      {
+        "file": "CWE369_Divide_by_Zero__float_connect_socket_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE369_Divide_by_Zero__float_connect_socket_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE369_Divide_by_Zero__float_connect_socket_82_bad_test.cpp:70:6: error: ‘CWE369_Divide_by_Zero__float_connect_socket_82_bad’ has not been declared\n   70 | void CWE369_Divide_by_Ze"
+      },
+      {
+        "file": "CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_81_bad_test.cpp:77:6: error: ‘CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_81_bad’ has not been declared\n   77 "
+      },
+      {
+        "file": "CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_82_bad_test.cpp:75:6: error: ‘CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_82_bad’ has not been declared\n   75 "
+      },
+      {
+        "file": "CWE400_Resource_Exhaustion__connect_socket_for_loop_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE400_Resource_Exhaustion__connect_socket_for_loop_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE400_Resource_Exhaustion__connect_socket_for_loop_81_bad_test.cpp:70:6: error: ‘CWE400_Resource_Exhaustion__connect_socket_for_loop_81_bad’ has not been declared\n   70 | void CWE"
+      },
+      {
+        "file": "CWE400_Resource_Exhaustion__connect_socket_for_loop_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE400_Resource_Exhaustion__connect_socket_for_loop_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE400_Resource_Exhaustion__connect_socket_for_loop_82_bad_test.cpp:70:6: error: ‘CWE400_Resource_Exhaustion__connect_socket_for_loop_82_bad’ has not been declared\n   70 | void CWE"
+      },
+      {
+        "file": "CWE401_Memory_Leak__new_array_int_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE401_Memory_Leak__new_array_int_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE401_Memory_Leak__new_array_int_81_bad_test.cpp:70:6: error: ‘CWE401_Memory_Leak__new_array_int_81_bad’ has not been declared\n   70 | void CWE401_Memory_Leak__new_array_int_81_ba"
+      },
+      {
+        "file": "CWE401_Memory_Leak__new_array_int_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE401_Memory_Leak__new_array_int_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE401_Memory_Leak__new_array_int_82_bad_test.cpp:70:6: error: ‘CWE401_Memory_Leak__new_array_int_82_bad’ has not been declared\n   70 | void CWE401_Memory_Leak__new_array_int_82_ba"
+      },
+      {
+        "file": "CWE404_Improper_Resource_Shutdown__fopen_w32_close_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE404_Improper_Resource_Shutdown__fopen_w32_close_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE404_Improper_Resource_Shutdown__fopen_w32_close_81_bad_test.cpp:79:6: error: ‘CWE404_Improper_Resource_Shutdown__fopen_w32_close_81_bad’ has not been declared\n   79 | void CWE40"
+      },
+      {
+        "file": "CWE404_Improper_Resource_Shutdown__fopen_w32_close_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE404_Improper_Resource_Shutdown__fopen_w32_close_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE404_Improper_Resource_Shutdown__fopen_w32_close_82_bad_test.cpp:62:111: error: missing terminating ' character\n   62 | To fix the buffer overflow vulnerability, you should check"
+      },
+      {
+        "file": "CWE415_Double_Free__malloc_free_char_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE415_Double_Free__malloc_free_char_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE415_Double_Free__malloc_free_char_81_bad_test.cpp:70:6: error: ‘CWE415_Double_Free__malloc_free_char_81_bad’ has not been declared\n   70 | void CWE415_Double_Free__malloc_free_c"
+      },
+      {
+        "file": "CWE415_Double_Free__malloc_free_char_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE415_Double_Free__malloc_free_char_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE415_Double_Free__malloc_free_char_82_bad_test.cpp:70:6: error: ‘CWE415_Double_Free__malloc_free_char_82_bad’ has not been declared\n   70 | void CWE415_Double_Free__malloc_free_c"
+      },
+      {
+        "file": "CWE426_Untrusted_Search_Path__char_popen_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE426_Untrusted_Search_Path__char_popen_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE426_Untrusted_Search_Path__char_popen_81_bad_test.cpp:77:6: error: ‘CWE426_Untrusted_Search_Path__char_popen_81_bad’ has not been declared\n   77 | void CWE426_Untrusted_Search_P"
+      },
+      {
+        "file": "CWE426_Untrusted_Search_Path__char_popen_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE426_Untrusted_Search_Path__char_popen_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE426_Untrusted_Search_Path__char_popen_82_bad_test.cpp:77:6: error: ‘CWE426_Untrusted_Search_Path__char_popen_82_bad’ has not been declared\n   77 | void CWE426_Untrusted_Search_P"
+      },
+      {
+        "file": "CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_81_bad_test.cpp:70:6: error: ‘CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_81_bad’ has not been declare"
+      },
+      {
+        "file": "CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_82_bad_test.cpp:70:6: error: ‘CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_82_bad’ has not been declare"
+      },
+      {
+        "file": "CWE457_Use_of_Uninitialized_Variable__no_constructor_01_bad.cpp",
+        "full_path": "results/codeastra_2/CWE457_Use_of_Uninitialized_Variable__no_constructor_01_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE464_Addition_of_Data_Structure_Sentinel__basic_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE464_Addition_of_Data_Structure_Sentinel__basic_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE464_Addition_of_Data_Structure_Sentinel__basic_81_bad_test.cpp:70:6: error: ‘CWE464_Addition_of_Data_Structure_Sentinel__basic_81_bad’ has not been declared\n   70 | void CWE464_"
+      },
+      {
+        "file": "CWE464_Addition_of_Data_Structure_Sentinel__basic_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE464_Addition_of_Data_Structure_Sentinel__basic_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE464_Addition_of_Data_Structure_Sentinel__basic_82_bad_test.cpp:70:6: error: ‘CWE464_Addition_of_Data_Structure_Sentinel__basic_82_bad’ has not been declared\n   70 | void CWE464_"
+      },
+      {
+        "file": "CWE500_Public_Static_Field_Not_Final__int_01_bad.cpp",
+        "full_path": "results/codeastra_2/CWE500_Public_Static_Field_Not_Final__int_01_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE563_Unused_Variable__unused_class_member_value_01_bad.cpp",
+        "full_path": "results/codeastra_2/CWE563_Unused_Variable__unused_class_member_value_01_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE563_Unused_Variable__unused_init_variable_char_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE563_Unused_Variable__unused_init_variable_char_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE563_Unused_Variable__unused_init_variable_char_81_bad_test.cpp:70:6: error: ‘CWE563_Unused_Variable__unused_init_variable_char_81_bad’ has not been declared\n   70 | void CWE563_"
+      },
+      {
+        "file": "CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__class_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__class_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__class_81_bad_test.cpp:70:6: error: ‘CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__class_81_bad’ has not been dec"
+      },
+      {
+        "file": "CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__struct_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__struct_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__struct_81_bad_test.cpp:70:6: error: ‘CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__struct_81_bad’ has not been d"
+      },
+      {
+        "file": "CWE590_Free_Memory_Not_on_Heap__delete_array_char_alloca_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE590_Free_Memory_Not_on_Heap__delete_array_char_alloca_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE590_Free_Memory_Not_on_Heap__delete_array_char_alloca_81_bad_test.cpp:70:6: error: ‘CWE590_Free_Memory_Not_on_Heap__delete_array_char_alloca_81_bad’ has not been declared\n   70 "
+      },
+      {
+        "file": "CWE590_Free_Memory_Not_on_Heap__delete_array_char_declare_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE590_Free_Memory_Not_on_Heap__delete_array_char_declare_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE590_Free_Memory_Not_on_Heap__delete_array_char_declare_81_bad_test.cpp:70:6: error: ‘CWE590_Free_Memory_Not_on_Heap__delete_array_char_declare_81_bad’ has not been declared\n   7"
+      },
+      {
+        "file": "CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_char_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_char_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_char_81_bad_test.cpp:75:37: error: non-member function ‘void action(const std::string&)’ cannot have cv-qualifier\n   "
+      },
+      {
+        "file": "CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_wchar_t_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_wchar_t_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_wchar_t_81_bad_test.cpp:80:6: error: ‘CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_wchar_t_81_bad’ "
+      },
+      {
+        "file": "CWE606_Unchecked_Loop_Condition__char_connect_socket_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE606_Unchecked_Loop_Condition__char_connect_socket_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE606_Unchecked_Loop_Condition__char_connect_socket_81_bad_test.cpp:70:6: error: ‘CWE606_Unchecked_Loop_Condition__char_connect_socket_81_bad’ has not been declared\n   70 | void C"
+      },
+      {
+        "file": "CWE606_Unchecked_Loop_Condition__char_console_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE606_Unchecked_Loop_Condition__char_console_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE606_Unchecked_Loop_Condition__char_console_81_bad_test.cpp:70:6: error: ‘CWE606_Unchecked_Loop_Condition__char_console_81_bad’ has not been declared\n   70 | void CWE606_Unchecke"
+      },
+      {
+        "file": "CWE617_Reachable_Assertion__connect_socket_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE617_Reachable_Assertion__connect_socket_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE617_Reachable_Assertion__connect_socket_81_bad_test.cpp:70:6: error: ‘CWE617_Reachable_Assertion__connect_socket_81_bad’ has not been declared\n   70 | void CWE617_Reachable_Asse"
+      },
+      {
+        "file": "CWE617_Reachable_Assertion__fgets_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE617_Reachable_Assertion__fgets_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE617_Reachable_Assertion__fgets_81_bad_test.cpp:70:6: error: ‘CWE617_Reachable_Assertion__fgets_81_bad’ has not been declared\n   70 | void CWE617_Reachable_Assertion__fgets_81_ba"
+      },
+      {
+        "file": "CWE665_Improper_Initialization__char_cat_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE665_Improper_Initialization__char_cat_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE665_Improper_Initialization__char_cat_81_bad_test.cpp:70:6: error: ‘CWE665_Improper_Initialization__char_cat_81_bad’ has not been declared\n   70 | void CWE665_Improper_Initializ"
+      },
+      {
+        "file": "CWE665_Improper_Initialization__char_ncat_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE665_Improper_Initialization__char_ncat_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE665_Improper_Initialization__char_ncat_81_bad_test.cpp:70:6: error: ‘CWE665_Improper_Initialization__char_ncat_81_bad’ has not been declared\n   70 | void CWE665_Improper_Initial"
+      },
+      {
+        "file": "CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_81_bad_test.cpp:70:6: error: ‘CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_81_bad’ has not "
+      },
+      {
+        "file": "CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_82_bad_test.cpp:70:6: error: ‘CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_82_bad’ has not "
+      },
+      {
+        "file": "CWE675_Duplicate_Operations_on_Resource__fopen_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE675_Duplicate_Operations_on_Resource__fopen_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE675_Duplicate_Operations_on_Resource__fopen_81_bad_test.cpp:70:6: error: ‘CWE675_Duplicate_Operations_on_Resource__fopen_81_bad’ has not been declared\n   70 | void CWE675_Duplic"
+      },
+      {
+        "file": "CWE675_Duplicate_Operations_on_Resource__fopen_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE675_Duplicate_Operations_on_Resource__fopen_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE675_Duplicate_Operations_on_Resource__fopen_82_bad_test.cpp:70:6: error: ‘CWE675_Duplicate_Operations_on_Resource__fopen_82_bad’ has not been declared\n   70 | void CWE675_Duplic"
+      },
+      {
+        "file": "CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_81_bad_test.cpp:70:6: error: ‘CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_81_bad’ has not be"
+      },
+      {
+        "file": "CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_82_bad_test.cpp:70:6: error: ‘CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_82_bad’ has not be"
+      },
+      {
+        "file": "CWE690_NULL_Deref_From_Return__char_malloc_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE690_NULL_Deref_From_Return__char_malloc_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE690_NULL_Deref_From_Return__char_malloc_81_bad_test.cpp:70:6: error: ‘CWE690_NULL_Deref_From_Return__char_malloc_81_bad’ has not been declared\n   70 | void CWE690_NULL_Deref_Fro"
+      },
+      {
+        "file": "CWE690_NULL_Deref_From_Return__char_malloc_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE690_NULL_Deref_From_Return__char_malloc_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE690_NULL_Deref_From_Return__char_malloc_82_bad_test.cpp:70:6: error: ‘CWE690_NULL_Deref_From_Return__char_malloc_82_bad’ has not been declared\n   70 | void CWE690_NULL_Deref_Fro"
+      },
+      {
+        "file": "CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_81_bad_test.cpp:72:6: error: ‘CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_81_bad’ has not been d"
+      },
+      {
+        "file": "CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_82_bad_test.cpp:72:6: error: ‘CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_82_bad’ has not been d"
+      },
+      {
+        "file": "CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_81_bad_test.cpp:70:6: error: ‘CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_81_bad’ "
+      },
+      {
+        "file": "CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_82_bad_test.cpp:70:6: error: ‘CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_82_bad’ "
+      },
+      {
+        "file": "CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_81_bad_test.cpp:70:6: error: ‘CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_81_bad’ has no"
+      },
+      {
+        "file": "CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_82_bad_test.cpp:70:6: error: ‘CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_82_bad’ has no"
+      },
+      {
+        "file": "CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_81_bad_test.cpp:70:6: error: ‘CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_81_bad’ has no"
+      },
+      {
+        "file": "CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_82_bad_test.cpp:70:6: error: ‘CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_82_bad’ has no"
+      },
+      {
+        "file": "CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_81_bad_test.cpp:72:6: error: ‘CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_81_bad’ has not been declared\n   7"
+      },
+      {
+        "file": "CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_82_bad_test.cpp:72:6: error: ‘CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_82_bad’ has not been declared\n   7"
+      },
+      {
+        "file": "CWE78_OS_Command_Injection__char_connect_socket_execl_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE78_OS_Command_Injection__char_connect_socket_execl_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE78_OS_Command_Injection__char_connect_socket_execl_81_bad_test.cpp:76:6: error: ‘CWE78_OS_Command_Injection__char_connect_socket_execl_81_bad’ has not been declared\n   76 | void"
+      },
+      {
+        "file": "CWE78_OS_Command_Injection__char_connect_socket_execl_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE78_OS_Command_Injection__char_connect_socket_execl_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE78_OS_Command_Injection__char_connect_socket_execl_82_bad_test.cpp:76:6: error: ‘CWE78_OS_Command_Injection__char_connect_socket_execl_82_bad’ has not been declared\n   76 | void"
+      },
+      {
+        "file": "CWE843_Type_Confusion__char_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE843_Type_Confusion__char_81_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE843_Type_Confusion__char_81_bad_test.cpp:70:6: error: ‘CWE843_Type_Confusion__char_81_bad’ has not been declared\n   70 | void CWE843_Type_Confusion__char_81_bad::action(int* dat"
+      },
+      {
+        "file": "CWE843_Type_Confusion__char_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE843_Type_Confusion__char_82_bad.cpp",
+        "compiles": false,
+        "error": "results/codeastra_2/CWE843_Type_Confusion__char_82_bad_test.cpp:70:6: error: ‘CWE843_Type_Confusion__char_82_bad’ has not been declared\n   70 | void CWE843_Type_Confusion__char_82_bad::action(void * d"
+      },
+      {
+        "file": "CWE90_LDAP_Injection__w32_char_connect_socket_81_bad.cpp",
+        "full_path": "results/codeastra_2/CWE90_LDAP_Injection__w32_char_connect_socket_81_bad.cpp",
+        "compiles": null,
+        "error": "Missing includes/libraries (available in your environment)"
+      },
+      {
+        "file": "CWE90_LDAP_Injection__w32_char_connect_socket_82_bad.cpp",
+        "full_path": "results/codeastra_2/CWE90_LDAP_Injection__w32_char_connect_socket_82_bad.cpp",
+        "compiles": null,
+        "error": "Missing includes/libraries (available in your environment)"
+      }
+    ]
+  }
+}
