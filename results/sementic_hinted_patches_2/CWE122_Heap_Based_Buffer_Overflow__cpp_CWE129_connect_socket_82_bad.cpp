@@ -11,7 +11,7 @@ void CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_82_bad::action
     {
         int i;
         int * buffer = new int[10];
-        
+       
         for (i = 0; i < 10; i++)
         {
             buffer[i] = 0;

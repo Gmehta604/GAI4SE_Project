@@ -14,12 +14,10 @@ void CWE126_Buffer_Overread__char_alloca_loop_81_bad::action(char * data) const
         memset(dest, 'C', 100-1);
         dest[100-1] = '\0';
         destLen = strlen(dest);
-        if (data != NULL && strlen(data) > 0)
+        for (i = 0; i < destLen; i++)
         {
-            for (i = 0; i < destLen; i++)
-            {
-                dest[i] = data[i];
-            }
+            if (i >= 99) break; // Added to prevent buffer overflow
+            dest[i] = data[i];
         }
         dest[100-1] = '\0';
         printLine(dest);

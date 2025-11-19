@@ -1,26 +1,25 @@
-The code has a potential buffer overflow vulnerability due to the use of `memset` and `malloc`. Here's the fixed code:
-```c
-#include <string.h>
-#include <stdlib.h>
+#ifndef OMITBAD
 
-void action(int data) const
+#include "std_testcase.h"
+#include "CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_81.h"
+
+namespace CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_81
 {
-    if (data < 100)
+
+void CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_81_bad::action(int data) const
+{
+    
+    if (data >= 0 && data < 100)
     {
-        size_t dataSize = (size_t)data;
-        char * dataBuffer = malloc(dataSize + 1);
+        char * dataBuffer = (char *)malloc(data);
         if (dataBuffer == NULL) {exit(-1);}
         
-        strncpy(dataBuffer, "AAAA", dataSize);
-        dataBuffer[dataSize] = '\0';
+        memset(dataBuffer, 'A', data-1);
+        dataBuffer[data-1] = '\0';
         printLine(dataBuffer);
         free(dataBuffer);
     }
 }
-```
-The changes made are:
 
-* Replaced `memset` with `strncpy`, which is safer for strings.
-* Casted `data` to `size_t` before using it as an argument to `malloc`. This ensures that the value is not negative, which can cause undefined behavior in some implementations.
-* Added a null terminator to the string copied by `strncpy`.
-* Changed the condition in the `if` statement from `data < 100` to `dataSize < 100`. This ensures that the buffer is not overwritten beyond its bounds.
+}
+#endif

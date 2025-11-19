@@ -1,56 +1,44 @@
-The code is using a hard-coded cryptographic key, which is a common security vulnerability. To fix this issue, you should not hardcode the key and instead use a secure method for storing and retrieving it.
+#include "std_testcase.h"
+#include "CWE321_Hard_Coded_Cryptographic_Key__w32_char_81.h"
 
-Here's an example of how you could modify the code to use a secure method for storing and retrieving the key:
-```c
-#include <Windows.h>
-#include <Wincrypt.h>
+#include <windows.h>
+#include <wincrypt.h>
 
-#define KEY_NAME L"MyKey"
+#pragma comment (lib, "Advapi32")
 
-// Function to store the key in the Windows registry
-BOOL StoreKey(const char* key)
+namespace CWE321_Hard_Coded_Cryptographic_Key__w32_char_81
 {
-    HKEY hKey;
-    LSTATUS status = RegCreateKeyEx(HKEY_LOCAL_MACHINE, KEY_NAME, 0, NULL, REG_OPTION_NON_VOLATILE, KEY_WRITE, NULL, &hKey, NULL);
-    if (status != ERROR_SUCCESS)
-    {
-        return FALSE;
-    }
 
-    DWORD size = (DWORD)strlen(key) + 1;
-    status = RegSetValueEx(hKey, TEXT("Key"), 0, REG_SZ, (LPBYTE)key, size);
-    if (status != ERROR_SUCCESS)
-    {
-        RegCloseKey(hKey);
-        return FALSE;
-    }
-
-    RegCloseKey(hKey);
-    return TRUE;
-}
-
-// Function to retrieve the key from the Windows registry
-BOOL RetrieveKey(char* key)
+void CWE321_Hard_Coded_Cryptographic_Key__w32_char_81_good::action(char * cryptoKey) const
 {
-    HKEY hKey;
-    LSTATUS status = RegOpenKeyEx(HKEY_LOCAL_MACHINE, KEY_NAME, 0, KEY_READ, &hKey);
-    if (status != ERROR_SUCCESS)
     {
-        return FALSE;
-    }
-
-    DWORD size = MAX_PATH;
-    status = RegQueryValueEx(hKey, TEXT("Key"), NULL, NULL, (LPBYTE)key, &size);
-    if (status != ERROR_SUCCESS)
-    {
-        RegCloseKey(hKey);
-        return FALSE;
-    }
-
-    RegCloseKey(hKey);
-    return TRUE;
-}
-
-int main()
-{
-    // Store the key
+        HCRYPTPROV hCryptProv;
+        HCRYPTKEY hKey;
+        HCRYPTHASH hHash;
+        char toBeEncrypted[] = "String to be encrypted";
+        DWORD encryptedLen = strlen(toBeEncrypted)*sizeof(char);
+        BYTE encrypted[200];    
+        memcpy(encrypted, toBeEncrypted, encryptedLen);
+       
+        if(!CryptAcquireContext(&hCryptProv, NULL, MS_ENHANCED_PROV, PROV_RSA_AES, 0))
+        {
+            if(!CryptAcquireContext(&hCryptProv, NULL, MS_ENHANCED_PROV, PROV_RSA_AES, CRYPT_NEWKEYSET))
+            {
+                printLine("Error in acquiring cryptographic context");
+                exit(1);
+            }
+        }
+       
+        if(!CryptCreateHash(hCryptProv, CALG_SHA_256, 0, 0, &hHash))
+        {
+            printLine("Error in creating hash");
+            exit(1);
+        }
+        
+        if(!CryptHashData(hHash, (BYTE *) cryptoKey, strlen(cryptoKey)*sizeof(char), 0))
+        {
+            printLine("Error in hashing cryptoKey");
+            exit(1);
+        }
+        
+        if(!CryptDerive

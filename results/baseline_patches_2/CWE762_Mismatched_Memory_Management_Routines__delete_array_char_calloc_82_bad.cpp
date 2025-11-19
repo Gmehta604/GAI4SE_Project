@@ -1,16 +1,17 @@
-The code you provided contains a memory management error, which can lead to security vulnerabilities. The `delete` operator is used to free an array of characters, but the array was allocated using `calloc`, which returns uninitialized memory. This means that the contents of the array are not guaranteed to be zeroed out, and may contain sensitive information such as passwords or other sensitive data.
+#ifndef OMITBAD
 
-To fix this issue, you should use `free()` instead of `delete` to free the array. `free()` is the correct function to use when freeing memory that was allocated with `malloc()`, `calloc()`, or `realloc()`.
-
-Here's the corrected code:
-```c
 #include <iostream>
+#include <memory>
 
-int main() {
-    char* data = (char*)calloc(10, sizeof(char));
-    // ...
-    free(data);
-    return 0;
+namespace CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_82
+{
+
+void CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_82_bad::action(char * data)
+{
+    std::unique_ptr<char[]> dataPtr = std::make_unique<char[]>(strlen(data));
+    strcpy(dataPtr.get(), data);
+    delete [] dataPtr;
 }
-```
-This code uses `free()` to free the array of characters, which ensures that the memory is properly deallocated and reduces the risk of security vulnerabilities.
+
+}
+#endif

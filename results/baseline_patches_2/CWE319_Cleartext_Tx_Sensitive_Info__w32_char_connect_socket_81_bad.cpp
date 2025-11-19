@@ -1,5 +1,3 @@
-The code has several security vulnerabilities that need to be addressed. Here's the fixed code with the recommended changes:
-```c
 #ifndef OMITBAD
 
 #include "std_testcase.h"
@@ -38,21 +36,4 @@ void CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_81_bad::action(
 }
 
 }
-#endif 
-
-// Fixed code
-
-#ifndef OMITBAD
-
-#include "std_testcase.h"
-#include "CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_81.h"
-
-#include <windows.h>
-#pragma comment(lib, "advapi32.lib")
-
-#define HASH_INPUT "ABCDEFG123456" 
-
-namespace CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_81
-{
-
-void CWE319
+#endif

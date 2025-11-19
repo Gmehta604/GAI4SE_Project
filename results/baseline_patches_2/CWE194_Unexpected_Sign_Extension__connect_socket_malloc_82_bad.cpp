@@ -1,23 +1,25 @@
-The code has a potential buffer overflow vulnerability due to the use of `memset` and `printLine`. The `memset` function sets each byte in the buffer to the specified value, which may cause the buffer to become larger than expected if the input is negative. The `printLine` function also takes the input as a parameter without any bounds checking, which could lead to a buffer overflow if the input is too large.
+#ifndef OMITBAD
 
-To fix these issues, you can modify the code as follows:
-```c
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "std_testcase.h"
+#include "CWE194_Unexpected_Sign_Extension__connect_socket_malloc_82.h"
 
-void action(short data)
+namespace CWE194_Unexpected_Sign_Extension__connect_socket_malloc_82
 {
+
+void CWE194_Unexpected_Sign_Extension__connect_socket_malloc_82_bad::action(short data)
+{
+    
     if (data < 100)
     {
-        char * dataBuffer = (char *)malloc(data + 1);
+        char * dataBuffer = (char *)malloc(data);
         if (dataBuffer == NULL) {exit(-1);}
         
         memset(dataBuffer, 'A', data);
         dataBuffer[data] = '\0';
-        printf("%s\n", dataBuffer);
+        printLine(dataBuffer);
         free(dataBuffer);
     }
 }
-```
-In this modified version, we allocate an extra byte for the null terminator at the end of the buffer, and set it to zero. We also check that the input is less than or equal to 100 before allocating the buffer to prevent potential buffer overflows. Finally, we use `printf` instead of `printLine` to avoid potential buffer overflows.
+
+}
+#endif

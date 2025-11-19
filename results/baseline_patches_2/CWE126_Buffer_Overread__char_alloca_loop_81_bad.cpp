@@ -1,25 +1,26 @@
-The original code has a buffer overread vulnerability in the `for` loop that copies data from `data` to `dest`. The loop iterates until `i` is equal to `destLen`, which is calculated as `strlen(dest)`. However, `destLen` is not properly initialized, and it can be any value between 0 and 99, inclusive. If `data` contains more than 99 characters, the loop will continue to write past the end of `dest`, causing a buffer overread.
+#ifndef OMITBAD
 
-To fix this vulnerability, we need to ensure that `destLen` is properly initialized before using it in the `for` loop. One way to do this is by using the `sizeof()` operator to get the length of the destination buffer, like this:
-```c
-size_t destLen = sizeof(dest) - 1;
-```
-This ensures that `destLen` is always set to the maximum number of characters that can be stored in `dest`, minus one to account for the null terminator.
+#include "std_testcase.h"
+#include "CWE126_Buffer_Overread__char_alloca_loop_81.h"
 
-Here's the fixed code:
-```c
-#include <string.h>
-
-void action(char *data)
+namespace CWE126_Buffer_Overread__char_alloca_loop_81
 {
-    size_t destLen = sizeof(dest) - 1;
-    char dest[100];
-    memset(dest, 'C', destLen);
-    dest[destLen] = '\0';
-    for (size_t i = 0; i < destLen; i++)
+
+void CWE126_Buffer_Overread__char_alloca_loop_81_bad::action(char * data) const
+{
     {
-        dest[i] = data[i];
+        size_t i;
+        char dest[100];
+        memset(dest, 'C', 99);
+        dest[99] = '\0';
+        for (i = 0; i < 99; i++)
+        {
+            dest[i] = data[i];
+        }
+        dest[99] = '\0';
+        printLine(dest);
     }
-    dest[destLen] = '\0';
-    printLine(dest);
 }
+
+}
+#endif

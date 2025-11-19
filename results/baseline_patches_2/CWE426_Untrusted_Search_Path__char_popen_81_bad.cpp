@@ -1,13 +1,9 @@
-The code contains a security vulnerability in the `POPEN` function call. The `data` variable is used as an argument for the `POPEN` function without proper sanitization or validation. This allows an attacker to execute arbitrary commands on the system by providing a malicious command string.
+#ifndef OMITBAD
 
-To fix this vulnerability, you should validate and sanitize the `data` variable before passing it to the `POPEN` function. Here's an example of how you can do this:
-```c
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 #include <unistd.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <errno.h>
+#include <string.h>
 
 #ifdef _WIN32
 #define POPEN _popen
@@ -17,41 +13,22 @@ To fix this vulnerability, you should validate and sanitize the `data` variable 
 #define PCLOSE pclose
 #endif
 
-int main()
+namespace CWE426_Untrusted_Search_Path__char_popen_81
 {
-    char *cmd = "/bin/ls";
-    char *args[] = {"ls", "-l", NULL};
-    int status;
 
-    // Validate the input
-    if (strlen(cmd) > 0 && strchr(cmd, '/') == NULL)
+void CWE426_Untrusted_Search_Path__char_popen_81_bad::action(char * data) const
+{
     {
-        printf("Invalid command\n");
-        return 1;
+        FILE *pipe;
+        char *cmd;
+        cmd = "/bin/sh";
+        pipe = POPEN(cmd, "wb");
+        if (pipe != NULL)
+        {
+            PCLOSE(pipe);
+        }
     }
-
-    // Sanitize the input
-    cmd = realpath(cmd, NULL);
-
-    // Execute the command
-    pid_t pid = fork();
-    if (pid == 0)
-    {
-        execv(cmd, args);
-        exit(EXIT_FAILURE);
-    }
-    else if (pid < 0)
-    {
-        perror("fork");
-        return 1;
-    }
-
-    // Wait for the child process to finish
-    wait(&status);
-
-    return 0;
 }
-```
-In this example, we first validate that the `cmd` string is not empty and does not contain any slashes. If either of these conditions are true, we print an error message and exit the program.
 
-Next, we use the `realpath` function to resolve the path of the command. This ensures that the command is executed from its absolute path,
+}
+#endif

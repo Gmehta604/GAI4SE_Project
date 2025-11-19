@@ -1,19 +1,17 @@
-The code has a potential security vulnerability due to the use of an uninitialized variable `intOne` in the `BadClass` class. This can lead to unexpected behavior or crashes when the variable is accessed.
-
-To fix this issue, we need to initialize the variable in the constructor of the `BadClass` class. Here's the corrected code:
-```c
 #include "std_testcase.h"
 
 namespace CWE457_Use_of_Uninitialized_Variable__no_constructor_01
 {
 
+#ifndef OMITBAD
+
 class BadClass 
 {
     public:
-        int intOne;
+        int intOne;        
 
         BadClass() {
-            intOne = 0; // Initialize the variable
+            intOne = 0;
         }
 };
 
@@ -22,6 +20,8 @@ void bad()
     BadClass * badClassObject = new BadClass;
     printIntLine(badClassObject->intOne);
 }
+
+#endif 
 
 } 
 
@@ -41,5 +41,3 @@ int main(int argc, char * argv[])
 }
 
 #endif
-```
-In this version, we have added a constructor for the `BadClass` class that initializes the `intOne` variable to 0. This ensures that the variable is properly initialized and avoids any potential security vulnerabilities.

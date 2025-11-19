@@ -10,13 +10,9 @@ void CWE123_Write_What_Where_Condition__connect_socket_82_bad::action(badStruct 
 {
     linkedListPrev = data.list.prev;
     linkedListNext = data.list.next;
-    linkedListPrev->next = linkedListNext;
-    linkedListNext->prev = linkedListPrev;
-
-    // Check for buffer overflows
-    if (linkedListNext->prev != NULL && linkedListNext->prev->next == linkedListNext)
-    {
+    if (linkedListNext->prev != linkedListPrev) {
         linkedListNext->prev = linkedListPrev;
+        linkedListPrev->next = linkedListNext;
     }
 }
 

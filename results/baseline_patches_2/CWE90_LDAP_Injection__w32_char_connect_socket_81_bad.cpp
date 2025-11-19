@@ -1,5 +1,3 @@
-The original code has several security vulnerabilities that can be exploited by an attacker. Here's a fixed version of the code with some of the most critical issues addressed:
-```c
 #ifndef OMITBAD
 
 #include "std_testcase.h"
@@ -49,3 +47,8 @@ void CWE90_LDAP_Injection__w32_char_connect_socket_81_bad::action(char * data) c
         if (searchSuccess != LDAP_SUCCESS)
         {
             printLine("Search failed");
+            if (pMessage != NULL)
+            {
+                ldap_msgfree(pMessage);
+            }
+            exit(

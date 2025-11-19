@@ -15,6 +15,7 @@ void CWE114_Process_Control__w32_char_connect_socket_82_bad::action(char * data)
         size_t len = strlen(data);
         if (len > MAX_PATH)
         {
+            printLine("Invalid file name");
             return;
         }
         hModule = LoadLibraryA(data);
