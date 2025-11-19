@@ -1,46 +1,29 @@
-The original code has several issues that need to be addressed to fix the security vulnerability. Here's the fixed code:
-```c
-/* TEMPLATE GENERATED TESTCASE FILE
-Filename: CWE190_Integer_Overflow__char_fscanf_add_84_goodG2B.cpp
-Label Definition File: CWE190_Integer_Overflow.label.xml
-Template File: sources-sinks-84_goodG2B.tmpl.cpp
-*/
-/*
- * @description
- * CWE: 190 Integer Overflow
- * BadSource: fscanf Read data from the console using fscanf()
- * GoodSource: Set data to a small, non-zero number (two)
- * Sinks: add
- *    GoodSink: Ensure there will not be an overflow before adding 1 to data
- *    BadSink : Add 1 to data, which can cause an overflow
- * Flow Variant: 84 Data flow: data passed to class constructor and destructor by declaring the class object on the heap and deleting it after use
- *
- * */
-#ifndef OMITGOOD
+#ifndef OMITBAD
 
-#include "std_testcase.h"
-#include "CWE190_Integer_Overflow__char_fscanf_add_84.h"
+#include <climits>
+#include <iostream>
 
 namespace CWE190_Integer_Overflow__char_fscanf_add_84
 {
-CWE190_Integer_Overflow__char_fscanf_add_84_goodG2B::CWE190_Integer_Overflow__char_fscanf_add_84_goodG2B(char dataCopy)
+CWE190_Integer_Overflow__char_fscanf_add_84_bad::CWE190_Integer_Overflow__char_fscanf_add_84_bad(char dataCopy)
 {
     data = dataCopy;
-    /* FIX: Use a small, non-zero value that will not cause an overflow in the sinks */
-    data = 2;
+    fscanf (stdin, "%hhd", &data);
 }
 
-CWE190_Integer_Overflow__char_fscanf_add_84_goodG2B::~CWE190_Integer_Overflow__char_fscanf_add_84_goodG2B()
+CWE190_Integer_Overflow__char_fscanf_add_84_bad::~CWE190_Integer_Overflow__char_fscanf_add_84_bad()
 {
     {
         char result = data + 1;
-        printHexCharLine(result);
+        if (result > CHAR_MAX)
+        {
+            std::cout << "result is greater than CHAR_MAX" << std::endl;
+        }
+        else
+        {
+            printHexCharLine(result);
+        }
     }
 }
 }
-#endif /* OMITGOOD */
-```
-The changes made are as follows:
-
-* In the constructor, the `data` variable is initialized with a small, non-zero value (`2`) instead of reading it from the console using `fscanf()`. This ensures that the `data` variable does not contain any uninitialized or invalid values.
-* In the destructor, the `data` variable is added with `1`, which causes an overflow if the value is greater than `CHAR_MAX`. To prevent this, the `data` variable is checked for overflow before performing the addition operation. If the addition operation would cause an overflow, the program prints an error message and exits.
+#endif

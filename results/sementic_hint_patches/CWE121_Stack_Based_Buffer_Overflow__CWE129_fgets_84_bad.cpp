@@ -1,11 +1,13 @@
+#ifndef OMITBAD
+
 #include "std_testcase.h"
-#include "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83.h"
+#include "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84.h"
 
 #define CHAR_ARRAY_SIZE (3 * sizeof(data) + 2)
 
-namespace CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83
+namespace CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84
 {
-CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad::CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad(int dataCopy)
+CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_bad::CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_bad(int dataCopy)
 {
     data = dataCopy;
     {
@@ -22,13 +24,13 @@ CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad::CWE121_Stack_Based_Buff
     }
 }
 
-CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad::~CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad()
+CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_bad::~CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_bad()
 {
     {
         int i;
         int buffer[10] = { 0 };
 
-        if (data >= 0 && data <= (10 - 1))
+        if (data >= 0 && data < 10)
         {
             buffer[data] = 1;
             
@@ -39,8 +41,9 @@ CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad::~CWE121_Stack_Based_Buf
         }
         else
         {
-            printLine("ERROR: Array index is out-of-bounds");
+            printLine("ERROR: Array index is negative.");
         }
     }
 }
 }
+#endif

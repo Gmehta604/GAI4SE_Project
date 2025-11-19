@@ -1,7 +1,7 @@
 #ifndef OMITBAD
 
-#include <iostream>
-#include <limits>
+#include "std_testcase.h"
+#include "CWE190_Integer_Overflow__char_fscanf_multiply_84.h"
 
 namespace CWE190_Integer_Overflow__char_fscanf_multiply_84
 {
@@ -10,21 +10,20 @@ CWE190_Integer_Overflow__char_fscanf_multiply_84_bad::CWE190_Integer_Overflow__c
     data = dataCopy;
     fscanf (stdin, "%c", &data);
 
-    // Check for overflows
-    if (data > std::numeric_limits<char>::max() / 2)
+    // Check for integer overflow before performing the multiplication
+    if (data <= CHAR_MAX / 2)
     {
-        // Handle overflow
-        std::cout << "Input value is too large to perform arithmetic safely." << std::endl;
+        char result = data * 2;
+        printHexCharLine(result);
+    }
+    else
+    {
+        printLine("Input value is too large to perform arithmetic safely.");
     }
 }
 
 CWE190_Integer_Overflow__char_fscanf_multiply_84_bad::~CWE190_Integer_Overflow__char_fscanf_multiply_84_bad()
 {
-    if(data > 0) 
-    {
-        char result = data * 2;
-        printHexCharLine(result);
-    }
 }
 }
 #endif

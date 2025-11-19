@@ -25,8 +25,8 @@ from transformers import AutoModel, AutoTokenizer
 # Configuration (edit these paths if needed)
 # ---------------------------------------------------------------------------
 GROUND_TRUTH_DIR = "benchmark/ground_truth"
-BASELINE_DIR = "results/baseline_patches_2"
-CODEASTRA_DIR = "results/codeastra_2"
+BASELINE_DIR = "benchmark/vulnerable_snippets"
+CODEASTRA_DIR = "results/sementic_hint_patches"
 OUTPUT_JSON = "results/codebert_similarity.json"
 MODEL_NAME = "microsoft/codebert-base"
 MAX_LENGTH = 512  # CodeBERT token limit

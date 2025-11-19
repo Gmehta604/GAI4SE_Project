@@ -18,7 +18,7 @@ CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_83_bad::~CWE121_Stack_Based_Bu
         int i;
         int buffer[10] = { 0 };
 
-        if (data >= 0 && data <= (10-1))
+        if (data >= 0 && data < sizeof(buffer)/sizeof(int))
         {
             buffer[data] = 1;
             
@@ -29,7 +29,7 @@ CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_83_bad::~CWE121_Stack_Based_Bu
         }
         else
         {
-            printLine("ERROR: Array index is out of bounds");
+            printLine("ERROR: Array index is negative.");
         }
     }
 }

@@ -6,9 +6,12 @@
 namespace CWE476_NULL_Pointer_Dereference__int_81
 {
 
-void CWE476_NULL_Pointer_Dereference__int_81_bad::action(const int * data) const
+void CWE476_NULL_Pointer_Dereference__int_81_bad::action(int * data) const
 {
-    printIntLine(*data);
+    if (data != NULL)
+    {
+        printIntLine(*data);
+    }
 }
 
 }

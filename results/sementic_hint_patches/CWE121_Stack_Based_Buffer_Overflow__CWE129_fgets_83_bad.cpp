@@ -1,3 +1,5 @@
+#ifndef OMITBAD
+
 #include "std_testcase.h"
 #include "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83.h"
 
@@ -28,7 +30,7 @@ CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad::~CWE121_Stack_Based_Buf
         int i;
         int buffer[10] = { 0 };
 
-        if (data >= 0 && data <= (10 - 1))
+        if (data >= 0 && data <= 9)
         {
             buffer[data] = 1;
             
@@ -44,3 +46,4 @@ CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad::~CWE121_Stack_Based_Buf
     }
 }
 }
+#endif

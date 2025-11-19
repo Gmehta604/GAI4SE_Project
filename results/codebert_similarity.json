@@ -1,1322 +1,370 @@
 {
-  "timestamp": "2025-11-19T07:23:06.543241",
+  "timestamp": "2025-11-19T23:44:37.569553",
   "model": "microsoft/codebert-base",
   "ground_truth_dir": "benchmark\\ground_truth",
-  "baseline_dir": "results\\baseline_patches_2",
-  "codeastra_dir": "results\\codeastra_2",
+  "baseline_dir": "benchmark\\vulnerable_snippets",
+  "codeastra_dir": "results\\sementic_hint_patches",
   "summary": {
     "baseline_patches_2": {
-      "total_files": 92,
-      "matched_files": 92,
+      "total_files": 24,
+      "matched_files": 24,
       "missing_ground_truth": 0,
       "empty_ground_truth": 0,
       "empty_patch": 0,
       "embedding_failed": 0,
-      "average_similarity": 0.987,
-      "min_similarity": 0.9371,
-      "max_similarity": 0.9971
+      "average_similarity": 0.9866,
+      "min_similarity": 0.9762,
+      "max_similarity": 0.995
     },
     "codeastra_2": {
-      "total_files": 92,
-      "matched_files": 92,
+      "total_files": 24,
+      "matched_files": 24,
       "missing_ground_truth": 0,
       "empty_ground_truth": 0,
       "empty_patch": 0,
       "embedding_failed": 0,
-      "average_similarity": 0.9911,
-      "min_similarity": 0.9824,
-      "max_similarity": 0.998
+      "average_similarity": 0.9889,
+      "min_similarity": 0.9807,
+      "max_similarity": 0.9955
     }
   },
   "results": {
     "baseline_patches_2": [
       {
-        "file": "CWE114_Process_Control__w32_char_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE114_Process_Control__w32_char_connect_socket_81_goodG2B.cpp",
-        "similarity": 0.9909,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE114_Process_Control__w32_char_connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE114_Process_Control__w32_char_connect_socket_82_goodG2B.cpp",
-        "similarity": 0.9924,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_81_goodB2G.cpp",
-        "similarity": 0.9871,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_82_goodB2G.cpp",
-        "similarity": 0.9885,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE123_Write_What_Where_Condition__connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE123_Write_What_Where_Condition__connect_socket_81_goodG2B.cpp",
-        "similarity": 0.9914,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE123_Write_What_Where_Condition__connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE123_Write_What_Where_Condition__connect_socket_82_goodG2B.cpp",
-        "similarity": 0.9877,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE126_Buffer_Overread__char_alloca_loop_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE126_Buffer_Overread__char_alloca_loop_81_goodG2B.cpp",
-        "similarity": 0.9513,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE126_Buffer_Overread__char_alloca_loop_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE126_Buffer_Overread__char_alloca_loop_82_goodG2B.cpp",
-        "similarity": 0.993,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE127_Buffer_Underread__char_alloca_cpy_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE127_Buffer_Underread__char_alloca_cpy_81_goodG2B.cpp",
-        "similarity": 0.9899,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE127_Buffer_Underread__char_alloca_cpy_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE127_Buffer_Underread__char_alloca_cpy_82_goodG2B.cpp",
-        "similarity": 0.9911,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_81_goodB2G.cpp",
-        "similarity": 0.9707,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_82_goodB2G.cpp",
-        "similarity": 0.9944,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE15_External_Control_of_System_or_Configuration_Setting__w32_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE15_External_Control_of_System_or_Configuration_Setting__w32_81_goodG2B.cpp",
-        "similarity": 0.99,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE15_External_Control_of_System_or_Configuration_Setting__w32_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE15_External_Control_of_System_or_Configuration_Setting__w32_82_goodG2B.cpp",
-        "similarity": 0.9874,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE176_Improper_Handling_of_Unicode_Encoding__w32_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE176_Improper_Handling_of_Unicode_Encoding__w32_81_goodB2G.cpp",
-        "similarity": 0.9818,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE176_Improper_Handling_of_Unicode_Encoding__w32_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE176_Improper_Handling_of_Unicode_Encoding__w32_82_goodB2G.cpp",
-        "similarity": 0.9826,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE191_Integer_Underflow__char_fscanf_multiply_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE191_Integer_Underflow__char_fscanf_multiply_81_goodB2G.cpp",
-        "similarity": 0.9855,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE191_Integer_Underflow__char_fscanf_multiply_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE191_Integer_Underflow__char_fscanf_multiply_82_goodB2G.cpp",
-        "similarity": 0.9819,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE194_Unexpected_Sign_Extension__connect_socket_malloc_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE194_Unexpected_Sign_Extension__connect_socket_malloc_81_goodG2B.cpp",
-        "similarity": 0.9866,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE194_Unexpected_Sign_Extension__connect_socket_malloc_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE194_Unexpected_Sign_Extension__connect_socket_malloc_82_goodG2B.cpp",
-        "similarity": 0.987,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_81_goodG2B.cpp",
-        "similarity": 0.9853,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_82_goodG2B.cpp",
-        "similarity": 0.9929,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_81_goodG2B.cpp",
-        "similarity": 0.9921,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_82_goodG2B.cpp",
-        "similarity": 0.9888,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE23_Relative_Path_Traversal__char_connect_socket_fopen_83_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE23_Relative_Path_Traversal__char_connect_socket_fopen_83_goodG2B.cpp",
-        "similarity": 0.9892,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_goodG2B.cpp",
-        "similarity": 0.9968,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE256_Plaintext_Storage_of_Password__w32_char_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE256_Plaintext_Storage_of_Password__w32_char_81_goodB2G.cpp",
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81_goodB2G.cpp",
         "similarity": 0.9936,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE256_Plaintext_Storage_of_Password__w32_char_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE256_Plaintext_Storage_of_Password__w32_char_82_goodB2G.cpp",
-        "similarity": 0.9865,
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_82_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_82_goodB2G.cpp",
+        "similarity": 0.9932,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE259_Hard_Coded_Password__w32_char_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE259_Hard_Coded_Password__w32_char_81_goodG2B.cpp",
-        "similarity": 0.9948,
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_goodB2G.cpp",
+        "similarity": 0.9946,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE259_Hard_Coded_Password__w32_char_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE259_Hard_Coded_Password__w32_char_82_goodG2B.cpp",
-        "similarity": 0.9919,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_81_goodB2G.cpp",
-        "similarity": 0.9888,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_82_goodB2G.cpp",
-        "similarity": 0.9954,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE321_Hard_Coded_Cryptographic_Key__w32_char_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE321_Hard_Coded_Cryptographic_Key__w32_char_81_goodG2B.cpp",
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_goodB2G.cpp",
         "similarity": 0.995,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE321_Hard_Coded_Cryptographic_Key__w32_char_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE321_Hard_Coded_Cryptographic_Key__w32_char_82_goodG2B.cpp",
-        "similarity": 0.9956,
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81_goodB2G.cpp",
+        "similarity": 0.9924,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE369_Divide_by_Zero__float_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE369_Divide_by_Zero__float_connect_socket_81_goodB2G.cpp",
-        "similarity": 0.9831,
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_82_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_82_goodB2G.cpp",
+        "similarity": 0.9923,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE369_Divide_by_Zero__float_connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE369_Divide_by_Zero__float_connect_socket_82_goodB2G.cpp",
-        "similarity": 0.9901,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_81_goodG2B.cpp",
-        "similarity": 0.9956,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_82_goodG2B.cpp",
-        "similarity": 0.995,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE400_Resource_Exhaustion__connect_socket_for_loop_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE400_Resource_Exhaustion__connect_socket_for_loop_81_goodB2G.cpp",
-        "similarity": 0.9927,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE400_Resource_Exhaustion__connect_socket_for_loop_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE400_Resource_Exhaustion__connect_socket_for_loop_82_goodB2G.cpp",
-        "similarity": 0.9907,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE401_Memory_Leak__new_array_int_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE401_Memory_Leak__new_array_int_81_goodB2G.cpp",
-        "similarity": 0.9809,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE401_Memory_Leak__new_array_int_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE401_Memory_Leak__new_array_int_82_goodB2G.cpp",
-        "similarity": 0.9851,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE404_Improper_Resource_Shutdown__fopen_w32_close_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE404_Improper_Resource_Shutdown__fopen_w32_close_81_goodB2G.cpp",
-        "similarity": 0.9873,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE404_Improper_Resource_Shutdown__fopen_w32_close_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE404_Improper_Resource_Shutdown__fopen_w32_close_82_goodB2G.cpp",
-        "similarity": 0.9837,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE415_Double_Free__malloc_free_char_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE415_Double_Free__malloc_free_char_81_goodB2G.cpp",
-        "similarity": 0.9828,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE415_Double_Free__malloc_free_char_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE415_Double_Free__malloc_free_char_82_goodB2G.cpp",
-        "similarity": 0.9903,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE426_Untrusted_Search_Path__char_popen_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE426_Untrusted_Search_Path__char_popen_81_goodG2B.cpp",
-        "similarity": 0.9948,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE426_Untrusted_Search_Path__char_popen_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE426_Untrusted_Search_Path__char_popen_82_goodG2B.cpp",
-        "similarity": 0.9966,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_81_goodG2B.cpp",
-        "similarity": 0.985,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_82_goodG2B.cpp",
-        "similarity": 0.9646,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE457_Use_of_Uninitialized_Variable__no_constructor_01_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE457_Use_of_Uninitialized_Variable__no_constructor_01_good1.cpp",
-        "similarity": 0.9954,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE464_Addition_of_Data_Structure_Sentinel__basic_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE464_Addition_of_Data_Structure_Sentinel__basic_81_goodG2B.cpp",
-        "similarity": 0.9846,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE464_Addition_of_Data_Structure_Sentinel__basic_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE464_Addition_of_Data_Structure_Sentinel__basic_82_goodG2B.cpp",
-        "similarity": 0.984,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE500_Public_Static_Field_Not_Final__int_01_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE500_Public_Static_Field_Not_Final__int_01_good1.cpp",
-        "similarity": 0.9971,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE563_Unused_Variable__unused_class_member_value_01_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE563_Unused_Variable__unused_class_member_value_01_good1.cpp",
-        "similarity": 0.995,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE563_Unused_Variable__unused_init_variable_char_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE563_Unused_Variable__unused_init_variable_char_81_goodB2G.cpp",
-        "similarity": 0.9859,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__class_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__class_81_goodG2B.cpp",
-        "similarity": 0.9911,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__struct_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__struct_81_goodG2B.cpp",
-        "similarity": 0.9879,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE590_Free_Memory_Not_on_Heap__delete_array_char_alloca_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE590_Free_Memory_Not_on_Heap__delete_array_char_alloca_81_goodG2B.cpp",
-        "similarity": 0.9898,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE590_Free_Memory_Not_on_Heap__delete_array_char_declare_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE590_Free_Memory_Not_on_Heap__delete_array_char_declare_81_goodG2B.cpp",
-        "similarity": 0.9918,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_char_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_char_81_goodG2B.cpp",
-        "similarity": 0.9879,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_wchar_t_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_wchar_t_81_goodG2B.cpp",
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_83_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_83_goodB2G.cpp",
         "similarity": 0.9933,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE606_Unchecked_Loop_Condition__char_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE606_Unchecked_Loop_Condition__char_connect_socket_81_goodB2G.cpp",
-        "similarity": 0.9936,
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_84_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_84_goodB2G.cpp",
+        "similarity": 0.9925,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE606_Unchecked_Loop_Condition__char_console_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE606_Unchecked_Loop_Condition__char_console_81_goodB2G.cpp",
-        "similarity": 0.9946,
+        "file": "CWE190_Integer_Overflow__char_fscanf_add_81_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_add_81_goodB2G.cpp",
+        "similarity": 0.9816,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE617_Reachable_Assertion__connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE617_Reachable_Assertion__connect_socket_81_goodG2B.cpp",
-        "similarity": 0.9578,
+        "file": "CWE190_Integer_Overflow__char_fscanf_add_82_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_add_82_goodB2G.cpp",
+        "similarity": 0.9823,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE617_Reachable_Assertion__fgets_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE617_Reachable_Assertion__fgets_81_goodG2B.cpp",
-        "similarity": 0.9906,
+        "file": "CWE190_Integer_Overflow__char_fscanf_add_83_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_add_83_goodB2G.cpp",
+        "similarity": 0.9919,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE665_Improper_Initialization__char_cat_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE665_Improper_Initialization__char_cat_81_goodG2B.cpp",
-        "similarity": 0.9483,
+        "file": "CWE190_Integer_Overflow__char_fscanf_add_84_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_add_84_goodB2G.cpp",
+        "similarity": 0.9918,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE665_Improper_Initialization__char_ncat_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE665_Improper_Initialization__char_ncat_81_goodG2B.cpp",
-        "similarity": 0.9371,
+        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_81_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_multiply_81_goodB2G.cpp",
+        "similarity": 0.9849,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_81_goodB2G.cpp",
-        "similarity": 0.989,
+        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_82_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_multiply_82_goodB2G.cpp",
+        "similarity": 0.9842,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_82_goodB2G.cpp",
-        "similarity": 0.9934,
+        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_83_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_multiply_83_goodB2G.cpp",
+        "similarity": 0.9931,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE675_Duplicate_Operations_on_Resource__fopen_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE675_Duplicate_Operations_on_Resource__fopen_81_goodB2G.cpp",
-        "similarity": 0.9864,
+        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_84_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_multiply_84_goodB2G.cpp",
+        "similarity": 0.993,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE675_Duplicate_Operations_on_Resource__fopen_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE675_Duplicate_Operations_on_Resource__fopen_82_goodB2G.cpp",
-        "similarity": 0.9865,
+        "file": "CWE476_NULL_Pointer_Dereference__char_81_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__char_81_goodB2G.cpp",
+        "similarity": 0.9762,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_81_goodG2B.cpp",
-        "similarity": 0.994,
+        "file": "CWE476_NULL_Pointer_Dereference__char_82_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__char_82_goodB2G.cpp",
+        "similarity": 0.978,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_82_goodG2B.cpp",
-        "similarity": 0.9969,
+        "file": "CWE476_NULL_Pointer_Dereference__class_81_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__class_81_goodB2G.cpp",
+        "similarity": 0.9785,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE690_NULL_Deref_From_Return__char_malloc_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE690_NULL_Deref_From_Return__char_malloc_81_goodB2G.cpp",
-        "similarity": 0.9894,
+        "file": "CWE476_NULL_Pointer_Dereference__class_82_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__class_82_goodB2G.cpp",
+        "similarity": 0.9779,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE690_NULL_Deref_From_Return__char_malloc_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE690_NULL_Deref_From_Return__char_malloc_82_goodB2G.cpp",
-        "similarity": 0.9843,
+        "file": "CWE476_NULL_Pointer_Dereference__int64_t_81_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__int64_t_81_goodB2G.cpp",
+        "similarity": 0.979,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_81_goodB2G.cpp",
-        "similarity": 0.996,
+        "file": "CWE476_NULL_Pointer_Dereference__int64_t_82_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__int64_t_82_goodB2G.cpp",
+        "similarity": 0.9793,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_82_goodB2G.cpp",
-        "similarity": 0.9944,
+        "file": "CWE476_NULL_Pointer_Dereference__int_81_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__int_81_goodB2G.cpp",
+        "similarity": 0.979,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_81_goodB2G.cpp",
-        "similarity": 0.9937,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_82_goodB2G.cpp",
-        "similarity": 0.9616,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_81_goodB2G.cpp",
-        "similarity": 0.9917,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_82_goodB2G.cpp",
-        "similarity": 0.9899,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_81_goodB2G.cpp",
-        "similarity": 0.9599,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_82_goodB2G.cpp",
-        "similarity": 0.9684,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_81_goodB2G.cpp",
-        "similarity": 0.992,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_82_goodB2G.cpp",
-        "similarity": 0.9924,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE78_OS_Command_Injection__char_connect_socket_execl_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE78_OS_Command_Injection__char_connect_socket_execl_81_goodG2B.cpp",
-        "similarity": 0.9856,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE78_OS_Command_Injection__char_connect_socket_execl_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE78_OS_Command_Injection__char_connect_socket_execl_82_goodG2B.cpp",
-        "similarity": 0.9946,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE843_Type_Confusion__char_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE843_Type_Confusion__char_81_goodG2B.cpp",
-        "similarity": 0.9764,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE843_Type_Confusion__char_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE843_Type_Confusion__char_82_goodG2B.cpp",
-        "similarity": 0.9953,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE90_LDAP_Injection__w32_char_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE90_LDAP_Injection__w32_char_connect_socket_81_goodG2B.cpp",
-        "similarity": 0.9952,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE90_LDAP_Injection__w32_char_connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE90_LDAP_Injection__w32_char_connect_socket_82_goodG2B.cpp",
-        "similarity": 0.9949,
+        "file": "CWE476_NULL_Pointer_Dereference__int_82_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__int_82_goodB2G.cpp",
+        "similarity": 0.9798,
         "status": "ok",
         "notes": null
       }
     ],
     "codeastra_2": [
       {
-        "file": "CWE114_Process_Control__w32_char_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE114_Process_Control__w32_char_connect_socket_81_goodG2B.cpp",
-        "similarity": 0.9929,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE114_Process_Control__w32_char_connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE114_Process_Control__w32_char_connect_socket_82_goodG2B.cpp",
-        "similarity": 0.9934,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_81_goodB2G.cpp",
-        "similarity": 0.9926,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_82_goodB2G.cpp",
-        "similarity": 0.9925,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE123_Write_What_Where_Condition__connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE123_Write_What_Where_Condition__connect_socket_81_goodG2B.cpp",
-        "similarity": 0.9879,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE123_Write_What_Where_Condition__connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE123_Write_What_Where_Condition__connect_socket_82_goodG2B.cpp",
-        "similarity": 0.9877,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE126_Buffer_Overread__char_alloca_loop_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE126_Buffer_Overread__char_alloca_loop_81_goodG2B.cpp",
-        "similarity": 0.9938,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE126_Buffer_Overread__char_alloca_loop_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE126_Buffer_Overread__char_alloca_loop_82_goodG2B.cpp",
-        "similarity": 0.9946,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE127_Buffer_Underread__char_alloca_cpy_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE127_Buffer_Underread__char_alloca_cpy_81_goodG2B.cpp",
-        "similarity": 0.9903,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE127_Buffer_Underread__char_alloca_cpy_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE127_Buffer_Underread__char_alloca_cpy_82_goodG2B.cpp",
-        "similarity": 0.9909,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_81_goodB2G.cpp",
-        "similarity": 0.9856,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_82_goodB2G.cpp",
-        "similarity": 0.9907,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE15_External_Control_of_System_or_Configuration_Setting__w32_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE15_External_Control_of_System_or_Configuration_Setting__w32_81_goodG2B.cpp",
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81_goodB2G.cpp",
         "similarity": 0.9928,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE15_External_Control_of_System_or_Configuration_Setting__w32_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE15_External_Control_of_System_or_Configuration_Setting__w32_82_goodG2B.cpp",
-        "similarity": 0.9897,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE176_Improper_Handling_of_Unicode_Encoding__w32_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE176_Improper_Handling_of_Unicode_Encoding__w32_81_goodB2G.cpp",
-        "similarity": 0.995,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE176_Improper_Handling_of_Unicode_Encoding__w32_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE176_Improper_Handling_of_Unicode_Encoding__w32_82_goodB2G.cpp",
-        "similarity": 0.9952,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE191_Integer_Underflow__char_fscanf_multiply_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE191_Integer_Underflow__char_fscanf_multiply_81_goodB2G.cpp",
-        "similarity": 0.9855,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE191_Integer_Underflow__char_fscanf_multiply_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE191_Integer_Underflow__char_fscanf_multiply_82_goodB2G.cpp",
-        "similarity": 0.9846,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE194_Unexpected_Sign_Extension__connect_socket_malloc_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE194_Unexpected_Sign_Extension__connect_socket_malloc_81_goodG2B.cpp",
-        "similarity": 0.9941,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE194_Unexpected_Sign_Extension__connect_socket_malloc_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE194_Unexpected_Sign_Extension__connect_socket_malloc_82_goodG2B.cpp",
-        "similarity": 0.993,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_81_goodG2B.cpp",
-        "similarity": 0.9936,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_82_goodG2B.cpp",
-        "similarity": 0.9943,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_81_goodG2B.cpp",
-        "similarity": 0.9869,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_82_goodG2B.cpp",
-        "similarity": 0.9916,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE23_Relative_Path_Traversal__char_connect_socket_fopen_83_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE23_Relative_Path_Traversal__char_connect_socket_fopen_83_goodG2B.cpp",
-        "similarity": 0.9973,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_goodG2B.cpp",
-        "similarity": 0.998,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE256_Plaintext_Storage_of_Password__w32_char_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE256_Plaintext_Storage_of_Password__w32_char_81_goodB2G.cpp",
-        "similarity": 0.9875,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE256_Plaintext_Storage_of_Password__w32_char_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE256_Plaintext_Storage_of_Password__w32_char_82_goodB2G.cpp",
-        "similarity": 0.9951,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE259_Hard_Coded_Password__w32_char_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE259_Hard_Coded_Password__w32_char_81_goodG2B.cpp",
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_82_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_82_goodB2G.cpp",
         "similarity": 0.9937,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE259_Hard_Coded_Password__w32_char_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE259_Hard_Coded_Password__w32_char_82_goodG2B.cpp",
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_goodB2G.cpp",
         "similarity": 0.9948,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_81_goodB2G.cpp",
-        "similarity": 0.9876,
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_goodB2G.cpp",
+        "similarity": 0.9951,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_82_goodB2G.cpp",
-        "similarity": 0.9906,
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81_goodB2G.cpp",
+        "similarity": 0.9925,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE321_Hard_Coded_Cryptographic_Key__w32_char_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE321_Hard_Coded_Cryptographic_Key__w32_char_81_goodG2B.cpp",
-        "similarity": 0.9937,
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_82_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_82_goodB2G.cpp",
+        "similarity": 0.9922,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE321_Hard_Coded_Cryptographic_Key__w32_char_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE321_Hard_Coded_Cryptographic_Key__w32_char_82_goodG2B.cpp",
-        "similarity": 0.9946,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE369_Divide_by_Zero__float_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE369_Divide_by_Zero__float_connect_socket_81_goodB2G.cpp",
-        "similarity": 0.9889,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE369_Divide_by_Zero__float_connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE369_Divide_by_Zero__float_connect_socket_82_goodB2G.cpp",
-        "similarity": 0.9898,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_81_goodG2B.cpp",
-        "similarity": 0.9934,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_82_goodG2B.cpp",
-        "similarity": 0.9952,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE400_Resource_Exhaustion__connect_socket_for_loop_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE400_Resource_Exhaustion__connect_socket_for_loop_81_goodB2G.cpp",
-        "similarity": 0.992,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE400_Resource_Exhaustion__connect_socket_for_loop_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE400_Resource_Exhaustion__connect_socket_for_loop_82_goodB2G.cpp",
-        "similarity": 0.9921,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE401_Memory_Leak__new_array_int_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE401_Memory_Leak__new_array_int_81_goodB2G.cpp",
-        "similarity": 0.9933,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE401_Memory_Leak__new_array_int_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE401_Memory_Leak__new_array_int_82_goodB2G.cpp",
-        "similarity": 0.9842,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE404_Improper_Resource_Shutdown__fopen_w32_close_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE404_Improper_Resource_Shutdown__fopen_w32_close_81_goodB2G.cpp",
-        "similarity": 0.9899,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE404_Improper_Resource_Shutdown__fopen_w32_close_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE404_Improper_Resource_Shutdown__fopen_w32_close_82_goodB2G.cpp",
-        "similarity": 0.9893,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE415_Double_Free__malloc_free_char_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE415_Double_Free__malloc_free_char_81_goodB2G.cpp",
-        "similarity": 0.9828,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE415_Double_Free__malloc_free_char_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE415_Double_Free__malloc_free_char_82_goodB2G.cpp",
-        "similarity": 0.9848,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE426_Untrusted_Search_Path__char_popen_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE426_Untrusted_Search_Path__char_popen_81_goodG2B.cpp",
-        "similarity": 0.9954,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE426_Untrusted_Search_Path__char_popen_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE426_Untrusted_Search_Path__char_popen_82_goodG2B.cpp",
-        "similarity": 0.9909,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_81_goodG2B.cpp",
-        "similarity": 0.9936,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_82_goodG2B.cpp",
-        "similarity": 0.9915,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE457_Use_of_Uninitialized_Variable__no_constructor_01_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE457_Use_of_Uninitialized_Variable__no_constructor_01_good1.cpp",
-        "similarity": 0.9954,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE464_Addition_of_Data_Structure_Sentinel__basic_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE464_Addition_of_Data_Structure_Sentinel__basic_81_goodG2B.cpp",
-        "similarity": 0.9931,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE464_Addition_of_Data_Structure_Sentinel__basic_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE464_Addition_of_Data_Structure_Sentinel__basic_82_goodG2B.cpp",
-        "similarity": 0.9927,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE500_Public_Static_Field_Not_Final__int_01_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE500_Public_Static_Field_Not_Final__int_01_good1.cpp",
-        "similarity": 0.9967,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE563_Unused_Variable__unused_class_member_value_01_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE563_Unused_Variable__unused_class_member_value_01_good1.cpp",
-        "similarity": 0.9979,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE563_Unused_Variable__unused_init_variable_char_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE563_Unused_Variable__unused_init_variable_char_81_goodB2G.cpp",
-        "similarity": 0.9864,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__class_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__class_81_goodG2B.cpp",
-        "similarity": 0.984,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__struct_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__struct_81_goodG2B.cpp",
-        "similarity": 0.9914,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE590_Free_Memory_Not_on_Heap__delete_array_char_alloca_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE590_Free_Memory_Not_on_Heap__delete_array_char_alloca_81_goodG2B.cpp",
-        "similarity": 0.9894,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE590_Free_Memory_Not_on_Heap__delete_array_char_declare_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE590_Free_Memory_Not_on_Heap__delete_array_char_declare_81_goodG2B.cpp",
-        "similarity": 0.9912,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_char_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_char_81_goodG2B.cpp",
-        "similarity": 0.9873,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_wchar_t_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_wchar_t_81_goodG2B.cpp",
-        "similarity": 0.9946,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE606_Unchecked_Loop_Condition__char_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE606_Unchecked_Loop_Condition__char_connect_socket_81_goodB2G.cpp",
-        "similarity": 0.9939,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE606_Unchecked_Loop_Condition__char_console_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE606_Unchecked_Loop_Condition__char_console_81_goodB2G.cpp",
-        "similarity": 0.9942,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE617_Reachable_Assertion__connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE617_Reachable_Assertion__connect_socket_81_goodG2B.cpp",
-        "similarity": 0.9907,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE617_Reachable_Assertion__fgets_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE617_Reachable_Assertion__fgets_81_goodG2B.cpp",
-        "similarity": 0.9888,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE665_Improper_Initialization__char_cat_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE665_Improper_Initialization__char_cat_81_goodG2B.cpp",
-        "similarity": 0.9905,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE665_Improper_Initialization__char_ncat_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE665_Improper_Initialization__char_ncat_81_goodG2B.cpp",
-        "similarity": 0.9898,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_81_goodB2G.cpp",
-        "similarity": 0.9913,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_82_goodB2G.cpp",
-        "similarity": 0.9928,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE675_Duplicate_Operations_on_Resource__fopen_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE675_Duplicate_Operations_on_Resource__fopen_81_goodB2G.cpp",
-        "similarity": 0.985,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE675_Duplicate_Operations_on_Resource__fopen_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE675_Duplicate_Operations_on_Resource__fopen_82_goodB2G.cpp",
-        "similarity": 0.9853,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_81_goodG2B.cpp",
-        "similarity": 0.9946,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_82_goodG2B.cpp",
-        "similarity": 0.995,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE690_NULL_Deref_From_Return__char_malloc_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE690_NULL_Deref_From_Return__char_malloc_81_goodB2G.cpp",
-        "similarity": 0.9885,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE690_NULL_Deref_From_Return__char_malloc_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE690_NULL_Deref_From_Return__char_malloc_82_goodB2G.cpp",
-        "similarity": 0.9887,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_81_goodB2G.cpp",
-        "similarity": 0.9936,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_82_goodB2G.cpp",
-        "similarity": 0.9956,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_81_goodB2G.cpp",
-        "similarity": 0.9888,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_82_goodB2G.cpp",
-        "similarity": 0.9875,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_81_goodB2G.cpp",
-        "similarity": 0.9917,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_82_goodB2G.cpp",
-        "similarity": 0.992,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_81_goodB2G.cpp",
-        "similarity": 0.9834,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_82_goodB2G.cpp",
-        "similarity": 0.9824,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_81_goodB2G.cpp",
-        "similarity": 0.9896,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_82_goodB2G.cpp",
-        "similarity": 0.992,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE78_OS_Command_Injection__char_connect_socket_execl_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE78_OS_Command_Injection__char_connect_socket_execl_81_goodG2B.cpp",
-        "similarity": 0.9953,
-        "status": "ok",
-        "notes": null
-      },
-      {
-        "file": "CWE78_OS_Command_Injection__char_connect_socket_execl_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE78_OS_Command_Injection__char_connect_socket_execl_82_goodG2B.cpp",
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_83_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_83_goodB2G.cpp",
         "similarity": 0.9935,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE843_Type_Confusion__char_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE843_Type_Confusion__char_81_goodG2B.cpp",
-        "similarity": 0.984,
+        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_84_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_84_goodB2G.cpp",
+        "similarity": 0.9925,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE843_Type_Confusion__char_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE843_Type_Confusion__char_82_goodG2B.cpp",
-        "similarity": 0.9851,
+        "file": "CWE190_Integer_Overflow__char_fscanf_add_81_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_add_81_goodB2G.cpp",
+        "similarity": 0.9898,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE90_LDAP_Injection__w32_char_connect_socket_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE90_LDAP_Injection__w32_char_connect_socket_81_goodG2B.cpp",
-        "similarity": 0.994,
+        "file": "CWE190_Integer_Overflow__char_fscanf_add_82_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_add_82_goodB2G.cpp",
+        "similarity": 0.9897,
         "status": "ok",
         "notes": null
       },
       {
-        "file": "CWE90_LDAP_Injection__w32_char_connect_socket_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE90_LDAP_Injection__w32_char_connect_socket_82_goodG2B.cpp",
-        "similarity": 0.9941,
+        "file": "CWE190_Integer_Overflow__char_fscanf_add_83_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_add_83_goodB2G.cpp",
+        "similarity": 0.9937,
+        "status": "ok",
+        "notes": null
+      },
+      {
+        "file": "CWE190_Integer_Overflow__char_fscanf_add_84_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_add_84_goodB2G.cpp",
+        "similarity": 0.9946,
+        "status": "ok",
+        "notes": null
+      },
+      {
+        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_81_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_multiply_81_goodB2G.cpp",
+        "similarity": 0.985,
+        "status": "ok",
+        "notes": null
+      },
+      {
+        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_82_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_multiply_82_goodB2G.cpp",
+        "similarity": 0.9864,
+        "status": "ok",
+        "notes": null
+      },
+      {
+        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_83_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_multiply_83_goodB2G.cpp",
+        "similarity": 0.9934,
+        "status": "ok",
+        "notes": null
+      },
+      {
+        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_84_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_multiply_84_goodB2G.cpp",
+        "similarity": 0.9955,
+        "status": "ok",
+        "notes": null
+      },
+      {
+        "file": "CWE476_NULL_Pointer_Dereference__char_81_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__char_81_goodB2G.cpp",
+        "similarity": 0.9807,
+        "status": "ok",
+        "notes": null
+      },
+      {
+        "file": "CWE476_NULL_Pointer_Dereference__char_82_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__char_82_goodB2G.cpp",
+        "similarity": 0.9819,
+        "status": "ok",
+        "notes": null
+      },
+      {
+        "file": "CWE476_NULL_Pointer_Dereference__class_81_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__class_81_goodB2G.cpp",
+        "similarity": 0.9838,
+        "status": "ok",
+        "notes": null
+      },
+      {
+        "file": "CWE476_NULL_Pointer_Dereference__class_82_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__class_82_goodB2G.cpp",
+        "similarity": 0.9827,
+        "status": "ok",
+        "notes": null
+      },
+      {
+        "file": "CWE476_NULL_Pointer_Dereference__int64_t_81_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__int64_t_81_goodB2G.cpp",
+        "similarity": 0.9823,
+        "status": "ok",
+        "notes": null
+      },
+      {
+        "file": "CWE476_NULL_Pointer_Dereference__int64_t_82_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__int64_t_82_goodB2G.cpp",
+        "similarity": 0.9824,
+        "status": "ok",
+        "notes": null
+      },
+      {
+        "file": "CWE476_NULL_Pointer_Dereference__int_81_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__int_81_goodB2G.cpp",
+        "similarity": 0.9823,
+        "status": "ok",
+        "notes": null
+      },
+      {
+        "file": "CWE476_NULL_Pointer_Dereference__int_82_bad.cpp",
+        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__int_82_goodB2G.cpp",
+        "similarity": 0.9835,
         "status": "ok",
         "notes": null
       }

@@ -304,11 +304,11 @@ if __name__ == "__main__":
     import argparse
     
     parser = argparse.ArgumentParser(description="Generate patches using CodeLlama with security hints")
-    parser.add_argument("--input", default="benchmark/vulnerable_snippets_2",
+    parser.add_argument("--input", default="benchmark/vulnerable_snippets",
                        help="Directory containing vulnerable snippets")
-    parser.add_argument("--output", default="results/sementic_hinted_patches_2",
+    parser.add_argument("--output", default="results/sementic_hint_patches",
                        help="Output directory for generated patches")
-    parser.add_argument("--hints", default="benchmark/security_hints_codeastra.json",
+    parser.add_argument("--hints", default="benchmark/security_hints.json",
                        help="JSON file containing security hints")
     parser.add_argument("--model", default="codellama/CodeLlama-7b-Instruct-hf",
                        help="CodeLlama model name")

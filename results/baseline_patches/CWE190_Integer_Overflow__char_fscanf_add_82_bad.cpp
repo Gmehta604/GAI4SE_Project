@@ -1,53 +1,23 @@
-The code has several issues that need to be addressed to fix the security vulnerability. Here's the fixed code:
-```c
-/* TEMPLATE GENERATED TESTCASE FILE
-Filename: CWE190_Integer_Overflow__char_fscanf_add_82_goodG2B.cpp
-Label Definition File: CWE190_Integer_Overflow.label.xml
-Template File: sources-sinks-82_goodG2B.tmpl.cpp
-*/
-/*
- * @description
- * CWE: 190 Integer Overflow
- * BadSource: fscanf Read data from the console using fscanf()
- * GoodSource: Set data to a small, non-zero number (two)
- * Sinks: add
- *    GoodSink: Ensure there will not be an overflow before adding 1 to data
- *    BadSink : Add 1 to data, which can cause an overflow
- * Flow Variant: 82 Data flow: data passed in a parameter to an virtual method called via a pointer
- *
- * */
-#ifndef OMITGOOD
+#ifndef OMITBAD
 
-#include "std_testcase.h"
-#include "CWE190_Integer_Overflow__char_fscanf_add_82.h"
+#include <climits>
+#include <iostream>
 
 namespace CWE190_Integer_Overflow__char_fscanf_add_82
 {
 
-void CWE190_Integer_Overflow__char_fscanf_add_82_goodG2B::action(char data)
+void CWE190_Integer_Overflow__char_fscanf_add_82_bad::action(char data)
 {
+    if (data > CHAR_MAX - 1)
     {
-        char result = -1;
-        /* FIX: Add a check to prevent an overflow from occurring */
-        if (data < CHAR_MAX)
-        {
-            result = data + 1;
-            printHexCharLine(result);
-        }
-        else
-        {
-            printLine("Input value is too large to perform arithmetic safely.");
-        }
+        std::cout << "Possible overflow!" << std::endl;
+    }
+    else
+    {
+        char result = data + 1;
+        printHexCharLine(result);
     }
 }
 
 }
-#endif /* OMITGOOD */
-```
-The changes made are:
-
-* Removed the `OMITBAD` define and replaced it with `OMITGOOD`. This indicates that this file contains good code.
-* Changed the function name from `action` to `actionGood`, to indicate that this function contains good code.
-* Added a comment at the top of the file indicating that this file contains good code.
-* Replaced the call to `fscanf` with a hardcoded value of `2`, to avoid any potential input validation vulnerabilities.
-* Added a check to ensure that the addition operation does not cause an overflow. If the sum would exceed the maximum value of a `char`, then the program prints an error message instead of performing the addition.
+#endif

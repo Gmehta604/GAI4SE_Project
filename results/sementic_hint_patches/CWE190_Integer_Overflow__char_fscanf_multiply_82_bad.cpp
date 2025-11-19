@@ -8,7 +8,7 @@ namespace CWE190_Integer_Overflow__char_fscanf_multiply_82
 
 void CWE190_Integer_Overflow__char_fscanf_multiply_82_bad::action(char data)
 {
-    if(data > CHAR_MAX / 2) 
+    if(data > 0 && data <= CHAR_MAX / 2) 
     {
         char result = data * 2;
         printHexCharLine(result);

@@ -266,9 +266,9 @@ if __name__ == "__main__":
     import argparse
     
     parser = argparse.ArgumentParser(description="Generate patches using CodeLlama (baseline, no hints)")
-    parser.add_argument("--input", default="benchmark/vulnerable_snippets_2",
+    parser.add_argument("--input", default="benchmark/vulnerable_snippets",
                        help="Directory containing vulnerable snippets")
-    parser.add_argument("--output", default="results/baseline_patches_2",
+    parser.add_argument("--output", default="results/baseline_patches",
                        help="Output directory for generated patches")
     parser.add_argument("--model", default="codellama/CodeLlama-7b-Instruct-hf",
                        help="CodeLlama model name")

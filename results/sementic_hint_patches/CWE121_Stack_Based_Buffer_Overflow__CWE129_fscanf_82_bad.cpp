@@ -10,9 +10,9 @@ void CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_82_bad::action(int data)
 {
     {
         int i;
-        int buffer[10];
+        int buffer[10] = { 0 };
 
-        if (data >= 0 && data <= (10 - 1))
+        if (data >= 0 && data < 10)
         {
             buffer[data] = 1;
             
@@ -23,7 +23,7 @@ void CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_82_bad::action(int data)
         }
         else
         {
-            printLine("ERROR: Array index is out-of-bounds");
+            printLine("ERROR: Array index is out of bounds");
         }
     }
 }
