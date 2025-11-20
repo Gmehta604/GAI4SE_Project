@@ -1,372 +1,1324 @@
 {
-  "timestamp": "2025-11-19T23:44:37.569553",
+  "timestamp": "2025-11-20T06:05:03.109307",
   "model": "microsoft/codebert-base",
   "ground_truth_dir": "benchmark\\ground_truth",
-  "baseline_dir": "benchmark\\vulnerable_snippets",
-  "codeastra_dir": "results\\sementic_hint_patches",
+  "baseline_dir": "results\\baseline_patches_2",
+  "codeastra_dir": "results\\sementic_hinted_patches_2",
   "summary": {
     "baseline_patches_2": {
-      "total_files": 24,
-      "matched_files": 24,
-      "missing_ground_truth": 0,
+      "total_files": 92,
+      "matched_files": 0,
+      "missing_ground_truth": 92,
       "empty_ground_truth": 0,
       "empty_patch": 0,
       "embedding_failed": 0,
-      "average_similarity": 0.9866,
-      "min_similarity": 0.9762,
-      "max_similarity": 0.995
+      "average_similarity": null,
+      "min_similarity": null,
+      "max_similarity": null
     },
     "codeastra_2": {
-      "total_files": 24,
-      "matched_files": 24,
-      "missing_ground_truth": 0,
+      "total_files": 92,
+      "matched_files": 0,
+      "missing_ground_truth": 92,
       "empty_ground_truth": 0,
       "empty_patch": 0,
       "embedding_failed": 0,
-      "average_similarity": 0.9889,
-      "min_similarity": 0.9807,
-      "max_similarity": 0.9955
+      "average_similarity": null,
+      "min_similarity": null,
+      "max_similarity": null
     }
   },
   "results": {
     "baseline_patches_2": [
       {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81_goodB2G.cpp",
-        "similarity": 0.9936,
-        "status": "ok",
-        "notes": null
+        "file": "CWE114_Process_Control__w32_char_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_82_goodB2G.cpp",
-        "similarity": 0.9932,
-        "status": "ok",
-        "notes": null
+        "file": "CWE114_Process_Control__w32_char_connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_goodB2G.cpp",
-        "similarity": 0.9946,
-        "status": "ok",
-        "notes": null
+        "file": "CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_goodB2G.cpp",
-        "similarity": 0.995,
-        "status": "ok",
-        "notes": null
+        "file": "CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81_goodB2G.cpp",
-        "similarity": 0.9924,
-        "status": "ok",
-        "notes": null
+        "file": "CWE123_Write_What_Where_Condition__connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_82_goodB2G.cpp",
-        "similarity": 0.9923,
-        "status": "ok",
-        "notes": null
+        "file": "CWE123_Write_What_Where_Condition__connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_83_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_83_goodB2G.cpp",
-        "similarity": 0.9933,
-        "status": "ok",
-        "notes": null
+        "file": "CWE126_Buffer_Overread__char_alloca_loop_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_84_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_84_goodB2G.cpp",
-        "similarity": 0.9925,
-        "status": "ok",
-        "notes": null
+        "file": "CWE126_Buffer_Overread__char_alloca_loop_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE190_Integer_Overflow__char_fscanf_add_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_add_81_goodB2G.cpp",
-        "similarity": 0.9816,
-        "status": "ok",
-        "notes": null
+        "file": "CWE127_Buffer_Underread__char_alloca_cpy_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE190_Integer_Overflow__char_fscanf_add_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_add_82_goodB2G.cpp",
-        "similarity": 0.9823,
-        "status": "ok",
-        "notes": null
+        "file": "CWE127_Buffer_Underread__char_alloca_cpy_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE190_Integer_Overflow__char_fscanf_add_83_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_add_83_goodB2G.cpp",
-        "similarity": 0.9919,
-        "status": "ok",
-        "notes": null
+        "file": "CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE190_Integer_Overflow__char_fscanf_add_84_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_add_84_goodB2G.cpp",
-        "similarity": 0.9918,
-        "status": "ok",
-        "notes": null
+        "file": "CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_multiply_81_goodB2G.cpp",
-        "similarity": 0.9849,
-        "status": "ok",
-        "notes": null
+        "file": "CWE15_External_Control_of_System_or_Configuration_Setting__w32_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_multiply_82_goodB2G.cpp",
-        "similarity": 0.9842,
-        "status": "ok",
-        "notes": null
+        "file": "CWE15_External_Control_of_System_or_Configuration_Setting__w32_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_83_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_multiply_83_goodB2G.cpp",
-        "similarity": 0.9931,
-        "status": "ok",
-        "notes": null
+        "file": "CWE176_Improper_Handling_of_Unicode_Encoding__w32_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_84_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_multiply_84_goodB2G.cpp",
-        "similarity": 0.993,
-        "status": "ok",
-        "notes": null
+        "file": "CWE176_Improper_Handling_of_Unicode_Encoding__w32_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE476_NULL_Pointer_Dereference__char_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__char_81_goodB2G.cpp",
-        "similarity": 0.9762,
-        "status": "ok",
-        "notes": null
+        "file": "CWE191_Integer_Underflow__char_fscanf_multiply_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE476_NULL_Pointer_Dereference__char_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__char_82_goodB2G.cpp",
-        "similarity": 0.978,
-        "status": "ok",
-        "notes": null
+        "file": "CWE191_Integer_Underflow__char_fscanf_multiply_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE476_NULL_Pointer_Dereference__class_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__class_81_goodB2G.cpp",
-        "similarity": 0.9785,
-        "status": "ok",
-        "notes": null
+        "file": "CWE194_Unexpected_Sign_Extension__connect_socket_malloc_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE476_NULL_Pointer_Dereference__class_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__class_82_goodB2G.cpp",
-        "similarity": 0.9779,
-        "status": "ok",
-        "notes": null
+        "file": "CWE194_Unexpected_Sign_Extension__connect_socket_malloc_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE476_NULL_Pointer_Dereference__int64_t_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__int64_t_81_goodB2G.cpp",
-        "similarity": 0.979,
-        "status": "ok",
-        "notes": null
+        "file": "CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE476_NULL_Pointer_Dereference__int64_t_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__int64_t_82_goodB2G.cpp",
-        "similarity": 0.9793,
-        "status": "ok",
-        "notes": null
+        "file": "CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE476_NULL_Pointer_Dereference__int_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__int_81_goodB2G.cpp",
-        "similarity": 0.979,
-        "status": "ok",
-        "notes": null
+        "file": "CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE476_NULL_Pointer_Dereference__int_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__int_82_goodB2G.cpp",
-        "similarity": 0.9798,
-        "status": "ok",
-        "notes": null
+        "file": "CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE23_Relative_Path_Traversal__char_connect_socket_fopen_83_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE256_Plaintext_Storage_of_Password__w32_char_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE256_Plaintext_Storage_of_Password__w32_char_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE259_Hard_Coded_Password__w32_char_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE259_Hard_Coded_Password__w32_char_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE321_Hard_Coded_Cryptographic_Key__w32_char_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE321_Hard_Coded_Cryptographic_Key__w32_char_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE369_Divide_by_Zero__float_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE369_Divide_by_Zero__float_connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE400_Resource_Exhaustion__connect_socket_for_loop_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE400_Resource_Exhaustion__connect_socket_for_loop_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE401_Memory_Leak__new_array_int_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE401_Memory_Leak__new_array_int_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE404_Improper_Resource_Shutdown__fopen_w32_close_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE404_Improper_Resource_Shutdown__fopen_w32_close_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE415_Double_Free__malloc_free_char_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE415_Double_Free__malloc_free_char_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE426_Untrusted_Search_Path__char_popen_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE426_Untrusted_Search_Path__char_popen_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE457_Use_of_Uninitialized_Variable__no_constructor_01_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE464_Addition_of_Data_Structure_Sentinel__basic_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE464_Addition_of_Data_Structure_Sentinel__basic_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE500_Public_Static_Field_Not_Final__int_01_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE563_Unused_Variable__unused_class_member_value_01_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE563_Unused_Variable__unused_init_variable_char_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__class_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__struct_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE590_Free_Memory_Not_on_Heap__delete_array_char_alloca_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE590_Free_Memory_Not_on_Heap__delete_array_char_declare_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_char_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_wchar_t_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE606_Unchecked_Loop_Condition__char_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE606_Unchecked_Loop_Condition__char_console_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE617_Reachable_Assertion__connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE617_Reachable_Assertion__fgets_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE665_Improper_Initialization__char_cat_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE665_Improper_Initialization__char_ncat_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE675_Duplicate_Operations_on_Resource__fopen_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE675_Duplicate_Operations_on_Resource__fopen_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE690_NULL_Deref_From_Return__char_malloc_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE690_NULL_Deref_From_Return__char_malloc_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE78_OS_Command_Injection__char_connect_socket_execl_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE78_OS_Command_Injection__char_connect_socket_execl_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE843_Type_Confusion__char_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE843_Type_Confusion__char_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE90_LDAP_Injection__w32_char_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE90_LDAP_Injection__w32_char_connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       }
     ],
     "codeastra_2": [
       {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_81_goodB2G.cpp",
-        "similarity": 0.9928,
-        "status": "ok",
-        "notes": null
+        "file": "CWE114_Process_Control__w32_char_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_82_goodB2G.cpp",
-        "similarity": 0.9937,
-        "status": "ok",
-        "notes": null
+        "file": "CWE114_Process_Control__w32_char_connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_83_goodB2G.cpp",
-        "similarity": 0.9948,
-        "status": "ok",
-        "notes": null
+        "file": "CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_84_goodB2G.cpp",
-        "similarity": 0.9951,
-        "status": "ok",
-        "notes": null
+        "file": "CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_81_goodB2G.cpp",
-        "similarity": 0.9925,
-        "status": "ok",
-        "notes": null
+        "file": "CWE123_Write_What_Where_Condition__connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_82_goodB2G.cpp",
-        "similarity": 0.9922,
-        "status": "ok",
-        "notes": null
+        "file": "CWE123_Write_What_Where_Condition__connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_83_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_83_goodB2G.cpp",
-        "similarity": 0.9935,
-        "status": "ok",
-        "notes": null
+        "file": "CWE126_Buffer_Overread__char_alloca_loop_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_84_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_84_goodB2G.cpp",
-        "similarity": 0.9925,
-        "status": "ok",
-        "notes": null
+        "file": "CWE126_Buffer_Overread__char_alloca_loop_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE190_Integer_Overflow__char_fscanf_add_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_add_81_goodB2G.cpp",
-        "similarity": 0.9898,
-        "status": "ok",
-        "notes": null
+        "file": "CWE127_Buffer_Underread__char_alloca_cpy_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE190_Integer_Overflow__char_fscanf_add_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_add_82_goodB2G.cpp",
-        "similarity": 0.9897,
-        "status": "ok",
-        "notes": null
+        "file": "CWE127_Buffer_Underread__char_alloca_cpy_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE190_Integer_Overflow__char_fscanf_add_83_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_add_83_goodB2G.cpp",
-        "similarity": 0.9937,
-        "status": "ok",
-        "notes": null
+        "file": "CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE190_Integer_Overflow__char_fscanf_add_84_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_add_84_goodB2G.cpp",
-        "similarity": 0.9946,
-        "status": "ok",
-        "notes": null
+        "file": "CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_multiply_81_goodB2G.cpp",
-        "similarity": 0.985,
-        "status": "ok",
-        "notes": null
+        "file": "CWE15_External_Control_of_System_or_Configuration_Setting__w32_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_multiply_82_goodB2G.cpp",
-        "similarity": 0.9864,
-        "status": "ok",
-        "notes": null
+        "file": "CWE15_External_Control_of_System_or_Configuration_Setting__w32_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_83_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_multiply_83_goodB2G.cpp",
-        "similarity": 0.9934,
-        "status": "ok",
-        "notes": null
+        "file": "CWE176_Improper_Handling_of_Unicode_Encoding__w32_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE190_Integer_Overflow__char_fscanf_multiply_84_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE190_Integer_Overflow__char_fscanf_multiply_84_goodB2G.cpp",
-        "similarity": 0.9955,
-        "status": "ok",
-        "notes": null
+        "file": "CWE176_Improper_Handling_of_Unicode_Encoding__w32_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE476_NULL_Pointer_Dereference__char_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__char_81_goodB2G.cpp",
-        "similarity": 0.9807,
-        "status": "ok",
-        "notes": null
+        "file": "CWE191_Integer_Underflow__char_fscanf_multiply_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE476_NULL_Pointer_Dereference__char_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__char_82_goodB2G.cpp",
-        "similarity": 0.9819,
-        "status": "ok",
-        "notes": null
+        "file": "CWE191_Integer_Underflow__char_fscanf_multiply_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE476_NULL_Pointer_Dereference__class_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__class_81_goodB2G.cpp",
-        "similarity": 0.9838,
-        "status": "ok",
-        "notes": null
+        "file": "CWE194_Unexpected_Sign_Extension__connect_socket_malloc_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE476_NULL_Pointer_Dereference__class_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__class_82_goodB2G.cpp",
-        "similarity": 0.9827,
-        "status": "ok",
-        "notes": null
+        "file": "CWE194_Unexpected_Sign_Extension__connect_socket_malloc_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE476_NULL_Pointer_Dereference__int64_t_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__int64_t_81_goodB2G.cpp",
-        "similarity": 0.9823,
-        "status": "ok",
-        "notes": null
+        "file": "CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE476_NULL_Pointer_Dereference__int64_t_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__int64_t_82_goodB2G.cpp",
-        "similarity": 0.9824,
-        "status": "ok",
-        "notes": null
+        "file": "CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE476_NULL_Pointer_Dereference__int_81_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__int_81_goodB2G.cpp",
-        "similarity": 0.9823,
-        "status": "ok",
-        "notes": null
+        "file": "CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       },
       {
-        "file": "CWE476_NULL_Pointer_Dereference__int_82_bad.cpp",
-        "ground_truth_file": "benchmark\\ground_truth\\CWE476_NULL_Pointer_Dereference__int_82_goodB2G.cpp",
-        "similarity": 0.9835,
-        "status": "ok",
-        "notes": null
+        "file": "CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE23_Relative_Path_Traversal__char_connect_socket_fopen_83_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE256_Plaintext_Storage_of_Password__w32_char_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE256_Plaintext_Storage_of_Password__w32_char_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE259_Hard_Coded_Password__w32_char_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE259_Hard_Coded_Password__w32_char_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE321_Hard_Coded_Cryptographic_Key__w32_char_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE321_Hard_Coded_Cryptographic_Key__w32_char_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE369_Divide_by_Zero__float_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE369_Divide_by_Zero__float_connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE400_Resource_Exhaustion__connect_socket_for_loop_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE400_Resource_Exhaustion__connect_socket_for_loop_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE401_Memory_Leak__new_array_int_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE401_Memory_Leak__new_array_int_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE404_Improper_Resource_Shutdown__fopen_w32_close_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE404_Improper_Resource_Shutdown__fopen_w32_close_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE415_Double_Free__malloc_free_char_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE415_Double_Free__malloc_free_char_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE426_Untrusted_Search_Path__char_popen_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE426_Untrusted_Search_Path__char_popen_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE457_Use_of_Uninitialized_Variable__no_constructor_01_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE464_Addition_of_Data_Structure_Sentinel__basic_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE464_Addition_of_Data_Structure_Sentinel__basic_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE500_Public_Static_Field_Not_Final__int_01_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE563_Unused_Variable__unused_class_member_value_01_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE563_Unused_Variable__unused_init_variable_char_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__class_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__struct_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE590_Free_Memory_Not_on_Heap__delete_array_char_alloca_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE590_Free_Memory_Not_on_Heap__delete_array_char_declare_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_char_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_wchar_t_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE606_Unchecked_Loop_Condition__char_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE606_Unchecked_Loop_Condition__char_console_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE617_Reachable_Assertion__connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE617_Reachable_Assertion__fgets_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE665_Improper_Initialization__char_cat_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE665_Improper_Initialization__char_ncat_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE675_Duplicate_Operations_on_Resource__fopen_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE675_Duplicate_Operations_on_Resource__fopen_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE690_NULL_Deref_From_Return__char_malloc_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE690_NULL_Deref_From_Return__char_malloc_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE78_OS_Command_Injection__char_connect_socket_execl_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE78_OS_Command_Injection__char_connect_socket_execl_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE843_Type_Confusion__char_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE843_Type_Confusion__char_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE90_LDAP_Injection__w32_char_connect_socket_81_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
+      },
+      {
+        "file": "CWE90_LDAP_Injection__w32_char_connect_socket_82_bad.cpp",
+        "ground_truth_file": null,
+        "similarity": null,
+        "status": "missing_ground_truth",
+        "notes": "No matching ground truth file found"
       }
     ]
   }

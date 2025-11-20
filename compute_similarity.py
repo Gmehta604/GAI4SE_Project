@@ -25,8 +25,8 @@ from transformers import AutoModel, AutoTokenizer
 # Configuration (edit these paths if needed)
 # ---------------------------------------------------------------------------
 GROUND_TRUTH_DIR = "benchmark/ground_truth"
-BASELINE_DIR = "benchmark/vulnerable_snippets"
-CODEASTRA_DIR = "results/sementic_hint_patches"
+BASELINE_DIR = "results/baseline_patches_2"
+CODEASTRA_DIR = "results/sementic_hinted_patches_2"
 OUTPUT_JSON = "results/codebert_similarity.json"
 MODEL_NAME = "microsoft/codebert-base"
 MAX_LENGTH = 512  # CodeBERT token limit
@@ -299,7 +299,7 @@ def main():
     )
 
     report = {
-        "timestamp": datetime.utcnow().isoformat(),
+        "timestamp": datetime.isoformat(),
         "model": MODEL_NAME,
         "ground_truth_dir": str(ground_truth_path),
         "baseline_dir": str(baseline_path),

@@ -1,7 +1,7 @@
 """
 scan_vulnerabilities.py
 
-Scans baseline_patches_2 and codeastra_2 directories for security vulnerabilities
+Scans baseline_patches_2_2 and sementic_hinted_patches_2 directories for security vulnerabilities
 using flawfinder and saves results to JSON.
 """
 
@@ -12,8 +12,8 @@ from datetime import datetime
 import re
 
 # Configuration
-BASELINE_DIR = "results/sementic_hinted_patches_2"
-CODEASTRA_DIR = "results/baseline_patches_2"
+BASELINE_DIR = "results/baseline_patches_2"
+CODEASTRA_DIR = "results/sementic_hinted_patches_2"
 OUTPUT_JSON = "results/vulnerability_scan.json"
 
 
@@ -22,47 +22,84 @@ def parse_flawfinder_output(output_text):
     vulnerabilities = []
     lines = output_text.split('\n')
     
-    # Pattern: "file.cpp:123:  [2] (buffer) strcpy: description"
-    pattern = r'^([^:]+):(\d+):\s+\[(\d+)\]\s+\(([^)]+)\)\s+([^:]+):\s*(.*)$'
+    # Pattern: "file.cpp:123:  [2] (buffer) strcpy:" or "file.cpp:123:  [2] (buffer) char:"
+    # The description comes on the next line(s), indented
+    # More flexible pattern that handles various formats
+    pattern = r'^([^:]+):(\d+):\s+\[(\d+)\]\s+\(([^)]+)\)\s+([^:\n]+):\s*$'
     
     in_results = False
     i = 0
     
     while i < len(lines):
-        line = lines[i].strip()
+        line = lines[i]
+        line_stripped = line.strip()
+        line_rstripped = line.rstrip()  # Preserve leading spaces for indented descriptions
         
-        if line.startswith('FINAL RESULTS:'):
+        # Check if we're entering the results section
+        if 'FINAL RESULTS:' in line_stripped:
             in_results = True
             i += 1
+            # Skip empty lines after FINAL RESULTS:
+            while i < len(lines) and not lines[i].strip():
+                i += 1
             continue
         
-        if line.startswith('ANALYSIS SUMMARY:') or 'No hits found' in line:
+        # Stop at analysis summary or if no hits found
+        if line_stripped.startswith('ANALYSIS SUMMARY:') or 'No hits found' in line_stripped:
             break
         
-        if in_results:
-            match = re.match(pattern, line)
+        if in_results and line_stripped:
+            # Try to match the vulnerability header line
+            match = re.match(pattern, line_rstripped)
             if match:
-                file_path, line_num, risk_level, category, function, description_start = match.groups()
+                file_path, line_num, risk_level, category, function = match.groups()
                 
-                # Collect multi-line description
-                description = description_start
+                # Collect multi-line description from following indented lines
+                description_parts = []
                 i += 1
+                
+                # Read description lines (they are indented with spaces)
                 while i < len(lines):
-                    next_line = lines[i].strip()
-                    if (re.match(pattern, next_line) or 
-                        next_line.startswith('ANALYSIS SUMMARY:') or
-                        next_line.startswith('FINAL RESULTS:')):
+                    next_line = lines[i]
+                    next_stripped = next_line.strip()
+                    next_rstripped = next_line.rstrip()
+                    
+                    # Stop if we hit another vulnerability header
+                    if re.match(pattern, next_rstripped):
                         break
-                    if next_line and not next_line.startswith('[') and not next_line.startswith('Hits'):
-                        description += " " + next_line
+                    
+                    # Stop at summary sections
+                    if (next_stripped.startswith('ANALYSIS SUMMARY:') or
+                        next_stripped.startswith('FINAL RESULTS:') or
+                        next_stripped.startswith('Hits =') or
+                        next_stripped.startswith('Lines analyzed') or
+                        next_stripped.startswith('Physical Source Lines')):
+                        break
+                    
+                    # Description lines are typically indented (start with spaces/tabs)
+                    # or continuation lines
+                    if next_stripped:
+                        # If it starts with whitespace, it's part of the description
+                        if next_line.startswith((' ', '\t')):
+                            description_parts.append(next_stripped)
+                        # If it doesn't match our pattern and has content, include it
+                        elif not re.match(pattern, next_rstripped):
+                            description_parts.append(next_stripped)
+                    elif description_parts:
+                        # Empty line after description - might be separator, but continue
+                        # in case there's more description after
+                        pass
+                    
                     i += 1
+                
+                description = ' '.join(description_parts).strip()
                 
                 vulnerabilities.append({
                     'line': int(line_num),
                     'level': int(risk_level),
-                    'function': function,
-                    'category': category,
-                    'description': description.strip()
+                    'function': function.strip(),
+                    'category': category.strip(),
+                    'description': description
                 })
                 continue
         
@@ -74,6 +111,7 @@ def parse_flawfinder_output(output_text):
 def scan_file(file_path):
     """Scan a single file using flawfinder command-line tool."""
     try:
+        # Run flawfinder with minimum level 1 to catch all vulnerabilities
         result = subprocess.run(
             ['flawfinder', '--minlevel', '1', str(file_path)],
             capture_output=True,
@@ -81,8 +119,11 @@ def scan_file(file_path):
             timeout=30
         )
         
+        # Combine stdout and stderr for parsing
+        output = result.stdout + result.stderr
+        
         # Parse output
-        vulnerabilities = parse_flawfinder_output(result.stdout + result.stderr)
+        vulnerabilities = parse_flawfinder_output(output)
         
         return vulnerabilities, None
         
@@ -140,7 +181,7 @@ def main():
     
     # Scan both directories
     baseline_results = scan_directory(BASELINE_DIR, "baseline_patches_2")
-    codeastra_results = scan_directory(CODEASTRA_DIR, "codeastra_2")
+    codeastra_results = scan_directory(CODEASTRA_DIR, "sementic_hinted_patches_2")
     
     # Compile results
     output_data = {
@@ -151,7 +192,7 @@ def main():
                 'files_with_vulnerabilities': sum(1 for r in baseline_results if r['vulnerability_count'] > 0),
                 'total_vulnerabilities': sum(r['vulnerability_count'] for r in baseline_results)
             },
-            'codeastra_2': {
+            'sementic_hinted_patches_2': {
                 'total_files': len(codeastra_results),
                 'files_with_vulnerabilities': sum(1 for r in codeastra_results if r['vulnerability_count'] > 0),
                 'total_vulnerabilities': sum(r['vulnerability_count'] for r in codeastra_results)
@@ -159,7 +200,7 @@ def main():
         },
         'results': {
             'baseline_patches_2': baseline_results,
-            'codeastra_2': codeastra_results
+            'sementic_hinted_patches_2': codeastra_results
         }
     }
     
@@ -179,10 +220,10 @@ def main():
     print(f"  Files with vulnerabilities: {output_data['scan_summary']['baseline_patches_2']['files_with_vulnerabilities']}")
     print(f"  Total vulnerabilities: {output_data['scan_summary']['baseline_patches_2']['total_vulnerabilities']}")
     
-    print(f"\ncodeastra_2:")
-    print(f"  Total files: {output_data['scan_summary']['codeastra_2']['total_files']}")
-    print(f"  Files with vulnerabilities: {output_data['scan_summary']['codeastra_2']['files_with_vulnerabilities']}")
-    print(f"  Total vulnerabilities: {output_data['scan_summary']['codeastra_2']['total_vulnerabilities']}")
+    print(f"\nsementic_hinted_patches_2:")
+    print(f"  Total files: {output_data['scan_summary']['sementic_hinted_patches_2']['total_files']}")
+    print(f"  Files with vulnerabilities: {output_data['scan_summary']['sementic_hinted_patches_2']['files_with_vulnerabilities']}")
+    print(f"  Total vulnerabilities: {output_data['scan_summary']['sementic_hinted_patches_2']['total_vulnerabilities']}")
     
     print(f"\nResults saved to: {output_path}")
 
