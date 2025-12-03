@@ -140,6 +140,9 @@ def generate_patch(code_snippet, tokenizer, model, device, max_length=256):
     # Store input length to extract only newly generated tokens
     input_length = inputs['input_ids'].shape[1]
     
+    # Store input length to extract only newly generated tokens
+    input_length = inputs['input_ids'].shape[1]
+    
     with torch.no_grad():
         outputs = model.generate(
             **inputs,
@@ -292,6 +295,7 @@ if __name__ == "__main__":
     
     tokenizer, model, device = load_codellama_model(args.model)
     process_vulnerable_snippets(args.input, args.output, tokenizer, model, device, max_length=args.max_length)
+
 
 
 
