@@ -319,17 +319,6 @@ sudo apt-get install flawfinder
 - Check PyTorch CUDA compatibility
 - Models will fall back to CPU if CUDA unavailable
 
-## Citation
-
-If you use this work in your research, please cite:
-
-```bibtex
-@article{security-patch-generation-2024,
-  title={Automated Security Patch Generation Using Large Language Models with Semantic Hints},
-  author={Abhishek Potdar, Gaurav Mehta, Sharwari Akre, Yash Shah},
-  year={2025}
-}
-```
 
 ## Acknowledgments
 
