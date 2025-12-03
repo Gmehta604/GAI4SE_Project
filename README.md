@@ -254,53 +254,6 @@ This generates visualization graphs in `results/graphs/`:
 - `functionality_breakdown.png` - Detailed functionality results
 - `combined_summary.png` - Integrated dashboard view
 
-## Output Formats
-
-### Vulnerability Scan Results (`vulnerability_scan.json`)
-
-```json
-{
-  "scan_summary": {
-    "baseline_patches_2": {
-      "total_files": 92,
-      "files_with_vulnerabilities": 35,
-      "total_vulnerabilities": 115
-    },
-    "sementic_hinted_patches_2": {
-      "total_files": 92,
-      "files_with_vulnerabilities": 18,
-      "total_vulnerabilities": 42
-    }
-  }
-}
-```
-
-### Functionality Check Results (`functionality_check.json`)
-
-```json
-{
-  "functionality_summary": {
-    "baseline_patches_2": {
-      "total_files": 92,
-      "compiles_successfully": 81,
-      "compilation_failed": 11,
-      "success_rate": 88.04
-    }
-  }
-}
-```
-
-### CodeBERT Similarity Results (`codebert_similarity.json`)
-
-```json
-{
-  "summary": {
-    "average_similarity": 0.7823,
-    "min_similarity": 0.4521,
-    "max_similarity": 0.9634
-  }
-}
-```
 
 ## Key Results
 
@@ -324,10 +277,6 @@ Based on evaluation of 92 C/C++ vulnerability test cases:
 - **Model**: `codellama/CodeLlama-7b-Instruct-hf`
 - **Architecture**: Instruction-tuned code generation model
 - **Usage**: Local inference with optional 8-bit quantization
-
-### GPT-4 (Optional)
-- **Purpose**: Alternative hint generation method
-- **Usage**: OpenAI API (requires API key)
 
 ## Notes
 
