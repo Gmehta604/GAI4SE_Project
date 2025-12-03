@@ -1,0 +1,959 @@
+{
+  "timestamp": "2025-11-20T00:35:26.063140",
+  "functionality_summary": {
+    "baseline_patches_2": {
+      "total_files": 92,
+      "compiles_successfully": 81,
+      "compilation_failed": 11,
+      "skipped": 0,
+      "success_rate": 88.04347826086956
+    },
+    "sementic_hinted_patches_2": {
+      "total_files": 92,
+      "compiles_successfully": 89,
+      "compilation_failed": 3,
+      "skipped": 0,
+      "success_rate": 96.73913043478261
+    }
+  },
+  "results": {
+    "baseline_patches_2": [
+      {
+        "file": "CWE114_Process_Control__w32_char_connect_socket_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE114_Process_Control__w32_char_connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE114_Process_Control__w32_char_connect_socket_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE114_Process_Control__w32_char_connect_socket_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_82_bad.cpp",
+        "compiles": false,
+        "error": "Header dependency issue (should have been cleaned)"
+      },
+      {
+        "file": "CWE123_Write_What_Where_Condition__connect_socket_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE123_Write_What_Where_Condition__connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE123_Write_What_Where_Condition__connect_socket_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE123_Write_What_Where_Condition__connect_socket_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE126_Buffer_Overread__char_alloca_loop_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE126_Buffer_Overread__char_alloca_loop_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE126_Buffer_Overread__char_alloca_loop_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE126_Buffer_Overread__char_alloca_loop_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE127_Buffer_Underread__char_alloca_cpy_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE127_Buffer_Underread__char_alloca_cpy_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE127_Buffer_Underread__char_alloca_cpy_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE127_Buffer_Underread__char_alloca_cpy_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE15_External_Control_of_System_or_Configuration_Setting__w32_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE15_External_Control_of_System_or_Configuration_Setting__w32_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE15_External_Control_of_System_or_Configuration_Setting__w32_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE15_External_Control_of_System_or_Configuration_Setting__w32_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE176_Improper_Handling_of_Unicode_Encoding__w32_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE176_Improper_Handling_of_Unicode_Encoding__w32_81_bad.cpp",
+        "compiles": false,
+        "error": "Header dependency issue (should have been cleaned)"
+      },
+      {
+        "file": "CWE176_Improper_Handling_of_Unicode_Encoding__w32_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE176_Improper_Handling_of_Unicode_Encoding__w32_82_bad.cpp",
+        "compiles": false,
+        "error": "Header dependency issue (should have been cleaned)"
+      },
+      {
+        "file": "CWE191_Integer_Underflow__char_fscanf_multiply_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE191_Integer_Underflow__char_fscanf_multiply_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE191_Integer_Underflow__char_fscanf_multiply_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE191_Integer_Underflow__char_fscanf_multiply_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE194_Unexpected_Sign_Extension__connect_socket_malloc_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE194_Unexpected_Sign_Extension__connect_socket_malloc_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE194_Unexpected_Sign_Extension__connect_socket_malloc_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE194_Unexpected_Sign_Extension__connect_socket_malloc_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE23_Relative_Path_Traversal__char_connect_socket_fopen_83_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE23_Relative_Path_Traversal__char_connect_socket_fopen_83_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches_2/CWE23_Relative_Path_Traversal__char_connect_socket_fopen_83_bad_test.cpp:21: error: unterminated #ifndef\n   21 | #ifndef OMITBAD\n      | \n"
+      },
+      {
+        "file": "CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches_2/CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_bad_test.cpp:21: error: unterminated #ifndef\n   21 | #ifndef OMITBAD\n      | \n"
+      },
+      {
+        "file": "CWE256_Plaintext_Storage_of_Password__w32_char_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE256_Plaintext_Storage_of_Password__w32_char_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE256_Plaintext_Storage_of_Password__w32_char_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE256_Plaintext_Storage_of_Password__w32_char_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE259_Hard_Coded_Password__w32_char_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE259_Hard_Coded_Password__w32_char_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE259_Hard_Coded_Password__w32_char_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE259_Hard_Coded_Password__w32_char_82_bad.cpp",
+        "compiles": false,
+        "error": "Header dependency issue (should have been cleaned)"
+      },
+      {
+        "file": "CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_82_bad.cpp",
+        "compiles": false,
+        "error": "Header dependency issue (should have been cleaned)"
+      },
+      {
+        "file": "CWE321_Hard_Coded_Cryptographic_Key__w32_char_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE321_Hard_Coded_Cryptographic_Key__w32_char_81_bad.cpp",
+        "compiles": false,
+        "error": "Header dependency issue (should have been cleaned)"
+      },
+      {
+        "file": "CWE321_Hard_Coded_Cryptographic_Key__w32_char_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE321_Hard_Coded_Cryptographic_Key__w32_char_82_bad.cpp",
+        "compiles": false,
+        "error": "Header dependency issue (should have been cleaned)"
+      },
+      {
+        "file": "CWE369_Divide_by_Zero__float_connect_socket_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE369_Divide_by_Zero__float_connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE369_Divide_by_Zero__float_connect_socket_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE369_Divide_by_Zero__float_connect_socket_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE400_Resource_Exhaustion__connect_socket_for_loop_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE400_Resource_Exhaustion__connect_socket_for_loop_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE400_Resource_Exhaustion__connect_socket_for_loop_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE400_Resource_Exhaustion__connect_socket_for_loop_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE401_Memory_Leak__new_array_int_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE401_Memory_Leak__new_array_int_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE401_Memory_Leak__new_array_int_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE401_Memory_Leak__new_array_int_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE404_Improper_Resource_Shutdown__fopen_w32_close_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE404_Improper_Resource_Shutdown__fopen_w32_close_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE404_Improper_Resource_Shutdown__fopen_w32_close_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE404_Improper_Resource_Shutdown__fopen_w32_close_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE415_Double_Free__malloc_free_char_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE415_Double_Free__malloc_free_char_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE415_Double_Free__malloc_free_char_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE415_Double_Free__malloc_free_char_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE426_Untrusted_Search_Path__char_popen_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE426_Untrusted_Search_Path__char_popen_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE426_Untrusted_Search_Path__char_popen_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE426_Untrusted_Search_Path__char_popen_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE457_Use_of_Uninitialized_Variable__no_constructor_01_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE457_Use_of_Uninitialized_Variable__no_constructor_01_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE464_Addition_of_Data_Structure_Sentinel__basic_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE464_Addition_of_Data_Structure_Sentinel__basic_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE464_Addition_of_Data_Structure_Sentinel__basic_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE464_Addition_of_Data_Structure_Sentinel__basic_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE500_Public_Static_Field_Not_Final__int_01_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE500_Public_Static_Field_Not_Final__int_01_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE563_Unused_Variable__unused_class_member_value_01_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE563_Unused_Variable__unused_class_member_value_01_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE563_Unused_Variable__unused_init_variable_char_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE563_Unused_Variable__unused_init_variable_char_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__class_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__class_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__struct_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__struct_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE590_Free_Memory_Not_on_Heap__delete_array_char_alloca_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE590_Free_Memory_Not_on_Heap__delete_array_char_alloca_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE590_Free_Memory_Not_on_Heap__delete_array_char_declare_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE590_Free_Memory_Not_on_Heap__delete_array_char_declare_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_char_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_char_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_wchar_t_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_wchar_t_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE606_Unchecked_Loop_Condition__char_connect_socket_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE606_Unchecked_Loop_Condition__char_connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE606_Unchecked_Loop_Condition__char_console_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE606_Unchecked_Loop_Condition__char_console_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE617_Reachable_Assertion__connect_socket_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE617_Reachable_Assertion__connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE617_Reachable_Assertion__fgets_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE617_Reachable_Assertion__fgets_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE665_Improper_Initialization__char_cat_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE665_Improper_Initialization__char_cat_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE665_Improper_Initialization__char_ncat_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE665_Improper_Initialization__char_ncat_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE675_Duplicate_Operations_on_Resource__fopen_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE675_Duplicate_Operations_on_Resource__fopen_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE675_Duplicate_Operations_on_Resource__fopen_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE675_Duplicate_Operations_on_Resource__fopen_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE690_NULL_Deref_From_Return__char_malloc_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE690_NULL_Deref_From_Return__char_malloc_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE690_NULL_Deref_From_Return__char_malloc_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE690_NULL_Deref_From_Return__char_malloc_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE78_OS_Command_Injection__char_connect_socket_execl_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE78_OS_Command_Injection__char_connect_socket_execl_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE78_OS_Command_Injection__char_connect_socket_execl_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE78_OS_Command_Injection__char_connect_socket_execl_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE843_Type_Confusion__char_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE843_Type_Confusion__char_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE843_Type_Confusion__char_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE843_Type_Confusion__char_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE90_LDAP_Injection__w32_char_connect_socket_81_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE90_LDAP_Injection__w32_char_connect_socket_81_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches_2/CWE90_LDAP_Injection__w32_char_connect_socket_81_bad_test.cpp:21: error: unterminated #ifndef\n   21 | #ifndef OMITBAD\n      | \n"
+      },
+      {
+        "file": "CWE90_LDAP_Injection__w32_char_connect_socket_82_bad.cpp",
+        "full_path": "results/baseline_patches_2/CWE90_LDAP_Injection__w32_char_connect_socket_82_bad.cpp",
+        "compiles": false,
+        "error": "results/baseline_patches_2/CWE90_LDAP_Injection__w32_char_connect_socket_82_bad_test.cpp:21: error: unterminated #ifndef\n   21 | #ifndef OMITBAD\n      | \n"
+      }
+    ],
+    "sementic_hinted_patches_2": [
+      {
+        "file": "CWE114_Process_Control__w32_char_connect_socket_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE114_Process_Control__w32_char_connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE114_Process_Control__w32_char_connect_socket_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE114_Process_Control__w32_char_connect_socket_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE122_Heap_Based_Buffer_Overflow__cpp_CWE129_connect_socket_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE123_Write_What_Where_Condition__connect_socket_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE123_Write_What_Where_Condition__connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE123_Write_What_Where_Condition__connect_socket_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE123_Write_What_Where_Condition__connect_socket_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE126_Buffer_Overread__char_alloca_loop_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE126_Buffer_Overread__char_alloca_loop_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE126_Buffer_Overread__char_alloca_loop_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE126_Buffer_Overread__char_alloca_loop_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE127_Buffer_Underread__char_alloca_cpy_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE127_Buffer_Underread__char_alloca_cpy_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE127_Buffer_Underread__char_alloca_cpy_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE127_Buffer_Underread__char_alloca_cpy_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE134_Uncontrolled_Format_String__char_connect_socket_fprintf_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE15_External_Control_of_System_or_Configuration_Setting__w32_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE15_External_Control_of_System_or_Configuration_Setting__w32_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE15_External_Control_of_System_or_Configuration_Setting__w32_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE15_External_Control_of_System_or_Configuration_Setting__w32_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE176_Improper_Handling_of_Unicode_Encoding__w32_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE176_Improper_Handling_of_Unicode_Encoding__w32_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE176_Improper_Handling_of_Unicode_Encoding__w32_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE176_Improper_Handling_of_Unicode_Encoding__w32_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE191_Integer_Underflow__char_fscanf_multiply_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE191_Integer_Underflow__char_fscanf_multiply_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE191_Integer_Underflow__char_fscanf_multiply_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE191_Integer_Underflow__char_fscanf_multiply_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE194_Unexpected_Sign_Extension__connect_socket_malloc_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE194_Unexpected_Sign_Extension__connect_socket_malloc_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE194_Unexpected_Sign_Extension__connect_socket_malloc_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE194_Unexpected_Sign_Extension__connect_socket_malloc_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE195_Signed_to_Unsigned_Conversion_Error__connect_socket_malloc_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE197_Numeric_Truncation_Error__int_connect_socket_to_char_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE23_Relative_Path_Traversal__char_connect_socket_fopen_83_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE23_Relative_Path_Traversal__char_connect_socket_fopen_83_bad.cpp",
+        "compiles": false,
+        "error": "results/sementic_hinted_patches_2/CWE23_Relative_Path_Traversal__char_connect_socket_fopen_83_bad_test.cpp:96:29: warning: missing terminating \" character\n   96 |         pFile = FOPEN(data, \"w\n      |                             ^\nresults/sementic_hinted_patches_2/CWE23_Relative_Path_Traversal__cha"
+      },
+      {
+        "file": "CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_bad.cpp",
+        "compiles": false,
+        "error": "results/sementic_hinted_patches_2/CWE23_Relative_Path_Traversal__char_connect_socket_fopen_84_bad_test.cpp:21: error: unterminated #ifndef\n   21 | #ifndef OMITBAD\n      | \n"
+      },
+      {
+        "file": "CWE256_Plaintext_Storage_of_Password__w32_char_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE256_Plaintext_Storage_of_Password__w32_char_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE256_Plaintext_Storage_of_Password__w32_char_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE256_Plaintext_Storage_of_Password__w32_char_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE259_Hard_Coded_Password__w32_char_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE259_Hard_Coded_Password__w32_char_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE259_Hard_Coded_Password__w32_char_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE259_Hard_Coded_Password__w32_char_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE319_Cleartext_Tx_Sensitive_Info__w32_char_connect_socket_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE321_Hard_Coded_Cryptographic_Key__w32_char_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE321_Hard_Coded_Cryptographic_Key__w32_char_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE321_Hard_Coded_Cryptographic_Key__w32_char_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE321_Hard_Coded_Cryptographic_Key__w32_char_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE369_Divide_by_Zero__float_connect_socket_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE369_Divide_by_Zero__float_connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE369_Divide_by_Zero__float_connect_socket_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE369_Divide_by_Zero__float_connect_socket_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE36_Absolute_Path_Traversal__char_connect_socket_fopen_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE400_Resource_Exhaustion__connect_socket_for_loop_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE400_Resource_Exhaustion__connect_socket_for_loop_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE400_Resource_Exhaustion__connect_socket_for_loop_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE400_Resource_Exhaustion__connect_socket_for_loop_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE401_Memory_Leak__new_array_int_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE401_Memory_Leak__new_array_int_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE401_Memory_Leak__new_array_int_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE401_Memory_Leak__new_array_int_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE404_Improper_Resource_Shutdown__fopen_w32_close_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE404_Improper_Resource_Shutdown__fopen_w32_close_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE404_Improper_Resource_Shutdown__fopen_w32_close_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE404_Improper_Resource_Shutdown__fopen_w32_close_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE415_Double_Free__malloc_free_char_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE415_Double_Free__malloc_free_char_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE415_Double_Free__malloc_free_char_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE415_Double_Free__malloc_free_char_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE426_Untrusted_Search_Path__char_popen_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE426_Untrusted_Search_Path__char_popen_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE426_Untrusted_Search_Path__char_popen_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE426_Untrusted_Search_Path__char_popen_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE427_Uncontrolled_Search_Path_Element__char_connect_socket_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE457_Use_of_Uninitialized_Variable__no_constructor_01_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE457_Use_of_Uninitialized_Variable__no_constructor_01_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE464_Addition_of_Data_Structure_Sentinel__basic_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE464_Addition_of_Data_Structure_Sentinel__basic_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE464_Addition_of_Data_Structure_Sentinel__basic_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE464_Addition_of_Data_Structure_Sentinel__basic_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE500_Public_Static_Field_Not_Final__int_01_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE500_Public_Static_Field_Not_Final__int_01_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE563_Unused_Variable__unused_class_member_value_01_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE563_Unused_Variable__unused_class_member_value_01_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE563_Unused_Variable__unused_init_variable_char_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE563_Unused_Variable__unused_init_variable_char_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__class_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__class_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__struct_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE588_Attempt_to_Access_Child_of_Non_Structure_Pointer__struct_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE590_Free_Memory_Not_on_Heap__delete_array_char_alloca_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE590_Free_Memory_Not_on_Heap__delete_array_char_alloca_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE590_Free_Memory_Not_on_Heap__delete_array_char_declare_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE590_Free_Memory_Not_on_Heap__delete_array_char_declare_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_char_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_char_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_wchar_t_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE591_Sensitive_Data_Storage_in_Improperly_Locked_Memory__w32_wchar_t_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE606_Unchecked_Loop_Condition__char_connect_socket_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE606_Unchecked_Loop_Condition__char_connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE606_Unchecked_Loop_Condition__char_console_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE606_Unchecked_Loop_Condition__char_console_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE617_Reachable_Assertion__connect_socket_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE617_Reachable_Assertion__connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE617_Reachable_Assertion__fgets_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE617_Reachable_Assertion__fgets_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE665_Improper_Initialization__char_cat_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE665_Improper_Initialization__char_cat_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE665_Improper_Initialization__char_ncat_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE665_Improper_Initialization__char_ncat_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE675_Duplicate_Operations_on_Resource__fopen_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE675_Duplicate_Operations_on_Resource__fopen_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE675_Duplicate_Operations_on_Resource__fopen_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE675_Duplicate_Operations_on_Resource__fopen_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE680_Integer_Overflow_to_Buffer_Overflow__malloc_connect_socket_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE690_NULL_Deref_From_Return__char_malloc_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE690_NULL_Deref_From_Return__char_malloc_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE690_NULL_Deref_From_Return__char_malloc_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE690_NULL_Deref_From_Return__char_malloc_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE761_Free_Pointer_Not_at_Start_of_Buffer__char_connect_socket_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE762_Mismatched_Memory_Management_Routines__delete_array_char_calloc_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE773_Missing_Reference_to_Active_File_Descriptor_or_Handle__fopen_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE775_Missing_Release_of_File_Descriptor_or_Handle__fopen_no_close_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE789_Uncontrolled_Mem_Alloc__malloc_char_connect_socket_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE78_OS_Command_Injection__char_connect_socket_execl_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE78_OS_Command_Injection__char_connect_socket_execl_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE78_OS_Command_Injection__char_connect_socket_execl_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE78_OS_Command_Injection__char_connect_socket_execl_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE843_Type_Confusion__char_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE843_Type_Confusion__char_81_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE843_Type_Confusion__char_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE843_Type_Confusion__char_82_bad.cpp",
+        "compiles": true
+      },
+      {
+        "file": "CWE90_LDAP_Injection__w32_char_connect_socket_81_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE90_LDAP_Injection__w32_char_connect_socket_81_bad.cpp",
+        "compiles": false,
+        "error": "Header dependency issue (should have been cleaned)"
+      },
+      {
+        "file": "CWE90_LDAP_Injection__w32_char_connect_socket_82_bad.cpp",
+        "full_path": "results/sementic_hinted_patches_2/CWE90_LDAP_Injection__w32_char_connect_socket_82_bad.cpp",
+        "compiles": true
+      }
+    ]
+  }
+}

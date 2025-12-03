@@ -1,9 +1,13 @@
 openai>=1.0.0
 transformers>=4.30.0
-torch>=2.0.0
-numpy
+torch>=2.6.0
+numpy>=1.24.0
 scipy>=1.10.0
-flawfinder>=2.0.0
+# flawfinder>=2.0.0
+bitsandbytes>=0.41.0
+packaging>=24.0
+
+
 
 
 

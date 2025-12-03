@@ -1,0 +1,28 @@
+#ifndef OMITBAD
+
+#include "std_testcase.h"
+#include "CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_81.h"
+
+namespace CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_81
+{
+
+void CWE672_Operation_on_Resource_After_Expiration_or_Release__list_int_81_bad::action(list<int>  data) const
+{
+    {
+        list<int> ::iterator i;
+        cout << "The list contains: ";
+        for( i = data.begin(); i != data.end(); i++)
+        {
+            if (i != data.end() && !*i)
+            {
+                data.clear();
+            }
+            
+            cout << " " << *i;
+        }
+        cout << endl;
+    }
+}
+
+}
+#endif
