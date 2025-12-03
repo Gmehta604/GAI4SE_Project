@@ -8,32 +8,24 @@ This project implements a pipeline for generating security patches using CodeLla
 [ Juliet C/C++ Files ]
          |
          v
-[ parse_juliet.py ]
-Extract _bad() and _good() functions
-         |
-         +--> benchmark/vulnerable_snippets/
-         +--> benchmark/ground_truth_patches/
-         |
-         v
-[ generate_hints.py (GPT-4) ]
+[ generate_hints_codeastra.py (CodeAstra) ]
 Generate security hint for each vulnerable snippet
          |
          v
 [ CodeLlama Scripts ]
-run_baseline.py → fixes without hints
+run_baseline.py → fixes without hint
 run_hinted.py → fixes with hints
          |
          v
 results/baseline_patches/   results/semantic_hint_patches/
          |
          v
-[ evaluate.py ]
-├── check_security() → flawfinder
-├── check_functionality() → gcc + run
-└── check_quality() → CodeBERT similarity
+├── scan_vulnerabilities.py → flawfinder
+├── check_functionality.py → gcc + run
+└── compute_similarility.py → CodeBERT similarity
          |
          v
-[ results.csv ] → security_pass, func_pass, similarity_score
+visualize_results.py → Generate graphs using Results
 ```
 
 ## Directory Structure
@@ -50,7 +42,7 @@ results/baseline_patches/   results/semantic_hint_patches/
 │   ├── semantic_hint_patches/       # CodeLlama patches (with hints)
 │   └── results.csv                  # Evaluation results
 ├── parse_juliet.py                  # Extract functions from Juliet files
-├── generate_hints.py                # Generate hints using GPT-4
+├── generate_hints_codeastra.py      # Generate hints using Coeeastra
 ├── run_baseline.py                  # Generate patches without hints
 ├── run_hinted.py                    # Generate patches with hints
 ├── evaluate.py                      # Evaluate patches
